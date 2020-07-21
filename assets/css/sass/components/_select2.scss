@@ -1,0 +1,121 @@
+
+.select2-container {
+    width: 100%  !important;
+    text-align: right;
+}
+.select2-container--default .select2-selection--multiple,
+.select2-container--default .select2-selection--single  {
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    min-height: calc(1.4em + 2rem + 2px) !important;
+    font-size: 0.825em;
+    font-weight: 400;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: $veryDarkBlue;
+    line-height: 39px;
+    font-size: 0.875em;
+    font-weight: bold;
+    padding-right: 10px;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    top: 14px;
+    left: 5px;
+    right: auto;
+}
+.select2-results {
+    text-align: right !important;
+    &__option[aria-selected] {
+        font-size: 0.825em !important;
+        color: $veryDarkBlue !important;
+    }
+}
+
+.select2-container--default .select2-results__option[aria-selected=true] {
+    background-color: $mainBlue !important;
+    color: #fff !important;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: $mainBlue !important;
+    color: #fff !important;
+}
+.select2 ~ .error {
+    position: absolute;
+    top: 47px;
+    
+}
+.profile--teacher .form-group {
+    margin-bottom: 30px;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__rendered li {
+    float: right;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice,
+.select2-container--default .select2-selection--single .select2-selection__choice {
+    background-color: #fff;
+    border: 2px solid $veryDarkBlue;
+    border-radius: 20px;
+    cursor: default;
+    float: left;
+    margin-right: 8px;
+    margin-top: 5px;
+    padding: 5px 15px;
+    font-weight: bold;
+    font-size: 12px;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove,
+.select2-container--default .select2-selection--single .select2-selection__choice__remove {
+    color: $veryDarkBlue;
+    margin-right: 12px;
+}
+.select2-container {
+    &--default {
+
+        .select2-selection {
+            &--multiple {
+
+            }
+            &--single {
+
+            }
+            &__choice {
+
+                &__remove {
+
+                }
+            }
+        } 
+    } 
+}
+
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+    border: solid $mainGreen 1px;
+}
+.select2-container ~ .form__label {
+    top: 19px;
+    right: 15px;
+    color: $veryDarkBlue;
+    font-size: 0.825em;
+    font-weight: bold;
+    i {
+        position: initial;
+        padding-right: 10px;
+    }
+}
+.select2-container--focus ~ .form__label,
+.select2-container--below ~ .form__label {
+    top: -7px !important;
+    background: #fff;
+    font-size: 0.625em !important;
+    color: $mainGreen !important;
+    min-width: 120px;
+    i {
+        position: initial;
+        padding-right: 10px;
+    }
+}

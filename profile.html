@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset="UTF-8">
+            <!-- First Mobile Meta -->
+            <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+            <!-- Interner Exeplorer (IE) Compatibility Meta -->
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <meta name="theme-color" content="#12c5bc">
+            <meta content="" name="description"/>
+            <meta content="" name="author"/>
+            <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    
+            <!-- <link rel="icon" href="dist/img/logo.png?v='.env('APP_VERSION" type="image/x-icon"> -->
+            <!-- Add to home screen for Safari on iOS -->
+            <meta name="apple-mobile-web-app-capable" content="yes">
+            <meta name="apple-mobile-web-app-status-bar-style" content="black">
+            <meta name="apple-mobile-web-app-title" content="Weather PWA">
+            <link rel="apple-touch-icon" href="">
+            <meta name="msapplication-TileImage" content="">
+            <meta name="msapplication-TileColor" content="#2F3BA2">
+    
+            <!--[if lt IE 9]>
+            <script src="js/html5shiv.min.js?v='.env('APP_VERSION"></script>
+            <script src="js/respond.min.js?v='.env('APP_VERSION"></script>
+            <![endif]-->
+    
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+                  integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+           <link rel="stylesheet" href="dist/css/global.css?v='.env('APP_VERSION">
+           <link rel="stylesheet" href="dist/css/profile.css?v='.env('APP_VERSION">
+
+
+    </head>
+<body>
+    <!-- header and navbar -->
+    <div class="fixed-menu">
+         <div class="container">
+             <!-- <i class="far fa-times-circle fa-2x"></i> -->
+             <img src="dist/img/close.svg" alt="close">
+            <ul class="list-unstyled">
+                <li class="active"><a href="#">الرئيسية</a></li>
+                <li><a href="#">طلب كورس</a></li>
+                <li><a href="#">عن أكاديمي</a></li>
+                <li><a href="#">الخدمات</a></li>
+                <li class="login" data-toggle="modal" data-target="#login-modal"><a href="#">تسجيل الدخول</a></li>
+                <li class="register" data-toggle="modal" data-target="#register-modal"><a href="#">انضم الينا</a></li>
+            </ul>
+         </div>           
+    </div>
+    <header class="home-header">
+        <div class="container">
+            <nav class="navbar navbar--padding-right navbar-expand-lg">
+                <a class="navbar-brand" href="#"> 
+                    <img class="img-responsive" src="dist/img/logo.svg" alt="logo">
+                </a>
+                <div class="navbar-toggler">
+                    <!-- <i class="fas fa-stream fa-1x"></i> -->
+                    <img src="dist/img/menu.svg" alt="menu" class="menu-icon">
+                </div>
+            
+                <div class="collapse navbar-collapse">
+
+                    <ul class="navbar-nav mr-auto"> 
+                        <li class="nav-item">
+                            <a class="nav-link" href="student-subscriptions.html">كورساتي</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">الرجوع إلى الرئيسية</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img class="teacher-photo" src="dist/img/teacher.jpg" alt="teacher-photo">
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item teacher-name" href="#">أحمد البيك</a>
+                                <a class="dropdown-item teacher-uni" href="#">جامعة الأميرة نورة</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">
+                                    <img src="dist/img/student_dashboard_icons/notification.svg" alt="icon">
+                                    الاشعارات
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                      
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <img src="dist/img/student_dashboard_icons/setting.svg" alt="icon">
+                                    اعدادات العضوية
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <img src="dist/img/student_dashboard_icons/support.svg" alt="icon">
+                                    الدعم الفني
+                                </a>
+                                    
+                                <a class="dropdown-item" href="#">
+                                    <img src="dist/img/student_dashboard_icons/sign out.svg" alt="icon">
+                                    تسجيل الخروج
+                                </a>
+                                              
+                                
+                            </div>
+                        </li>
+                   
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    
+    <!-- start preview div -->
+    <div class="preview preview--profile">
+        <div class="overlay">
+            <div class="container">
+          
+            </div>
+        </div>
+    </div>
+    <!-- end preview div -->
+    <section class="profile profile--teacher profile--pd text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs">
+                        <div class="profile-image">
+                            <img src="dist/img/teacher.jpg" alt="profile-img">
+                        </div>
+                        <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#personalInfo">بيانات شخصية</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#accountInfo">بيانات الحساب</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#paymentInfo">بيانات الدفع</a>
+                        </li>
+                    </ul>
+                    <!-- Tab panes -->
+                </div>
+                <!-- end col -->
+                <div class="col-lg-7">
+                    <div class="tab-content">
+                        <div class="tab-pane container active" id="personalInfo">
+                            <form action="" id="personal-info-form">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group custom-input">
+                                            <input required class="form-control" id="firstName" type="text"  name="firstName">
+                                            <label class="form__label" for="firstName">الاسم الأول</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group custom-input">
+                                            <input required class="form-control" id="lastName" type="text"  name="lastName">
+                                            <label class="form__label" for="lastName">الاسم الثاني</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group custom-input">
+                                            <input required class="form-control" id="mobileNumber" type="tel"  name="tel">
+                                            <label class="form__label" for="mobileNumber">رقم الجوال</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group custom-input">
+                                            <input required class="form-control" id="email" type="text"  name="email">
+                                            <label class="form__label" for="email">البريد الالكتروني</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group custom-input">
+                                            <input required class="form-control" id="address" type="tel"  name="address">
+                                            <label class="form__label" for="address">العنوان</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <!-- <div class="form-group custom-input">
+                                            <input required class="form-control" id="uni" type="text"  name="uni">
+                                            <label class="form__label" for="uni">الجامعة</label>
+                                        </div> -->
+                                        <div class="form-group custom-input">
+                                            <!-- <label class="label-file" for=""> اختر الجامعة
+                                                <i class="fas fa-question-circle"
+                                                data-toggle="tooltip" data-placement="left" title="إن لم تجد التخصص المطلوب يمكنك كتابة التخصص الذي ترغب به!"
+                                                data-content=""></i>
+                                            </label> -->
+                                          
+                                            <select class="form-control select2" name="uni" id="">
+                                                <option value=""> اختر الجامعة</option>
+                                                <option value="0">جامعة الملك سعود</option>
+                                                <option value="1">جامعة الأميرة نورة</option>
+                                                <option value="2">جامعة الحامد</option>
+                                                <option value="3">آخرى</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+   
+                                <div class="form-group mt-4">
+                                    <input class="custom-btn custom-btn--no-bg  mb-2  empty-field" type="button" value="إعادة الحقول">
+                                    <input class="custom-btn custom-btn--blue" type="submit" value="حفظ">
+                                </div>
+                            </form>
+                        </div>
+                        <!-- end tab content -->
+                        <div class="tab-pane container fade" id="accountInfo">
+                            <form action="" id="account-info-form">
+                                <div class="row">
+                                    <div class="col-md-12 offset-md-0 col-lg-6 offset-lg-3">
+                                        <div class="form-group custom-input">
+                                            <input required class="form-control" id="password" type="password" name="old-password">
+                                            <label class="form__label password" for="password">كلمة المرور القديمة</label>
+                                            <i class="fas fa-eye fa-lg hide-show-pass"></i>
+                                        </div>
+                                        <div class="form-group custom-input">
+                                            <input required class="form-control" id="new-password" type="password" name="new-password">
+                                            <label class="form__label password" for="new-password">كلمة المرور جديدة</label>
+                                            <i class="fas fa-eye fa-lg hide-show-pass"></i>
+                                        </div>
+                                        <div class="form-group custom-input">
+                                            <input required class="form-control password" id="re-password" type="password" name="confirm-password">
+                                            <label class="form__label" for="re-password">إعادة كلمة المرور </label>
+                                            <i class="fas fa-eye fa-lg hide-show-pass"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group mt-4">
+                                    <input class="custom-btn custom-btn--no-bg  mb-2 empty-field" type="button" value="إعادة الحقول">
+                                    <input class="custom-btn custom-btn--blue" type="submit" value= "حفظ كلمة المرور">
+                                </div>
+                            </form>
+                  
+                        </div>
+                        <!-- end tab content -->
+                        <div class="tab-pane container fade" id="paymentInfo">
+                            <form action="" id="payment-info-form">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group custom-input">
+                                            <input required class="form-control" id="name-card" type="text"  name="name-card">
+                                            <label class="form__label" for="name-card">اسم حامل البطاقة</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group custom-input">
+                                            <input required class="form-control" id="card-number" type="text"  name="card-number">
+                                            <label class="form__label" for="card-number">رقم البطاقة</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group custom-input">
+                                            <input required class="form-control" id="cvv" type="text"  name="cvv">
+                                            <label class="form__label" for="cvvv">cvv</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group custom-input">
+                                            <input required class="form-control" id="start-date" type="text"  name="start-date">
+                                            <label class="form__label" for="start-date">شهر الانتهاء</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group custom-input">
+                                            <input required class="form-control" id="end-date" type="text"  name="end-date">
+                                            <label class="form__label" for="end-date">سنة الانتهاء</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group mt-4">
+                                    <input class="custom-btn custom-btn--no-bg  mb-2  empty-field" type="button" value="إعادة الحقول">
+                                    <input class="custom-btn custom-btn--blue" type="submit" value="حفظ">
+                                </div>
+                            </form>
+                        </div>
+                        <!-- end tab content -->
+                    </div>
+                    <!-- end tab -->
+                </div>
+            
+              
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container -->
+    </section>
+
+    <!-- end about section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row d-flex">
+                <div class="col-lg-3 footer__logo">
+                    <img src="dist/img/logo.png" alt="logo">
+                </div>
+                <div class="col-lg-6 footer__links">
+                    <ul class="list-unstyled d-flex justify-content-center">
+                        <li><a href="">الرئيسية</a> </li>
+                        <li><a href="">الأسئلة الشائعة</a></li>
+                        <li><a href="">حقوق الطالب</a></li>
+                        <li><a href="">حقوق المعلم</a></li>
+                        <li><a href="">تسجيل شكوى</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 footer__social">
+                    <a target="_blank" href="#"><i class="fab fa-facebook-f fa-2x"></i></a>
+                    <a target="_blank" href="https://twitter.com/academi_sa"><i class="fab fa-twitter fa-2x"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/company/academi-sa/"><i class="fab fa-linkedin fa-2x"></i></a>
+                    <a target="_blank" href="https://www.instagram.com/academi_sa/"><i class="fab fa-instagram fa-2x"></i></a>
+                    <!-- <a href="#"><i class="fab fa-google-plus-g fa-2x"></i></a> -->
+                    <a target="_blank" href="https://www.youtube.com/channel/UCM1e6k-gmPu4l7O6oXPmoOg?view_as=subscriber"><i class="fab fa-youtube fa-2x"></i></a>
+
+                </div>
+            </div>
+            <div class="d-flex justify-content-center footer__copy-right">
+                <p class="copy-right">جميع حقوق النشر محفوظة, أكاديمي 2019 &copy;</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="chat-icon">
+
+        <span class="online"></span>
+        <a href="#">
+            <img src="dist/img/message.svg" alt="chat">
+        </a>
+    </div>        
+    </body>
+    <script src="dist/js/allPage.js"></script>
+    <script src="dist/js/profile.js"></script>
+
+</body>
+</html>

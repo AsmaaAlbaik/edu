@@ -1,0 +1,392 @@
+.navbar {
+    padding: 0;
+    background: transparent;
+    .navbar-toggler:focus,
+    .navbar-toggler:hover {
+      border-color: transparent;
+      border: none;
+    }
+    .navbar-toggler {
+        cursor: pointer;
+        text-align: center;
+        i {
+            color: $veryDarkBlue;
+            border: 2px solid #fff;
+            background: #fff;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            line-height: 48px;
+            cursor: pointer;
+        }
+    }
+ 
+    .navbar-brand {
+        margin-right: 0;
+        color : #fff;
+        font-family: font-bold;
+        font-size: 1.75em;
+        padding-top: 0;
+        img {
+            width: 130px;
+            margin-left: 10px;
+        }
+        &--large {
+            img {
+                @media (min-width:992px){
+                    width: 175px;
+                }
+               
+            }
+        }
+    }
+    .navbar-nav {
+        .nav-item.active {
+            .nav-link {
+                font-family: font-bold;
+                opacity: 1;
+            }
+        }
+        .nav-item {
+            margin-top: 1px;
+            margin-right: 10px;
+            .nav-link {
+                color: #fff;
+                margin-left: 0.75rem;
+                opacity: 0.6;
+                font-size: 1em;
+                transition: all 0.4s ease-in-out;
+                font-family: font-bold;
+                @media (min-width:992px) and (max-width:1199px){
+                    font-size: 1em;
+                }
+                &:hover {
+                    opacity: 1;
+                }
+            }
+            &.dropdown {
+                margin-top: -14px;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                display: block;
+                transition: all 0.4s ease-in-out;
+                img.teacher-photo {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    box-shadow: 0.25rem 0.25rem 0.8125rem 0.2rem  rgba(37, 74, 93, .4);
+                    object-fit: cover;
+                    position: relative;
+                    z-index: 99999;
+                    left: 20px;
+                }
+                &.show {
+                    img.teacher-photo {
+                        box-shadow: none;
+                    }
+                }
+                .nav-link {
+                    opacity: 1 !important;
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+            .dropdown-menu {
+                min-width: 14rem;
+                text-align: right;
+                top: 0;
+                z-index: 0;
+                // opacity: 0;
+                // display: none;
+                animation: opacityFade 0.6s;
+                border-radius: 20px;
+                border: none;
+                box-shadow: 0rem 0rem 0.8125rem 0.2rem  rgba(37, 74, 93, .4);
+                &.show {
+                    opacity: 1;
+                    display: block;
+                    transition: all 0.4s ease-in-out;
+                   
+                } 
+                .dropdown-item {
+                    padding: 0.625rem;
+                    font-size: 0.75rem;
+                    font-weight: bold;
+                    transition: all 0.4s ease-in-out;
+                    &:active {
+                        color: $veryDarkBlue;
+                        background: none;
+                    }
+                    &:hover {
+                        color: $veryDarkBlue;
+                        background: $lightGray;  
+                        border-radius: 20px;
+                    }
+                    img {
+                        margin-left: 0.625rem;
+                    }
+                    &.teacher-name {
+                        color: $veryDarkBlue;
+                        font-weight: bold;
+                        font-size: 1rem;
+                    }
+                    &.teacher-uni {
+                        color: $mainGreen;
+                    }
+                    &:nth-of-type(1){
+                        &:hover {
+                            background: none;  
+                        }
+                    }
+                    &:nth-of-type(2){
+                        &:hover {
+                            background: none;  
+                        }
+                    }
+                }
+            }
+            &.no-opacity {
+                cursor: pointer;
+                .nav-link {
+                    opacity: 1;
+                }
+            }
+            &#contact {
+                @extend .gradient-background;
+                border-radius: 30px;
+                padding: 5px 10px;
+                @media (max-width:767px){
+                    border-radius: 50%;
+                    width: 50px;
+                    height: 50px;
+                    text-align: center;
+                }
+                .nav-link {
+                    @media (max-width:767px){
+                        margin-left: 0 !important;
+                    }
+                }
+                img {
+                    margin-left: 10px;
+                    @media (max-width:767px) {
+                        margin-left: 0px;
+                    }
+                }
+                span {
+                    @media (max-width:767px) {
+                        display: none;
+                    }
+                }
+            }
+            
+        }
+
+        .login {
+            padding: 2px 10px;
+            border-radius: 30px;
+            border: 1px solid #fff;
+            font-family: font-bold;
+            width: 150px;
+            text-align: center;
+            margin-right: 16px;
+            margin-top: 0px;
+            transition: all 0.4s ease-in-out;
+            margin-left: 0;
+            &:hover {
+                background: #fff;
+                a {
+                    color: #000;
+                }
+            }
+            .nav-link {
+                opacity: 1;
+                margin-left: 0;
+            }
+        }
+        .register {
+            @extend .login;
+            background: #fff;
+            cursor: pointer;
+            .nav-link {
+                color: #000;
+            }
+            &:hover {
+                background: transparent;
+                .nav-link {
+                    color: #fff;
+                }
+            }
+        }
+    }
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: #fff;
+        opacity: 0.53; /* Firefox */
+        font-size: 0.85rem;
+      }
+      :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: #fff;
+        opacity: 0.53;
+        font-size: 0.85rem;
+      }
+      ::-ms-input-placeholder { /* Microsoft Edge */
+        color: #fff;
+        opacity: 0.53;
+        font-size: 0.85rem;
+      }
+    .form-inline {
+        position: relative;
+        right: 22%;
+        @media (max-width:1199px) {
+        right: 10%;
+        }
+        @media (min-width:1900px){
+            right: 25%;
+
+        }
+        img {
+            position: absolute;
+            top: 13px;
+            left: 13px;
+        }
+        .form-control {
+            min-width: 355px;
+            background: transparent;
+            border-radius: 30px;
+            border-color: #fff;
+            padding: 1.375rem .75rem;
+            color: #fff;
+        }  
+    }
+    &--padding-right {
+        margin-right: 3.625rem;
+        @media (max-width:991px) {
+            margin-right: 0;
+
+        }
+        .nav-item {
+            margin-top: 1px;
+            .nav-link {
+                opacity: 1 !important;
+                font-family: font-regular !important;
+            }
+        }
+    }
+}
+.fixed-menu {
+    position: fixed;
+    // right: -991px;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    background: $lightBlue;
+    padding: 15px;
+    // opacity: 0;
+    display: block;
+    transition: all 0.4s ease-in-out;
+    // animation: fixed-menu 0.65s;
+    @media (max-width:400px) {
+        right: -400px; 
+    }
+    @media (min-width:401px) and (max-width:600px) {
+        right: -600px; 
+    }
+    @media (min-width:601px) and (max-width:767px) {
+        right: -767px; 
+    }
+    @media (min-width:768px) and (max-width:800px) {
+        right: -800px; 
+    }
+    @media (min-width:801px) and (max-width:991px) {
+        right: -991px; 
+    }
+    @media (min-width:992px){
+      display: none;
+    }
+
+    i {
+        cursor: pointer;
+        color: $veryDarkBlue;
+        padding: 30px ;
+    }
+    ul {
+        padding: 0;
+        margin: auto;
+        display: block;
+        text-align: center;
+        li {
+            padding: 20px 0;
+            a {
+                color: $veryDarkBlue;
+                opacity: 0.4;
+                font-size: 1em;
+            }
+        }
+        li.active {
+            a {
+                color: $veryDarkBlue;
+                font-family: fony-bold;
+                opacity: 1;
+                font-weight: bolder;
+                font-size: 1.1em;
+            }
+        }
+        li.login {
+            border: 2px solid $veryDarkBlue;
+            border-radius: 30px;
+            padding: 10px 30px;
+            width: 200px;
+            margin: auto;
+            margin-bottom: 20px;
+            margin-top: 40px;
+            transition: all 0.4s ease-in-out;
+            &:hover {
+              background: $veryDarkBlue;
+              a {
+                color: #fff;
+              }
+            }
+            a {
+                opacity: 1;
+                font-weight: bold;
+            }
+        }
+        li.register {
+            @extend li.login;
+            margin-top: 20px;
+            background: $veryDarkBlue;
+            box-shadow: 0.25rem 0.25rem 0.8125rem 0.5rem $lightBlue;
+            cursor: pointer;
+            &:hover {
+              background: transparent;
+              a {
+                color: $veryDarkBlue;
+              }
+            }
+            a {
+                color: #fff;
+            }
+        }
+    }
+}
+@keyframes opacityFade {
+    0% {
+      opacity: 0;
+      display: none;
+    }
+    100% {
+      opacity: 1;
+      display: block;
+    }
+}
+// @keyframes fixed-menu {
+//     0% {
+//         transform: scale(0);
+//     }
+//     100% {
+//         transform: scale(1);
+//     }
+
+// }

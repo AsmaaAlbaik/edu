@@ -1,0 +1,294 @@
+.course-card {
+  padding: 3.125rem 0;
+  &__selection {
+    margin: 0 0 1.875rem 0;
+    background: $lightBlue;
+    padding: 0.675rem .75rem;
+    border-radius: 3.125rem;
+    h5 {
+      font-family: font-bold;
+      text-align: right;
+      margin: .875rem .75rem;
+      font-size: 1.0625em;
+      color: $veryDarkBlue;
+    }
+    select.form-control {
+      // padding: 1.375rem .75rem;
+      border-color: #fff;
+      border-radius: 2.25rem;
+      padding: 0 20px;
+      height: calc(3em + 2px);
+      @media (max-width:768px) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  &__box {
+    background: #fff;
+    box-shadow: 0.25rem 0.25rem 0.8125rem 0.5rem $lightBlue;
+    display: block;
+    border-radius: 0.625rem;
+    padding: 0.625rem;
+    cursor: pointer;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+    .overlay {
+      transition: all 0.4s ease-in-out;
+    }
+    &:hover {
+      text-decoration: none;
+      .overlay {
+        display: block;
+        opacity: .95;
+
+      }
+      .course-card__course-img {
+        transform: rotate(-10deg) scale(1.3);
+      }
+      .course-card__course-title {
+        display: none;
+      }
+
+    }
+    &--request {
+      text-align: center;
+      .course-request {
+        @extend .gradient-background;
+        box-shadow: 0.25rem 0.25rem 0.8125rem 0.5rem #f1fafb;
+        display: block;
+        border-radius: 0.625rem;
+        height: 329px;
+        padding-top: 15%;
+        img {
+          margin-bottom: 10px;
+        }
+        p {
+          color: #fff;
+          font-size: 21px;
+          font-family: font-bold;
+        }
+      }
+    }
+
+  }
+  &__img-box {
+    position: relative;
+    margin-bottom: 0.9375rem;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+    border-radius: 0.625rem;
+    height: 250px;
+
+  }
+  &__course-img {
+    width: 100%;
+    border-radius: 0.625rem;
+    height: 250px;
+    object-fit: cover;
+    transition: all 0.4s ease-in-out;
+  }
+  &__course-title {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    color: #fff;
+    font-size: 1.2em;
+    bottom: 0px;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 100%;
+    background-image: linear-gradient(to top, $veryDarkBlue, transparent);
+    .course-live {
+      img.live {
+          @extend .gradient-orange-red-background;
+          border-radius: 50%;
+          width: 55px;
+          height: 55px;
+          object-fit: scale-down;
+          text-align: center;
+          display: block;
+          margin: 15px;
+          border: 3px solid #fff;
+      }
+    }
+    .course-progress {
+      border-radius: 50%;
+      width: 55px;
+      height: 55px;
+      background-color: #fff;
+      object-fit: scale-down;
+      text-align: center;
+      display: block;
+      margin: 15px;
+      canvas {
+        position: absolute;
+        top: 21px;
+        right: 21px;
+      }
+      .progress-number {
+        color: $veryDarkBlue;
+        font-size: 0.8rem;
+        font-weight: bold;
+        line-height: 3.8;
+        // border: 2px solid $mainGreen;
+        border-radius: 50%;
+        width: 48px;
+        height: 48px;
+        text-align: center;
+        margin: 3px;
+        top: 18px;
+        right: 13px;
+        position: absolute;
+      }
+      .circle--done {
+        top: 4px;
+        right: 3px;
+        width: 48px;
+        height: 48px;
+      }
+    }
+    p {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      font-family: font-bold;
+
+    }
+
+  }
+  &__university {
+    text-align: right;
+    img {
+      background-image: linear-gradient(to left, $mainBlue, $mainGreen);
+      border-radius: 50px;
+      padding: 7px;
+      width: 40px;
+      height: 40px;
+      object-fit: scale-down;
+    }
+    span {
+      color: $veryDarkBlue;
+      font-family: font-bold;
+      font-size: 0.75em;
+      padding-right: 0.4375rem;
+    }
+  }
+  &__code {
+    text-align: left;
+    span {
+      color: #fff;
+      background-image: linear-gradient(to left, $veryDarkBlue, #497294);
+      border-radius: 20px;
+      padding: 7px 15px;
+      display: inline-block;
+      font-family: font-bold;
+      font-size: 0.75em;
+      margin-top: 0.625rem;
+    }
+  }
+  .overlay {
+    z-index: 9;
+    border-radius: 10px;
+    display: none;
+    animation: opacityFade 0.65s;
+    transition: all 0.4s ease-in-out;
+    text-align: center;
+
+    .content {
+      margin-top: 40%;
+      animation: overlay 0.5s;
+      transform: translateY(-50%);
+      @media(min-width:450px) and (max-width:767px){
+        margin-top: 26%;
+      }
+    }
+    p {
+      font-family: font-bold;
+      color: #fff;
+      margin-bottom: 30px;
+      font-size: 1em;
+    }
+    button {
+      font-family: font-bold;
+      border-radius: 1.625rem;
+      border: 1px solid #fff;
+      color: #fff;
+      background: transparent;
+      padding: 8px 20px;
+      transition: all 0.4s ease-in-out;
+      margin-left: 5px;
+      @media (max-width:767px) {
+        margin-bottom: 10px;
+      }
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+      &:hover {
+        background: #fff;
+        color: $mainGreen;
+        a {
+          text-decoration: none;
+          color: $mainGreen;
+        }
+      }
+
+    }
+  }
+
+  @keyframes overlay {
+    0% {
+      margin-top: 77%;
+    }
+    100% {
+      height: 40%;
+    }
+   }
+
+
+  @keyframes opacityFade {
+    0% {
+      opacity: 0;
+      display: none;
+    }
+    100% {
+      opacity: 0.95;
+      display: block;
+    }
+   }
+
+
+  &__upload-more {
+    padding: 50px 0;
+    button, a {
+      background-image: linear-gradient(to left, $mainBlue, $mainGreen);
+      border-radius: 50px;
+      padding: 7px 20px;
+      color: #fff;
+      padding: 17px 40px;
+      box-shadow: 0.25rem 0.25rem 0.8125rem 0.5rem $lightBlue;
+      width: 230px;
+      font-family: font-bold;
+      &:hover {
+        color: #fff !important;
+      }
+      i {
+        margin-right: 10px;
+      }
+    }
+  }
+  &--subscription {
+    .course-card__box {
+      border-radius: 0.625rem 2.625rem 0.625rem 0.625rem;
+      padding: 0;
+
+    }
+    .course-card__img-box {
+      margin-bottom: 0;
+    }
+  }
+
+}

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="83" height="84" viewBox="0 0 83 84">
+    <defs>
+        <linearGradient id="prefix__a" x1="100%" x2="0%" y1="100%" y2="0%">
+            <stop offset="0%" stop-color="#0C9EE2"/>
+            <stop offset="100%" stop-color="#00D0D3"/>
+        </linearGradient>
+        <linearGradient id="prefix__b" x1="100%" x2="0%" y1="56.792%" y2="43.208%">
+            <stop offset="0%" stop-color="#0C9EE2"/>
+            <stop offset="100%" stop-color="#00D0D3"/>
+        </linearGradient>
+        <linearGradient id="prefix__c" x1="100%" x2="0%" y1="57.406%" y2="42.594%">
+            <stop offset="0%" stop-color="#0C9EE2"/>
+            <stop offset="100%" stop-color="#00D0D3"/>
+        </linearGradient>
+        <linearGradient id="prefix__d" x1="51.581%" x2="48.419%" y1="100%" y2="0%">
+            <stop offset="0%" stop-color="#0C9EE2"/>
+            <stop offset="100%" stop-color="#00D0D3"/>
+        </linearGradient>
+        <linearGradient id="prefix__e" x1="69.531%" x2="30.469%" y1="100%" y2="0%">
+            <stop offset="0%" stop-color="#0C9EE2"/>
+            <stop offset="100%" stop-color="#00D0D3"/>
+        </linearGradient>
+        <linearGradient id="prefix__f" x1="100%" x2="0%" y1="54.89%" y2="45.11%">
+            <stop offset="0%" stop-color="#0C9EE2"/>
+            <stop offset="100%" stop-color="#00D0D3"/>
+        </linearGradient>
+        <linearGradient id="prefix__g" x1="100%" x2="0%" y1="73.36%" y2="26.64%">
+            <stop offset="0%" stop-color="#0C9EE2"/>
+            <stop offset="100%" stop-color="#00D0D3"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(1.1 1.8)">
+        <circle cx="40.5" cy="40.5" r="40.5" stroke="url(#prefix__a)" stroke-width="1.8"/>
+        <g stroke-linecap="round" stroke-width="1.89" transform="translate(21.675 20.715)">
+            <path stroke="url(#prefix__b)" stroke-linejoin="round" d="M16.05 12.907L.951 7.615c-1.268-.446-1.268-1.57 0-2.017l15.1-5.292c1.216-.408 2.533-.408 3.75 0l15.098 5.292c1.269.446 1.269 1.57 0 2.017L19.8 12.907c-1.216.408-2.533.408-3.75 0z"/>
+            <path stroke="url(#prefix__c)" stroke-linejoin="round" d="M29.216 9.601l.966 4.778c1.01 6.237-25.515 6.237-24.513 0l.965-4.778"/>
+            <path stroke="url(#prefix__d)" stroke-linejoin="round" d="M33.045 8.257L33.045 18.885"/>
+            <ellipse cx="33.045" cy="22.667" stroke="url(#prefix__e)" stroke-linejoin="round" rx="2.362" ry="3.78"/>
+            <path stroke="url(#prefix__f)" stroke-linejoin="round" d="M15.468 31.716c2.517 1.002 5.392.283 7.14-1.786"/>
+            <path stroke="url(#prefix__a)" d="M13.2 22.691L13.2 24.581M22.65 22.691L22.65 24.581"/>
+            <path stroke="url(#prefix__g)" stroke-linejoin="round" d="M29.343 28.222c-2.204 5.749-6.487 9.563-11.418 9.563-5.48 0-10.181-4.725-12.086-11.6-1.48 1.069-3.315-.216-3.315-2.186-.068-.694.181-1.381.678-1.871.497-.49 1.188-.73 1.88-.652 0 0 0-1.12.061-2.03"/>
+        </g>
+    </g>
+</svg>

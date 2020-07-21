@@ -1,0 +1,91 @@
+.footer {
+    padding: 70px 0;
+    &__logo {
+        text-align: right;
+        img {
+            width: 70px;
+            margin-top: -25px;
+            @media (max-width:991px){
+                width: 50px;
+                display: block;
+                margin: auto;
+            }
+            @media (max-width:768px){
+                display: none;
+            }
+        }
+    }
+    &__links {
+        margin-top: 5px;
+        @media (max-width:768px){
+            display: none;
+        }
+        ul {
+            padding: 0;
+            @media (max-width:991px) {
+                display: block !important;
+                text-align: center;
+                margin: 0.875rem 0;
+            }
+            li {
+                margin-left: 0.9375rem;
+                font-size: 0.875em;
+                font-family: font-bold;
+                transition: all 0.4s ease-in-out;
+
+                @media (max-width:991px) {
+                    padding-bottom: .875rem;
+                }
+                a {
+                    font-family: font-bold;
+                    color: $veryDarkBlue;
+                    text-decoration: none;
+                    transition: all 0.4s ease-in-out;
+                    &:hover {
+                        color: $mainGreen;
+                    }
+                }
+            }
+        }
+    }
+    &__social {
+        text-align: center;
+        a {
+            margin-left: 0.9375rem;
+            font-family: font-bold;
+            i {
+                font-size: 1.6em;
+                padding-left: 10px;
+                color:  $mainBlue;
+                background: linear-gradient(to left, $mainBlue, $mainGreen);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                @media (min-width:992px) and (max-width:1024px){
+                    padding-left: 0;
+                }
+            }
+            @media (max-width:991px){
+                float: none;
+                text-align: center;
+                margin: 20px 0;
+                margin-left: 0.9375rem;
+
+            }
+        }
+    }
+    &__copy-right {
+        opacity: 0.6;
+        color: $veryDarkBlue;
+        margin-top: 65px;
+        @media (max-width:768px){
+            margin-top: 30px;
+        }
+        p {
+            font-family: font-bold;
+        }
+        @media (max-width:991px){
+            text-align: center;
+
+        }
+    }
+}

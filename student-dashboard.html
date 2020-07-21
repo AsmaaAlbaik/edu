@@ -1,0 +1,1572 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <!-- First Mobile Meta -->
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <!-- Interner Exeplorer (IE) Compatibility Meta -->
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="theme-color" content="#12c5bc">
+        <meta content="" name="description"/>
+        <meta content="" name="author"/>
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+        <!-- <link rel="icon" href="dist/img/logo.png?v='.env('APP_VERSION" type="image/x-icon"> -->
+        <!-- Add to home screen for Safari on iOS -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="Weather PWA">
+        <link rel="apple-touch-icon" href="">
+        <meta name="msapplication-TileImage" content="">
+        <meta name="msapplication-TileColor" content="#2F3BA2">
+
+        <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js?v='.env('APP_VERSION"></script>
+        <script src="js/respond.min.js?v='.env('APP_VERSION"></script>
+        <![endif]-->
+    
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+                integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"> -->
+
+        <!-- <link href="http://vjs.zencdn.net/7.0/video-js.min.css" rel="stylesheet"> -->
+        <!-- <link href="https://vjs.zencdn.net/7.5.5/video-js.css" rel="stylesheet" /> -->
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/videojs-resolution-switcher/0.4.2/videojs-resolution-switcher.min.css"> -->
+        <link rel="stylesheet" href="dist/css/global.css">
+        <link rel="stylesheet" href="dist/css/student-dashboard.css">
+        <!-- <script src="http://vjs.zencdn.net/7.0/video.min.js"></script> -->
+        <!-- <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script> -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-resolution-switcher/0.4.2/videojs-resolution-switcher.min.js"></script> -->
+
+    </head>
+<body>
+    <!-- header and navbar -->
+    <div class="fixed-menu">
+         <div class="container">
+             <!-- <i class="far fa-times-circle fa-2x"></i> -->
+             <img src="dist/img/close.svg" alt="close">
+            <ul class="list-unstyled">
+                <li class="active"><a href="#">الرئيسية</a></li>
+                <li><a href="#">طلب كورس</a></li>
+                <li><a href="#">عن أكاديمي</a></li>
+                <li><a href="#">الخدمات</a></li>
+                <li class="login" data-toggle="modal" data-target="#login-modal"><a href="#">تسجيل الدخول</a></li>
+                <li class="register" data-toggle="modal" data-target="#register-modal"><a href="#">انضم الينا</a></li>
+            </ul>
+         </div>           
+    </div>
+    <!-- <div class="row">
+        <div class="col"> -->
+    
+ 
+        <!-- </div>
+
+    </div> -->
+    <header class="home-header">
+        <div class="container-fluid">
+            <nav class="navbar navbar--padding-right navbar-expand-lg">
+                <a class="navbar-brand" href="#"> 
+                    <img class="img-responsive" src="dist/img/logo.svg" alt="logo">
+                </a>
+                <div class="navbar-toggler">
+                    <!-- <i class="fas fa-stream fa-1x"></i> -->
+                    <img src="dist/img/menu.svg" alt="menu" class="menu-icon">
+                </div>
+            
+                <div class="collapse navbar-collapse">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="ايجاد المنهج, كود الكورس, اسم الجامعة و أكثر..." aria-label="Search">
+                        <img src="dist/img/student_dashboard_icons/Слой 2.svg" alt="search">
+                    </form>
+                    <ul class="navbar-nav mr-auto"> 
+                        <li class="nav-item">
+                            <a class="nav-link" href="student-subscriptions.html">كورساتي</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">الرجوع إلى الرئيسية</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img class="teacher-photo" src="dist/img/teacher.jpg" alt="teacher-photo">
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item teacher-name" href="#">أحمد البيك</a>
+                                <a class="dropdown-item teacher-uni" href="#">جامعة الأميرة نورة</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">
+                                    <img src="dist/img/student_dashboard_icons/notification.svg" alt="icon">
+                                    الاشعارات
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                      
+                                </a>
+                                <a class="dropdown-item" href="teacher-profile.html">
+                                    <img src="dist/img/student_dashboard_icons/setting.svg" alt="icon">
+                                    اعدادات العضوية
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <img src="dist/img/student_dashboard_icons/support.svg" alt="icon">
+                                    الدعم الفني
+                                </a>
+                                    
+                                <a class="dropdown-item" href="#">
+                                    <img src="dist/img/student_dashboard_icons/sign out.svg" alt="icon">
+                                    تسجيل الخروج
+                                </a>
+                                              
+                                
+                            </div>
+                        </li>
+                   
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+  
+    <section class="student-dashboard" id="app">
+
+        <div class="tab tab--user">
+            <!-- Nav pills -->
+            <ul class="nav nav-pills">
+                <li class="nav-item" id="step1" data-step="1">
+                    <a class="nav-link active" data-toggle="pill" href="#about-course">
+                        <!--     
+                        <object type="image/svg+xml" data="https://mytest.academi.sa/svg/write-board.svg"
+                                class="svg-content"></object> -->
+                        <img src="dist\img\student_dashboard_icons/write-board.svg" alt="icon">
+                        <!-- <embed type="image/svg+xml" src="https://mytest.academi.sa/svg/write-board.svg" /> -->
+                        <span>دروس الدورة</span>
+                    </a>
+                </li>
+                <li class="nav-item" id="step2" data-step="2">
+                    <a class="nav-link question-and-answer" data-toggle="pill" href="#student-questions">
+                        <!-- <object type="image/svg+xml" data="https://mytest.academi.sa/svg/question-and-answer.svg"
+                                class="svg-content"></object> -->
+                        <img src="dist\img\student_dashboard_icons/question-and-answer.svg" alt="icon">
+    
+                        <span>سؤال وجواب</span>
+                    </a>
+                </li>
+                <li class="nav-item" id="step3" data-step="3">
+                    <a class="nav-link" data-toggle="pill" href="#group-chat">
+                        <!-- <object type="image/svg+xml" data="https://mytest.academi.sa/svg/lesson.svg"
+                                class="svg-content"></object> -->
+                        <img src="dist\img\student_dashboard_icons/lesson.svg" alt="icon">
+                        <span>جروب الدورة</span>
+    
+                    </a>
+                </li>
+                <li class="nav-item" id="step4" data-step="4">
+                    <a class="nav-link" data-toggle="pill" href="#teacher-chat">
+                        <!-- <object type="image/svg+xml" data="https://mytest.academi.sa/svg/answer.svg"
+                                class="svg-content"></object> -->
+                            <img src="dist\img\student_dashboard_icons/answer.svg" alt="icon">
+                        <span>محادثة مباشرة</span>
+    
+                    </a>
+                </li>
+                <li class="nav-item" id="step5" data-step="5">
+                    <a class="nav-link" data-toggle="pill" href="#certification">
+                        <!-- <object type="image/svg+xml" data="https://mytest.academi.sa/svg/certificate.svg"
+                                class="svg-content"></object> -->
+                        <img src="dist\img\student_dashboard_icons/certificate.svg" alt="icon">  
+                        <span>شهادة الدورة</span>
+    
+                    </a>
+                </li>
+<!--     
+                <li class="nav-item" id="step6" data-step="6">
+                    <a class="nav-link" id="live" data-toggle="pill" href="#live-chat">
+                
+                        <img src="dist/img/student_dashboard_icons/live-stream.svg" alt="icon">  
+                        <span>محاضرة مباشرة</span>
+    
+                    </a>
+                </li> -->
+            </ul>
+        </div>
+        
+        <div class="container-fluid">
+            <!-- Tab panes -->
+            <div class="student-dashboard__content tab-content">
+                <div class="tab-pane active" id ="about-course">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-5 col-lg-5">
+                            <div class="student-dashboard__right-content">
+                                <h4 class="student-dashboard__course-title">نظرية الحوسبة</h4>
+                                <h4 class="student-dashboard__course-title">جامعة طيبة فرع ينبع & المهد</h4>
+                                <p class="student-dashboard__chapter-number"><span>5 وحدات </span>| <span> 30 دروس</span></p>
+                                <div class="student-dashboard__chapters">
+                                    <div id="accordion2" class="accordion">
+                                        <div class="card">
+                                            <div class="card-header" id="headingOne"data-toggle="collapse" href="#collapseOne">
+                                                
+                                            <h5 class="mb-0">
+                                                <div class="circle-progress">
+                                                    <span class="number">25%</span>
+                                                </div>
+                                                <button class="btn btn-link" data-toggle="collapse" href="#collapseOne">
+                                                    مقدمة المنهج    
+                                                </button>
+                                                <i class="fas fa-plus"></i>
+                                            </h5>
+                                            </div>
+                                        
+                                            <div id="collapseOne" class="collapse show"  data-parent="#accordion2">
+                                            <div class="card-body">
+                                                <ul class="list-unstyled">
+                                                    <li class="active">
+                                                        <!-- <span class="circle">
+                                                            <div class="check"></div>
+                                                        </span> -->
+                                                        <img src="dist/img/student_dashboard_icons/done.svg" alt="answer">
+                                                        <span class="lesson-name">أهمية علم الاقصاد الهندسي</span>
+                                                        <span class="free">مجاني</span>
+                                                        <p class="lesson-time">25 دقيقة</p>
+                                                    </li>
+                                                    <li>
+                                                        <!-- <span class="circle">
+                                                            <div class="check"></div>
+                                                        </span> -->
+                                                        <img src="dist/img/student_dashboard_icons/done.svg" alt="answer">
+                                                        <span class="lesson-name">أهمية علم الاقصاد الهندسي</span>
+                                                        <span class="free">مجاني</span>
+                                                        <p class="lesson-time">25 دقيقة</p>
+    
+                                                    </li>
+                                                    <li>
+                                                        <span class="circle"></span>
+                                                        <span class="lesson-name">أهمية علم الاقصاد الهندسي</span>
+                                                        <p class="lesson-time">25 دقيقة</p>
+    
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="heading2" data-toggle="collapse" href="#collapse2">
+                                                
+                                            <h5 class="mb-0">
+                                                <div class="circle-progress">
+                                                    <span class="number">25%</span>
+                                                </div>
+                                                <button class="btn btn-link" data-toggle="collapse" href="#collapse2">
+                                                    مقدمة المنهج    
+                                                </button>
+                                                <i class="fas fa-plus"></i>
+                                            </h5>
+                                            </div>
+                                        
+                                            <div id="collapse2" class="collapse show"  data-parent="#accordion2">
+                                            <div class="card-body">
+                                                <ul class="list-unstyled">
+                                                    <li class="">
+                                                        <!-- <span class="circle">
+                                                            <div class="check"></div>
+                                                        </span> -->
+                                                        <img src="dist/img/student_dashboard_icons/done.svg" alt="answer">
+                                                        <span class="lesson-name">أهمية علم الاقصاد الهندسي</span>
+                                                        <span class="free">مجاني</span>
+                                                        <p class="lesson-time">25 دقيقة</p>
+                                                    </li>
+                                                    <li>
+                                                        <!-- <span class="circle">
+                                                            <div class="check"></div>
+                                                        </span> -->
+                                                        <img src="dist/img/student_dashboard_icons/done.svg" alt="answer">
+                                                        <span class="lesson-name">أهمية علم الاقصاد الهندسي</span>
+                                                        <span class="free">مجاني</span>
+                                                        <p class="lesson-time">25 دقيقة</p>
+    
+                                                    </li>
+                                                    <li>
+                                                        <span class="circle"></span>
+                                                        <span class="lesson-name">أهمية علم الاقصاد الهندسي</span>
+                                                        <p class="lesson-time">25 دقيقة</p>
+    
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="heading3" data-toggle="collapse" href="#collapse3">
+                                                    
+                                            <h5 class="mb-0">
+                                                <div class="circle-progress">
+                                                    <span class="number">25%</span>
+                                                </div>
+                                                <button class="btn btn-link" data-toggle="collapse" href="#collapse3" >
+                                                    مقدمة المنهج    
+                                                </button>
+                                                <i class="fas fa-plus"></i>
+                                            </h5>
+                                            </div>
+                                            
+                                            <div id="collapse3" class="collapse show" data-parent="#accordion2">
+                                                <div class="card-body">
+                                                    <ul class="list-unstyled">
+                                                        <li class="">
+                                                            <!-- <span class="circle">
+                                                                <div class="check"></div>
+                                                            </span> -->
+                                                            <img src="dist/img/student_dashboard_icons/done.svg" alt="answer">
+                                                            <span class="lesson-name">أهمية علم الاقصاد الهندسي</span>
+                                                            <span class="free">مجاني</span>
+                                                            <p class="lesson-time">25 دقيقة</p>
+                                                        </li>
+                                                        <li>
+                                                            <!-- <span class="circle">
+                                                                <div class="check"></div>
+                                                            </span> -->
+                                                            <img src="dist/img/student_dashboard_icons/done.svg" alt="answer">
+                                                            <span class="lesson-name">أهمية علم الاقصاد الهندسي</span>
+                                                            <span class="free">مجاني</span>
+                                                            <p class="lesson-time">25 دقيقة</p>
+    
+                                                        </li>
+                                                        <li>
+                                                            <span class="circle"></span>
+                                                            <span class="lesson-name">أهمية علم الاقصاد الهندسي</span>
+                                                            <p class="lesson-time">25 دقيقة</p>
+                                                        </li>
+                                                        
+                                                        
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end accordion -->
+                                </div>
+                                <!-- student-dashboard__chapters -->
+                                <!-- <div class="download-course">
+                                    <button class="btn btn-block" type="button">
+                                        <img src="dist/img/student_dashboard_icons/download-folder-filled.svg" alt="file">
+                                        <span>
+                                            <h5>تحميل الدروة</h5>
+                                            <p>يمكنك تحميل الدورة كاملة</p>
+                                        </span>
+                                    </button>
+                                </div> -->
+                                <!-- <div class="goToLeft">
+                                    <i class="fas fa-arrow-left"></i>
+                                </div> -->
+                            </div>
+                            <!-- student-dashboard__right-content -->
+                        </div>
+                        <!-- end col-4 -->
+                        <div class="col-xl-8 col-lg-7">
+                             <div class="student-dashboard__left-content student-dashboard__left-content--scroll">
+                                <div class="student-dashboard__about-course">
+                                    <div class="box box--larg-padding">
+                                        <div class="row">
+                                            <div class="col-md-12 col-lg-6">
+                                                <div class="lesson-details">
+                                                    <h4 class="lesson-name">كيفية تقييم الطالب للمادة</h4>
+                                                    <p class="lesson-time"> 25 دقيقة</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 col-lg-6">
+                                                <!-- <div class="evaluating">
+                                                    <button class="btn">
+                                                        <img src="dist/img/student_dashboard_icons/broken-heart.svg" alt="evaluating">
+                                                        <span>ضعيف</span>
+                                                    </button>
+                                                    <button class="btn">
+                                                        <img src="dist/img/student_dashboard_icons/heart.svg" alt="evaluating">
+                                                        <span>ممتاز</span>
+                                                    </button>
+                                                </div> -->
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xl-12">
+                                                <div class="lesson-video">
+                                                        <video width="100%" height="300" id="my-player"
+                                                            poster="dist/img/vue1.png"  
+                                                            class="video-js" controls preload="none"
+                                                            style="">
+                                                            <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                                                            <source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+                                                            <source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
+                                                            <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+                                                    </video>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- end row -->
+                                        <div class="lesson-button">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <button class="btn prvButton" id="prvButton">
+                                                        <i class="fas fa-angle-right"></i>
+                                                        الدرس السابق</button>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <button class="btn nextButton" id="nextButton">
+                                                        الدرس التالي
+                                                        <i class="fas fa-angle-left"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                     
+                                    </div>
+                                
+                                </div>
+                            </div>
+                            <!-- student-dashboard__left-content -->
+                            <div class="playlist">
+                                <img src="dist/img/student_dashboard_icons/playlist.svg" alt="playlist">
+                            </div>
+                        </div>
+                        <!-- end col-8 -->
+                    </div>
+                  
+                </div>
+                <!-- end about-course -->
+                <div class="tab-pane fade" id="student-questions">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-5 col-lg-5">
+                            <div class="student-dashboard__right-content">
+                                <h4 class="student-dashboard__course-title">نظرية الحوسبة</h4>
+                                <h4 class="student-dashboard__course-title">جامعة طيبة فرع ينبع & المهد</h4>
+                                <p class="student-dashboard__chapter-number"><span>5 وحدات </span>| <span> 30 دروس</span></p>
+                                <div class="student-dashboard__chapters student-dashboard__questions">
+                                    <ul class="list-unstyled nav nav-pills">
+                                        <li> 
+                                            <a class="active" data-toggle="pill" href="#question1">
+                                                <span class="answered">
+                                                    <img src="dist/img/student_dashboard_icons/done.svg" alt="answer">
+                                                    تمت الاجابة</span>
+                                                <div class="about-question">
+                                                    <h5 class="question-title">ما أهمية علم الاقتصاد الهندسي</h5>
+                                                    <p class="who-asked">أحمد هنداوي</p>
+                                                </div>
+                                            </a> 
+                                          
+                                        </li>
+                                        <!-- end li -->
+                                        <li> 
+                                            <a data-toggle="pill" href="#question2">
+                                                <span class="answered answered--not">
+                                                    <img src="dist/img/student_dashboard_icons/not_done.svg" alt="answer">
+                                                        غير مجاب</span>
+                                                <div class="about-question">
+                                                    <h5 class="question-title">ما أهمية علم الاقتصاد الهندسي</h5>
+                                                    <p class="who-asked">أحمد هنداوي</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <!-- end li -->
+                                        <li> 
+                                            <a data-toggle="pill" href="#question3">
+                                                <span class="answered">
+                                                    <img src="dist/img/student_dashboard_icons/done.svg" alt="answer">
+                                                    تمت الاجابة</span>
+                                                <div class="about-question">
+                                                    <h5 class="question-title">ما أهمية علم الاقتصاد الهندسي</h5>
+                                                    <p class="who-asked">أحمد هنداوي</p>
+                                                </div>
+                                            </a>
+                                        </li>   
+                                        <!-- end li -->
+                                        <li> 
+                                            <a href="" data-toggle="pill" href="#question4">
+                                                <span class="answered answered--not">
+                                                    <img src="dist/img/student_dashboard_icons/not_done.svg" alt="answer">
+                                                        غير مجاب</span>
+                                                <div class="about-question">
+                                                    <h5 class="question-title">ما أهمية علم الاقتصاد الهندسي</h5>
+                                                    <p class="who-asked">أحمد هنداوي</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <!-- end li -->
+                                        <li> 
+                                            <a href="" data-toggle="pill" href="#question5">
+                                                <span class="answered">
+                                                    <img src="dist/img/student_dashboard_icons/done.svg" alt="answer">
+                                                    تمت الاجابة</span>
+                                                <div class="about-question">
+                                                    <h5 class="question-title">ما أهمية علم الاقتصاد الهندسي</h5>
+                                                    <p class="who-asked">أحمد هنداوي</p>
+                                                </div>
+                                            </a>
+                                        </li>   
+                                        <!-- end li -->
+                                        <li> 
+                                            <a href="" data-toggle="pill" href="#question6">
+                                                <span class="answered answered--not">
+                                                    <img src="dist/img/student_dashboard_icons/not_done.svg" alt="answer">
+                                                        غير مجاب</span>
+                                                <div class="about-question">
+                                                    <h5 class="question-title">ما أهمية علم الاقتصاد الهندسي</h5>
+                                                    <p class="who-asked">أحمد هنداوي</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <!-- end li -->
+                                    </ul>
+                                </div>
+                                <!-- student-dashboard__chapters -->
+                                <!-- <div class="download-course">
+                                    <button class="btn btn-block" type="button">
+                                        <img src="dist/img/student_dashboard_icons/download-folder-filled.svg" alt="file">
+                                        <span>
+                                            <h5>تحميل الدروة</h5>
+                                            <p>يمكنك تحميل الدورة كاملة</p>
+                                        </span>
+                                    </button>
+                                </div> -->
+                                <div class="goToLeft">
+                                    <i class="fas fa-arrow-left"></i>
+                                </div>
+                            </div>
+                            <!-- student-dashboard__right-content -->
+                        </div>
+                        <!-- end col-4 -->
+                        <div class="col-xl-8 col-lg-7">
+                            <div class="student-dashboard__left-content">
+                                <div class="student-dashboard__about-course student-dashboard__answer  tab-content container">
+                                    <div class="box tab-pane active" id="question1">
+                                        <div class="student-question ">
+                                                <div class="student">
+                                                    <div class="row">
+                                                        <div class="col-md-2 col-lg-12 col-xl-2">
+                                                                <span class="answered">
+                                                                        <img src="dist/img/student_dashboard_icons/done.svg" alt="answer">
+                                                                        تمت الاجابة</span>
+                                                        </div>
+                                                        <div class="col-md-10 col-lg-12 col-xl-10">
+                                                                <div class="about-question">
+                                                                        <h5 class="question-title">ما أهمية علم الاقتصاد الهندسي</h5>
+                                                                        <p class="who-asked">أحمد هنداوي</p>
+                                                                    </div>
+                                                            
+                                                                
+                                                                <p class="question-details">
+                                                                        منذ زمن بعيد، وكانت الحواجز الأكثر أهمية للمهندسين هى الحواجز التكنولوجية. الأشياء التي المهندسينيريدوا ان يفعلوها، انهم ببساطة لا يعرفون حتى الآن كيفية القيام بذلك،
+                                                                            أو لم تضع حتى الآن الأدوات اللازمة لذلك.
+                                                                            هناك بالتأكيد العديد من التحديات أكثر مثل هذه 
+                                                                        التي تواجه في الوقت الحاضر المهندسين ،
+                                                                            لذالك لماذا ندرس هذة المادة ،
+                                                                            ولماذا علم الاقتصاد هي مادة هامة ؟
+                                                                <p>
+                                                        </div>
+                                                    </div>
+                                                
+                                            
+                                                </div>
+                                        </div>
+                                        <div class="student-question">
+                                            <div class="teacher">
+                                                    <div class="row">
+                                                        <div class="col-xl-2">
+                                                        <span class="answered">
+                                                                <img src="dist/img/student_dashboard_icons/help.svg" alt="answer">
+                                                                    الاجابة
+                                                            </span>
+                                                        </div>
+                                                        <!-- end col-2 -->
+                                                
+                                                    <div class="col-xl-10">
+                                                        <div class="replay">
+                                                            <div class="about-question about-question--bg">
+                                                                <img src="dist/img/teacher.jpg" alt="teacher-photo">
+                                                                <!-- <div class="about-teacher"> -->
+                                                                <span class="about-teacher">
+                                                                    <h4 class="teacher-name">م. أحمد البيك</h4>
+                                                                    <p class="teacher-qualification">هندسة معمارية الجامعة الاسلامية</p>
+                                                                </span>
+                                                            </div>
+                                                            <p class="question-details">
+                                                                    منذ زمن بعيد، وكانت الحواجز الأكثر أهمية للمهندسين هى الحواجز التكنولوجية. الأشياء التي المهندسينيريدوا ان يفعلوها، انهم ببساطة لا يعرفون حتى الآن كيفية القيام بذلك،
+                                                                    أو لم تضع حتى الآن الأدوات اللازمة لذلك.
+                                                                    هناك بالتأكيد العديد من التحديات أكثر مثل هذه 
+                                                                    التي تواجه في الوقت الحاضر المهندسين ،
+                                                                    لذالك لماذا ندرس هذة المادة ،
+                                                                    ولماذا علم الاقتصاد هي مادة هامة ؟
+                                                            <p>                                                     
+                                                        </div>
+                                                        <!-- end replay div -->
+                                                    </div>
+                                                    <!-- end col-10 -->
+                                                </div>
+                                                <!-- end row -->
+                                            </div>
+                                            <!-- end teacher div  -->
+                                        </div>
+                               
+                                    </div>
+                                    <div class="box tab-pane" id="question2">
+                                        <div class="student-question ">
+                                                <div class="student">
+                                                    <div class="row">
+                                                        <div class="col-md-2 col-lg-12 col-xl-2">
+                                                                <span class="answered">
+                                                                        <img src="dist/img/student_dashboard_icons/done.svg" alt="answer">
+                                                                        تمت الاجابة</span>
+                                                        </div>
+                                                        <div class="col-md-10 col-lg-12 col-xl-10">
+                                                                <div class="about-question">
+                                                                        <h5 class="question-title">ما أهمية علم الاقتصاد الهندسي</h5>
+                                                                        <p class="who-asked">أحمد هنداوي</p>
+                                                                    </div>
+                                                            
+                                                                
+                                                                <p class="question-details">
+                                                                        منذ زمن بعيد، وكانت الحواجز الأكثر أهمية للمهندسين هى الحواجز التكنولوجية. الأشياء التي المهندسينيريدوا ان يفعلوها، انهم ببساطة لا يعرفون حتى الآن كيفية القيام بذلك،
+                                                                            أو لم تضع حتى الآن الأدوات اللازمة لذلك.
+                                                                            هناك بالتأكيد العديد من التحديات أكثر مثل هذه 
+                                                                        التي تواجه في الوقت الحاضر المهندسين ،
+                                                                            لذالك لماذا ندرس هذة المادة ،
+                                                                            ولماذا علم الاقتصاد هي مادة هامة ؟
+                                                                <p>
+                                                        </div>
+                                                    </div>
+                                                
+                                            
+                                                </div>
+                                        </div>
+                                        <div class="student-question">
+                                            <div class="teacher">
+                                                    <div class="row">
+                                                        <div class="col-xl-2">
+                                                        <span class="answered">
+                                                                <img src="dist/img/student_dashboard_icons/help.svg" alt="answer">
+                                                                    الاجابة
+                                                            </span>
+                                                        </div>
+                                                        <!-- end col-2 -->
+                                                
+                                                    <div class="col-xl-10">
+                                                        <div class="replay">
+                                                            <div class="about-question about-question--bg">
+                                                                <img src="dist/img/teacher.jpg" alt="teacher-photo">
+                                                                <!-- <div class="about-teacher"> -->
+                                                                <span class="about-teacher">
+                                                                    <h4 class="teacher-name">م. أحمد البيك</h4>
+                                                                    <p class="teacher-qualification">هندسة معمارية الجامعة الاسلامية</p>
+                                                                </span>
+                                                            </div>
+                                                            <p class="question-details">
+                                                                    منذ زمن بعيد، وكانت الحواجز الأكثر أهمية للمهندسين هى الحواجز التكنولوجية. الأشياء التي المهندسينيريدوا ان يفعلوها، انهم ببساطة لا يعرفون حتى الآن كيفية القيام بذلك،
+                                                                    أو لم تضع حتى الآن الأدوات اللازمة لذلك.
+                                                                    هناك بالتأكيد العديد من التحديات أكثر مثل هذه 
+                                                                    التي تواجه في الوقت الحاضر المهندسين ،
+                                                                    لذالك لماذا ندرس هذة المادة ،
+                                                                    ولماذا علم الاقتصاد هي مادة هامة ؟
+                                                            <p>                                                     
+                                                        </div>
+                                                        <!-- end replay div -->
+                                                    </div>
+                                                    <!-- end col-10 -->
+                                                </div>
+                                                <!-- end row -->
+                                            </div>
+                                            <!-- end teacher div  -->
+                                        </div>
+                               
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- student-dashboard__left-content -->
+                            <div class="playlist">
+                                <img src="dist/img/student_dashboard_icons/playlist.svg" alt="playlist">
+                            </div>
+                        </div>
+                        <!-- end col-8 -->
+                    </div>
+                    <!-- end row -->
+                </div>
+                <!-- end student-question -->
+                <div class="tab-pane fade" id="group-chat">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-5 col-lg-5">
+                            <div class="student-dashboard__right-content">
+                                <h4 class="student-dashboard__course-title">نظرية الحوسبة</h4>
+                                <h4 class="student-dashboard__course-title">جامعة طيبة فرع ينبع & المهد</h4>
+                                <p class="student-dashboard__chapter-number"><span>5 وحدات </span>| <span> 30 دروس</span></p>
+                                <div class="student-dashboard__chapters student-dashboard__group-chat">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <span class="online"></span>
+                                            <span class="about-student">
+                                                <img src="dist/img/student.jpg" alt="student-photo">
+                                                <span class="more">
+                                                    <h4 class="student-name">أحمد هنداوي</h4>
+                                                    <p class="student-uni">جامعة الأميرة نورة</p>
+                                                </span>
+                                            </span>
+
+                                        </li>
+                                        <li>
+                                            <span class="online online--off"></span>
+                                            <span class="about-student">
+                                                <img src="dist/img/student2.png" alt="student-photo">
+                                                <span class="more">
+                                                    <h4 class="student-name">محمد الحامد</h4>
+                                                    <p class="student-uni">جامعة الملك خالد</p>
+                                                </span>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="online"></span>
+                                            <span class="about-student">
+                                                <img src="dist/img/student.jpg" alt="student-photo">
+                                                <span class="more">
+                                                    <h4 class="student-name">أحمد البيك</h4>
+                                                    <p class="student-uni">الجامعة الاسلامية</p>
+                                                </span>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="online online--off"></span>
+                                            <span class="about-student">
+                                                <img src="dist/img/student2.png" alt="student-photo">
+                                                <span class="more">
+                                                    <h4 class="student-name">حسام البيك</h4>
+                                                    <p class="student-uni">الجامعة الاسلامية</p>
+                                                </span>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="online online--off"></span>
+                                            <span class="about-student">
+                                                <img src="dist/img/student2.png" alt="student-photo">
+                                                <span class="more">
+                                                    <h4 class="student-name">إبراهيم البيك</h4>
+                                                    <p class="student-uni">الجامعة الاسلامية</p>
+                                                </span>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- student-dashboard__chapters -->
+                                <!-- <div class="download-course">
+                                    <button class="btn btn-block" type="button">
+                                        <img src="dist/img/student_dashboard_icons/download-folder-filled.svg" alt="file">
+                                        <span>
+                                            <h5>تحميل الدروة</h5>
+                                            <p>يمكنك تحميل الدورة كاملة</p>
+                                        </span>
+                                    </button>
+                                </div> -->
+                                <div class="goToLeft">
+                                    <i class="fas fa-arrow-left"></i>
+                                </div>
+                            </div>
+                            <!-- student-dashboard__right-content -->
+                        </div>
+                        <!-- end col-4 -->
+                        <div class="col-xl-8 col-lg-7">
+                            <div class="student-dashboard__left-content student-dashboard__left-content--chat">
+                                <div class="student-dashboard__about-course student-dashboard__chat container">
+                              
+                                    <div class="mesgs">
+                                        <div class="msg_history">
+                                            <div class="incoming_msg"> 
+                                                <div class="received_msg">
+                                                    <div class="received_withd_msg">
+                                                        <p>
+                                                            incomming asmas                       
+                                                        </p>
+                                                        <span class="time_date"> 11:01 AM    |    June 9</span>
+                                                        <div class="incoming_msg_img">
+                                                            <img src="dist/img/student.jpg" alt="sunil">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                             
+                                            </div>
+                                            <div class="outgoing_msg" v-for="msg in massagesList">
+                                                <div class="sent_msg">
+                                                    <div class="content">
+                                                        <p> {{ msg.content }} </p>
+                                                    </div>
+                                                    
+                                                    <span class="time_date"> {{ msg.date }}   |    June 9</span>
+                                                 </div>
+                                            </div>
+                                            <div class="incoming_msg"> 
+                                                <div class="received_msg">
+                                                    <div class="received_withd_msg">
+                                                        <p>
+                                                            incomming asmmmmmmmmmmmmmmmmmaaa 
+                                                            incomeing                       
+                                                        </p>
+                                                        <span class="time_date"> 11:01 AM    |    June 9</span>
+                                                        <div class="incoming_msg_img">
+                                                            <img src="dist/img/student.jpg" alt="sunil">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                             
+                                            </div>
+                                        
+                                        </div>
+                                
+                                    </div>
+                                    <!-- end mesgs div -->
+                          
+                                </div>
+                     
+                                <div class="type_msg">
+                                    <div class="input_msg_write">
+                                        
+                                        <div class="row">
+                                            <div class="col-6 col-sm-9 col-lg-8 col-xl-9">
+                                                <img class="smile" src="dist/img/student_dashboard_icons/smile.svg" alt="smile">
+                                                <input type="text" 
+                                                class="write_msg form-control" 
+                                                placeholder="اكتب رسالتك هنا..."
+                                                v-model="massage.content"
+                                                @keyup.enter="sendMsg()"
+                                                />
+                                            </div>
+                                            <div class="col-6 col-sm-3 col-lg-4 col-xl-3">
+                                                <div class="chat-icon">
+                                                    <a href="">
+                                                        <img src="dist/img/student_dashboard_icons/attachment.svg" alt="chat-icon">
+                                                    </a>
+                                                    <a href="">
+                                                        <img src="dist/img/student_dashboard_icons/microphone_3.svg" alt="chat-icon">
+                                                    </a>
+                                                    <a href="" @click.prevent="sendMsg">
+                                                        <img src="dist/img/student_dashboard_icons/send-mail.svg" alt="chat-icon">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- student-dashboard__left-content -->
+                            <div class="playlist">
+                                <img src="dist/img/student_dashboard_icons/playlist.svg" alt="playlist">
+                            </div>
+                        </div>
+                        <!-- end col-8 -->
+                   
+                    </div>
+                    <!-- end row -->
+                </div>
+                <!-- end group-chat -->
+                <div class="tab-pane fade" id="teacher-chat">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-5 col-lg-5">
+                            <div class="student-dashboard__right-content">
+                                <h4 class="student-dashboard__course-title">نظرية الحوسبة</h4>
+                                <h4 class="student-dashboard__course-title">جامعة طيبة فرع ينبع & المهد</h4>
+                                <p class="student-dashboard__chapter-number"><span>5 وحدات </span>| <span> 30 دروس</span></p>
+                                <div class="student-dashboard__chapters student-dashboard__group-chat group-chat--teacher  text-center">
+                                    <div class="about-teacher">
+                                        <div class="teacher-img">
+                                            <img src="dist/img/teacher.jpg" alt="teacher">
+                                            <span class="online">متاح</span>
+                                        </div>
+                                        <div class="teacher-details">
+                                            <h4 class="teacher-name">م. أحمد البيك</h4>
+                                            <p class="teacher-uni">الجامعة الاسلامية</p>
+                                        </div>
+                                        
+
+                                    </div>
+                                </div>
+                                <!-- student-dashboard__chapters -->
+                                <!-- <div class="download-course">
+                                    <button class="btn btn-block" type="button">
+                                        <img src="dist/img/student_dashboard_icons/download-folder-filled.svg" alt="file">
+                                        <span>
+                                            <h5>تحميل الدروة</h5>
+                                            <p>يمكنك تحميل الدورة كاملة</p>
+                                        </span>
+                                    </button>
+                                </div> -->
+                                <div class="goToLeft">
+                                    <i class="fas fa-arrow-left"></i>
+                                </div>
+                            </div>
+                            <!-- student-dashboard__right-content -->
+                        </div>
+                        <!-- end col-4 -->
+                        <div class="col-xl-8 col-lg-7">
+                            <div class="student-dashboard__left-content student-dashboard__left-content--chat">
+                                <div class="student-dashboard__about-course student-dashboard__chat container">
+                              
+                                    <div class="mesgs">
+                                        <div class="msg_history">
+                                            <div class="incoming_msg"> 
+                                                <div class="received_msg">
+                                                    <div class="received_withd_msg">
+                                                        <p>
+                                                            incomming asmas                       
+                                                        </p>
+                                                        <span class="time_date"> 11:01 AM    |    June 9</span>
+                                                        <div class="incoming_msg_img">
+                                                            <img src="dist/img/student.jpg" alt="sunil">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                             
+                                            </div>
+                                            <div class="outgoing_msg" v-for="msg in massagesList">
+                                                <div class="sent_msg">
+                                                    <div class="content">
+                                                        <p> {{ msg.content }} </p>
+                                                    </div>
+                                                    
+                                                    <span class="time_date"> {{ msg.date }}   |    June 9</span>
+                                                 </div>
+                                            </div>
+                                            <div class="incoming_msg"> 
+                                                <div class="received_msg">
+                                                    <div class="received_withd_msg">
+                                                        <p>
+                                                            incomming asmmmmmmmmmmmmmmmmmaaa 
+                                                            incomeing                       
+                                                        </p>
+                                                        <span class="time_date"> 11:01 AM    |    June 9</span>
+                                                        <div class="incoming_msg_img">
+                                                            <img src="dist/img/student.jpg" alt="sunil">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                             
+                                            </div>
+                                        
+                                        </div>
+                                
+                                    </div>
+                                    <!-- end mesgs div -->
+                          
+                                </div>
+                     
+                                <div class="type_msg">
+                                    <div class="input_msg_write">
+                                        
+                                        <div class="row">
+                                            <div class="col-6 col-sm-9 col-lg-8 col-xl-9">
+                                                <img class="smile" src="dist/img/student_dashboard_icons/smile.svg" alt="smile">
+                                                <input type="text" 
+                                                class="write_msg form-control" 
+                                                placeholder="اكتب رسالتك هنا..."
+                                                v-model="massage.content"
+                                                @keyup.enter="sendMsg()"
+                                                />
+                                            </div>
+                                            <div class="col-6 col-sm-3 col-lg-4 col-xl-3">
+                                                <div class="chat-icon">
+                                                    <a href="">
+                                                        <img src="dist/img/student_dashboard_icons/attachment.svg" alt="chat-icon">
+                                                    </a>
+                                                    <a href="">
+                                                        <img src="dist/img/student_dashboard_icons/microphone_3.svg" alt="chat-icon">
+                                                    </a>
+                                                    <a href="" @click.prevent="sendMsg">
+                                                        <img src="dist/img/student_dashboard_icons/send-mail.svg" alt="chat-icon">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- student-dashboard__left-content -->
+                            <div class="playlist">
+                                <img src="dist/img/student_dashboard_icons/playlist.svg" alt="playlist">
+                            </div>
+                        </div>
+                        <!-- end col-8 -->
+
+
+                    </div>
+                    <!-- end row -->
+                </div>
+                <!-- end teacher-chat -->
+                <div class="tab-pane fade" id="certification">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-5 col-lg-5">
+                            <div class="student-dashboard__right-content">
+                                <h4 class="student-dashboard__course-title">نظرية الحوسبة</h4>
+                                <h4 class="student-dashboard__course-title">جامعة طيبة فرع ينبع & المهد</h4>
+                                <p class="student-dashboard__chapter-number"><span>5 وحدات </span>| <span> 30 دروس</span></p>
+                                <div class="student-dashboard__chapters">
+                                    <div id="accordion" class="accordion">
+                                        <div class="card">
+                                            <div class="card-header" id="headingOne">        
+                                                <h5 class="mb-0">
+                                                    <span class="circle circle--done">
+                                                        <div class="check"></div>
+                                                    </span>
+                                                    <button class="btn btn-link" data-toggle="collapse" href="#collapseOne">
+                                                        مقدمة المنهج    
+                                                    </button>
+                                                    <i class="fas fa-plus"></i>
+                                                </h5>
+                                            </div>
+                                        
+                                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                                <div class="card-body">
+                                                    
+                                                    <ul class="list-unstyled">
+                                                        
+                                                        <li class="active">
+                                                            <!-- <span class="circle">
+                                                                <div class="check"></div>
+                                                            </span> -->
+                                                            <img src="dist/img/student_dashboard_icons/done.svg" alt="done">
+                                                            <span class="lesson-name">أهمية علم الاقصاد الهندسي</span>
+                                                            <span class="free">مجاني</span>
+                                                            <p class="lesson-time">25 دقيقة</p>
+                                                        </li>
+                                                        <li>
+                                                            <!-- <span class="circle">
+                                                                <div class="check"></div>
+                                                            </span> -->
+                                                            <img src="dist/img/student_dashboard_icons/done.svg" alt="done">
+
+                                                            <span class="lesson-name">أهمية علم الاقصاد الهندسي</span>
+                                                            <span class="free">مجاني</span>
+                                                            <p class="lesson-time">25 دقيقة</p>
+        
+                                                        </li>
+                                                        <li>
+                                                            <!-- <span class="circle"></span> -->
+                                                            <img src="dist/img/student_dashboard_icons/done.svg" alt="done">
+                                                            <span class="lesson-name">أهمية علم الاقصاد الهندسي</span>
+                                                            <p class="lesson-time">25 دقيقة</p>
+                                                        </li>                                                    
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="heading2">
+                                                
+                                            <h5 class="mb-0">
+                                                <span class="circle circle--done">
+                                                    <div class="check"></div>
+                                                </span>
+                                                <button class="btn btn-link" data-toggle="collapse" href="#collapse2">
+                                                    مقدمة المنهج    
+                                                </button>
+                                                <i class="fas fa-plus"></i>
+                                            </h5>
+                                            </div>
+                                        
+                                            <div id="collapse2" class="collapse show" aria-labelledby="heading2" data-parent="#accordion">
+                                                <div class="card-body">
+                                                    <ul class="list-unstyled">
+                                                        <li class="">
+                                                            <!-- <span class="circle">
+                                                                <div class="check"></div>
+                                                            </span> -->
+                                                            <img src="dist/img/student_dashboard_icons/done.svg" alt="done">
+                                                            <span class="lesson-name">أهمية علم الاقصاد الهندسي</span>
+                                                            <span class="free">مجاني</span>
+                                                            <p class="lesson-time">25 دقيقة</p>
+                                                        </li>
+                                                        <li>
+                                                            <!-- <span class="circle">
+                                                                <div class="check"></div>
+                                                            </span> -->
+                                                            <img src="dist/img/student_dashboard_icons/done.svg" alt="done">
+                                                            <span class="lesson-name">أهمية علم الاقصاد الهندسي</span>
+                                                            <span class="free">مجاني</span>
+                                                            <p class="lesson-time">25 دقيقة</p>
+        
+                                                        </li>
+                                                        <li>
+                                                            <!-- <span class="circle"></span> -->
+                                                            <img src="dist/img/student_dashboard_icons/done.svg" alt="done">
+                                                            <span class="lesson-name">أهمية علم الاقصاد الهندسي</span>
+                                                            <p class="lesson-time">25 دقيقة</p>
+        
+                                                        </li>
+                                                        
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="heading3">               
+                                            <h5 class="mb-0">
+                                                <span class="circle circle--done">
+                                                    <div class="check"></div>
+                                                </span>
+                                                <button class="btn btn-link" data-toggle="collapse" href="#collapse3">
+                                                    مقدمة المنهج    
+                                                </button>
+                                                <i class="fas fa-plus"></i>
+                                            </h5>
+                                            </div>
+                                            
+                                            <div id="collapse3" class="collapse show" data-parent="#accordion">
+                                                <div class="card-body">
+                                                    <ul class="list-unstyled">
+                                                        <li class="">
+                                                            <!-- <span class="circle">
+                                                                <div class="check"></div>
+                                                            </span> -->
+                                                            <img src="dist/img/student_dashboard_icons/done.svg" alt="done">
+                                                            <span class="lesson-name">أهمية علم الاقصاد الهندسي</span>
+                                                            <span class="free">مجاني</span>
+                                                            <p class="lesson-time">25 دقيقة</p>
+                                                        </li>
+                                                        <li>
+                                                            <!-- <span class="circle">
+                                                                <div class="check"></div>
+                                                            </span> -->
+                                                            <img src="dist/img/student_dashboard_icons/done.svg" alt="done">
+                                                            <span class="lesson-name">أهمية علم الاقصاد الهندسي</span>
+                                                            <span class="free">مجاني</span>
+                                                            <p class="lesson-time">25 دقيقة</p>
+
+                                                        </li>
+                                                        <li>
+                                                            <!-- <span class="circle"></span> -->
+                                                            <img src="dist/img/student_dashboard_icons/done.svg" alt="done">
+                                                            <span class="lesson-name">أهمية علم الاقصاد الهندسي</span>
+                                                            <p class="lesson-time">25 دقيقة</p>
+
+                                                        </li>
+                                                        
+                                                        
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end accordion -->
+                                </div>
+                                <!-- student-dashboard__chapters -->
+                                <!-- <div class="download-course">
+                                    <button class="btn btn-block" type="button">
+                                        <img src="dist/img/student_dashboard_icons/download-folder-filled.svg" alt="file">
+                                        <span>
+                                            <h5>تحميل الدروة</h5>
+                                            <p>يمكنك تحميل الدورة كاملة</p>
+                                        </span>
+                                    </button>
+                                </div> -->
+                                <div class="goToLeft">
+                                    <i class="fas fa-arrow-left"></i>
+                                </div>
+                            </div>
+                            <!-- student-dashboard__right-content -->
+                        </div>
+                        <!-- end col-4 -->
+                        <div class="col-xl-8 col-lg-7">
+                            <div class="student-dashboard__left-content">
+                                <div class="student-dashboard__about-course texr-center">
+                                    <div class="cerification text-center">
+                                        <div class="heart">
+                                            <img src="dist/img/student_dashboard_icons/heart_2.svg" alt="heart">
+                                        </div>
+                                        <h3>رائع لقد انتهيت من الدورة بنجاح !</h3>
+                                        <div class="buttons">
+                                            <button class="btn">
+                                                <i class="far fa-star"></i>
+                                                تقييم الدورة
+                                            </button>
+                                            <button class="btn">
+                                                <img src="dist/img/student_dashboard_icons/certificate.svg" alt="certificate">
+                                                تحميل الشهادة
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                 
+                                </div>
+                            </div>
+                            <!-- student-dashboard__left-content -->                           
+                            <div class="playlist">
+                                <img src="dist/img/student_dashboard_icons/playlist.svg" alt="playlist">
+                            </div>
+
+                        </div>
+                        <!-- end col-8 -->
+                    </div>
+                    <!-- end row -->
+                </div>
+                <div class="tab-pane fade" id="live-chat">
+               
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-5 col-lg-5">
+                            <div class="student-dashboard__right-content">
+                                <h4 class="student-dashboard__course-title">نظرية الحوسبة</h4>
+                                <h4 class="student-dashboard__course-title">جامعة طيبة فرع ينبع & المهد</h4>
+                                <p class="student-dashboard__chapter-number"><span>5 وحدات </span>| <span> 30 دروس</span></p>
+                                <div class="student-dashboard__chapters student-dashboard__chapters--live student-dashboard__group-chat">
+                                    <ul class="list-unstyled" id="live-list">
+                                     
+                                    
+                                    
+                                        <li class="teacher">
+                                            <span class="online">
+                                                متاح
+                                            </span>
+                                            <span class="about-student">
+
+                                                <!-- <img src="dist/img/teacher.jpg" alt="student-photo"> -->
+                                                <div class="md-avatar-circle">
+                                                    3 T
+                                                </div>
+                                                <span class="more">
+                                                    <h4 class="student-name">أحمد هنداوي</h4>
+                                                    <p class="student-uni">جامعة الأميرة نورة</p>
+                                                </span>
+                                        
+                                                
+                                            </span>
+                                            <div class="icon float-left mt-3">
+                                                <img class="ml-2 mt-2" src="dist/svg/block-fff.svg" alt="block">
+
+                                            </div>
+ 
+                                        </li>
+                                        <li>
+                                            <span class="online online--away"></span>
+                                            <span class="about-student">
+                                                <div class="md-avatar-circle">
+                                                    M A
+                                                </div>
+                                                <!-- <img src="dist/img/student2.png" alt="student-photo"> -->
+                                                <span class="more">
+                                                    <h4 class="student-name">محمد الحامد</h4>
+                                                    <p class="student-uni">جامعة الملك خالد</p>
+                                                </span>
+                                             
+                                            </span>
+                                            <div class="icon float-left mt-3">
+                                                <img class="ml-2 mt-2" src="dist/svg/block-fff.svg" alt="block">
+
+                                            </div> 
+                                        </li>
+                                        <li>
+                                            <span class="online"></span>
+                                            <span class="about-student">
+                                                <div class="md-avatar-circle">
+                                                    A A
+                                                </div>
+                                                <!-- <img src="dist/img/student.jpg" alt="student-photo"> -->
+                                                <span class="more">
+                                                    <h4 class="student-name">أحمد البيك</h4>
+                                                    <p class="student-uni">الجامعة الاسلامية</p>
+                                                </span>
+                                            </span>
+                                            <div class="icon float-left mt-3">
+                                           
+                                                <img class="ml-2 mt-2" src="dist/svg/mic.svg" alt="mic">
+                                                <img class="ml-2 mt-2" src="dist/svg/block-fff.svg" alt="block">
+                                             
+                                            </div>
+                                       
+                                        </li>
+                                        <li>
+                                            <span class="online online--off"></span>
+                                            <span class="about-student">
+                                                <div class="md-avatar-circle">
+                                                    H A
+                                                </div>
+                                                <!-- <img src="dist/img/student2.png" alt="student-photo"> -->
+                                                <span class="more">
+                                                    <h4 class="student-name">حسام البيك</h4>
+                                                    <p class="student-uni">الجامعة الاسلامية</p>
+                                                </span>
+                                            </span>
+                                            <div class="icon float-left mt-3">
+                                                <img class="ml-2 mt-2" src="dist/svg/mic.svg" alt="mic">
+                                                <img class="ml-2 mt-2" src="dist/svg/block-fff.svg" alt="block">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <span class="online online--off"></span>
+                                            <span class="about-student">
+                                                <div class="md-avatar-circle">
+                                                    I A
+                                                </div>
+                                                <!-- <img src="dist/img/student2.png" alt="student-photo"> -->
+                                                <span class="more">
+                                                    <h4 class="student-name">إبراهيم البيك</h4>
+                                                    <p class="student-uni">الجامعة الاسلامية</p>
+                                                </span>
+                                            </span>
+                                            <div class="icon float-left mt-3">
+                                                <img class="ml-2 mt-2" src="dist/svg/block-fff.svg" alt="block">                                             
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- student-dashboard__chapters -->
+                                <div class="download-course">
+                                    <button class="btn btn-block" type="button">
+                                        <!-- <img src="dist/img/student_dashboard_icons/download-folder-filled.svg" alt="file"> -->
+                                        <span>
+                                            <h5>تحميل الحضور</h5>
+                                            <!-- <p>يمكنك تحميل الدورة كاملة</p> -->
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="goToLeft">
+                                    <i class="fas fa-arrow-left"></i>
+                                </div>
+                            </div>
+                            <!-- student-dashboard__right-content -->
+                        </div>
+                        <!-- end col-4 -->
+                        <div class="col-xl-8 col-lg-7">
+                            <div class="student-dashboard__left-content">
+                                <div class="container student-dashboard__about-course student-dashboard__chat student-dashboard__chat--live">
+                                    <div class="row">
+                                        <div class="col-xl-6">
+                                            <label class="custom-btn custom-btn--red custom-btn--with-icon custom-btn--small-pd float-left mb-2">
+                                                <span>1:05:55</span>
+                                                <!-- <img src="dist/svg/clock.svg"> -->
+                                                <svg class="float-left" xmlns="http://www.w3.org/2000/svg" 
+                                                     width="20" height="22" viewBox="0 0 20 22">
+                                                    <path fill="#FFF" 
+                                                    d="M17.619 5.799l1.244-1.22c.21-.21.21-.546 0-.756l-.782-.767c-.103-.102-.244-.16-.39-.16-.148 0-.288.058-.392.16l-1.222 1.263c-1.158-.921-2.513-1.574-3.964-1.911V1.08c0-.597-.493-1.08-1.101-1.08H8.809c-.608 0-1.1.483-1.1 1.08v1.328C3.2 3.415.002 7.345 0 11.878c.06 5.235 4.29 9.506 9.624 9.718 3.86.102 7.427-2.003 9.143-5.394 1.716-3.391 1.268-7.451-1.148-10.403zM9.91 19.437c-4.257 0-7.708-3.384-7.708-7.559 0-4.175 3.451-7.559 7.708-7.559 4.258 0 7.709 3.384 7.709 7.56 0 4.174-3.451 7.558-7.709 7.558zm.419-12.958h-.837c-.304 0-.55.242-.55.54v5.399c0 .298.246.54.55.54h.837c.304 0 .55-.242.55-.54v-5.4c0-.297-.246-.54-.55-.54z"/>
+                                                </svg>
+                                                
+                                            </label>
+                                            <video width="100%" height="300" id="live"
+                                                poster="dist/img/vue1.png"  
+                                                class="video-js" controls preload="none"
+                                                >
+                                                <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                                                <source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+                                                <source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
+                                                <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+                                            </video>
+                                            <div class="live-button">
+                                                <button class="custom-btn custom-btn--blue custom-btn--with-icon mt-2">
+                                                    <svg class="float-right" xmlns="http://www.w3.org/2000/svg" width="16" height="23" viewBox="0 0 16 23">
+                                                        <path fill="#FFF" d="M7.49 23c-.795 0-1.558-.317-2.12-.88L1.75 18.5C.64 17.55 0 16.162 0 14.7V13c0-1.105.895-2 2-2v1.65c0 .58.252 1.13.69 1.51l.31.31V1.5C3 .672 3.672 0 4.5 0S6 .672 6 1.5v8c0 .276.224.5.5.5s.5-.224.5-.5V7h3.26c.795 0 1.558.317 2.12.88l2.74 2.74c.563.562.88 1.325.88 2.12v1.67c.004 1.052-.268 2.087-.79 3L12.58 22c-.359.621-1.023 1.003-1.74 1H7.49z"/>
+                                                    </svg>
+                                                   <span>
+                                                    طلب تحدث 
+                                                   </span>
+                                                </button>
+                                                <button class="custom-btn custom-btn--gray custom-btn--with-icon mt-2">
+                                                    <svg class="float-right" xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 24 22">
+                                                        <path fill="#FFF" d="M2.854.185C2.745.067 2.594 0 2.434 0c-.158 0-.31.067-.42.185L1.38.833c-.116.11-.182.266-.182.428 0 .162.066.316.182.427L4.497 4.89C2.467 6.273.92 8.275.072 10.609c-.045.125-.07.258-.072.391 0 .13.024.259.072.379 1.95 4.96 6.677 8.202 11.92 8.175 1.942-.011 3.856-.467 5.601-1.332l3.538 3.593c.109.118.26.185.42.185.159 0 .31-.067.42-.185l.635-.648c.116-.11.182-.266.182-.428 0-.162-.066-.316-.182-.427L2.854.185zm9.139 16.925C7.935 17.1 4.24 14.727 2.483 11c.798-1.799 2.105-3.314 3.753-4.35l2.59 2.64c-.656 1.401-.375 3.073.703 4.171 1.078 1.099 2.719 1.386 4.095.716l2.11 2.151c-1.191.485-2.458.75-3.741.782zm11.992-6.477C21.53 4.416 14.863 1.093 8.54 2.935L10.566 5c.472-.073.949-.11 1.427-.11 4.058.01 7.752 2.383 9.51 6.11-.48 1.144-1.191 2.172-2.087 3.018l1.703 1.736c1.256-1.205 2.213-2.696 2.794-4.35.052-.129.076-.266.072-.404.02-.121.02-.245 0-.367z"/>
+                                                    </svg>
+                                                    <span>
+                                                        إخفاء المحادثة 
+                                                    </span>
+                                                   
+                                                </button>
+                                            </div>
+                                        
+                                        </div>
+                                        <div class="col-xl-6">        
+                                         
+                                                <div class="mesgs">
+                                                    <div class="msg_history">
+                                                        <div class="incoming_msg"> 
+                                                            <div class="received_msg">
+                                                                <div class="received_withd_msg">
+                                                                    <p>
+                                                                        incomming asmas                       
+                                                                    </p>
+                                                                    <span class="time_date"> 11:01 AM    |    June 9</span>
+                                                                    <div class="incoming_msg_img">
+                                                                        <img src="dist/img/student.jpg" alt="sunil">
+                                                                    </div>
+          
+                                                                </div>
+                                                            </div>
+
+                                                            
+                                                        </div>
+                                                        <div class="outgoing_msg" v-for="msg in massagesList">
+                                                            <div class="sent_msg">
+                                                                <div class="content">
+                                                                    <p> {{ msg.content }} </p>
+                                                                </div>
+                                                         
+                                                                <span class="time_date"> {{ msg.date }}   |    June 9</span>
+                                                          
+                                                            </div>
+                                                            <div class="sent_msg">
+                                                                <!-- <div class="content">
+                                                                    <p> {{ msg.content }} </p>
+                                                                </div> -->
+                                                                <div class="offer">
+
+                                                                    <div class="offer-title">
+                                                                    
+                                                                        <p>
+                                                                            <svg class="ml-2" 
+                                                                                xmlns="http://www.w3.org/2000/svg" 
+                                                                                width="16.25" height="30" 
+                                                                                viewBox="0 0 16.25 30">
+                                                                                <g id="microphone_3" transform="translate(-5.5)">
+                                                                                <path id="Path_2764" data-name="Path 2764" d="M18.744,23.93A3.129,3.129,0,0,0,15.625,21h-5A3.129,3.129,0,0,0,7.5,24.125a.625.625,0,0,0,.625.625h10a.166.166,0,0,0,.025,0,.625.625,0,0,0,.625-.625A.59.59,0,0,0,18.744,23.93Z" transform="translate(0.5 5.25)" fill="#09C6BD"/>
+                                                                                <g id="Group_3109" data-name="Group 3109" transform="translate(5.5 12.5)">
+                                                                                    <path id="Path_2765" data-name="Path 2765" d="M13.625,20A8.134,8.134,0,0,1,5.5,11.875v-1.25A.624.624,0,0,1,6.125,10h2.5a.625.625,0,1,1,0,1.25H6.75v.625a6.875,6.875,0,1,0,13.75,0V11.25H18.625a.625.625,0,1,1,0-1.25h2.5a.625.625,0,0,1,.625.625v1.25A8.134,8.134,0,0,1,13.625,20Z" transform="translate(-5.5 -10)" fill="#09C6BD"/>
+                                                                                </g>
+                                                                                <g id="Group_3110" data-name="Group 3110" transform="translate(13 21.25)">
+                                                                                    <path id="Path_2766" data-name="Path 2766" d="M12.125,23.25a.625.625,0,0,1-.625-.625v-5a.625.625,0,0,1,1.25,0v5A.625.625,0,0,1,12.125,23.25Z" transform="translate(-11.5 -17)" fill="#09C6BD"/>
+                                                                                </g>
+                                                                                <g id="Group_3111" data-name="Group 3111" transform="translate(8.625 8.125)">
+                                                                                    <path id="Path_2767" data-name="Path 2767" d="M8,6.5" transform="translate(-8 -6.5)" fill="#09C6BD"/>
+                                                                                </g>
+                                                                                <g id="Group_3112" data-name="Group 3112" transform="translate(8)">
+                                                                                    <path id="Path_2768" data-name="Path 2768" d="M10.625,5a.625.625,0,1,1,0,1.25H7.5V7.5h3.125a.625.625,0,1,1,0,1.25H7.5v2.5H18.75V8.75H15.625a.625.625,0,1,1,0-1.25H18.75V6.25H15.625a.625.625,0,1,1,0-1.25h3.061A5.593,5.593,0,0,0,7.564,5Z" transform="translate(-7.5)" fill="#09C6BD"/>
+                                                                                    <path id="Path_2769" data-name="Path 2769" d="M7.5,10v1.875a5.625,5.625,0,0,0,11.25,0V10Z" transform="translate(-7.5 2.5)" fill="#09C6BD"/>
+                                                                                </g>
+                                                                                </g>
+                                                                            </svg>
+                                                                            <span> يريد الطالب " أحمد هنداوي " التحدث</span>
+                                                                           
+                                                                        </p>
+                                                                    </div>
+                                                                    <div class="text-center">
+                                                                        <button class="custom-btn custom-btn--blue custom-btn--small-pd 
+                                                                        custom-btn--small-width mt-2"> قبول</button>
+                                                                        <button class="custom-btn custom-btn--red custom-btn--small-pd
+                                                                         custom-btn--small-width mt-2"> رفض</button>
+                                                                    </div>
+                                                                  
+                                                                </div>
+                                                                
+                                                                <span class="time_date"> {{ msg.date }}   |    June 9</span>
+                                                          
+                                                            </div>
+                                                        </div>
+                                                    
+                                                    </div>
+                                            
+                                                </div>
+                                                <!-- end mesgs div -->
+                                                                    
+                                                <div class="type_msg">
+                                                    <div class="input_msg_write">
+                                                        <div class="row">
+                                                            <div class="col-6 col-sm-9 col-lg-8 col-xl-7">
+                                                                <img class="smile" src="dist/img/student_dashboard_icons/smile.svg" alt="smile">
+                                                                <input type="text" 
+                                                                class="write_msg form-control" 
+                                                                placeholder="اكتب رسالتك هنا..."
+                                                                v-model="massage.content"
+                                                                @keyup.enter="sendMsg()"
+                                                                />
+                                                            </div>
+                                                            <div class="col-6 col-sm-3 col-lg-4 col-xl-5">
+                                                                <div class="chat-icon">
+                                                                    <a href="">
+                                                                        <img src="dist/img/student_dashboard_icons/attachment.svg" alt="chat-icon">
+                                                                    </a>
+                                                                    <a href="">
+                                                                        <img src="dist/img/student_dashboard_icons/microphone_3.svg" alt="chat-icon">
+                                                                    </a>
+                                                                    <a href="" @click.prevent="sendMsg">
+                                                                        <img src="dist/img/student_dashboard_icons/send-mail.svg" alt="chat-icon">
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    
+                               
+                                    </div>
+                                    <!-- student-dashboard__left-content -->
+                                </div>
+                            </div>
+                            <div class="playlist">
+                                <img src="dist/img/student_dashboard_icons/playlist.svg" alt="playlist">
+                            </div>
+                        </div>
+                        <!-- end col-8 -->
+                    </div>
+                </div>
+                <!-- end live-chat -->
+            </div>
+      
+        </div>
+        <!-- end container -->
+    </section> 
+    </body>
+    <script src="dist/js/allPage.js"></script>
+    <script src="dist/js/student-dashboard-plugin.js"></script>
+    <script src="dist/js/student-dashboard.js"></script>
+    <!-- <script src="node_modules/randomcolor/randomColor.js"></script> -->
+    <!-- <script src="node_modules/material-avatar/material-avatar.js"></script> -->
+    <!-- <script defer async type="text/javascript">
+        MaterialAvatar(document.getElementsByClassName('md-avatar-circle'), {
+        shape: 'circle',
+        randomColor: {hue: 'blue'}
+        });
+    //     $(document).ready(function() {
+    //         // $(".lightgallery").lightGallery(); 
+    //         $(".fancybox").fancybox({
+    // 	openEffect	: 'none',
+    // 	closeEffect	: 'none'
+    // });
+    //     }); -->
+    <!-- </script> -->
+
+    <!-- <script src="randomcolor/randomColor.js"></script>
+    <script src="material-avatar.js"></script> -->
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+     var app =  new Vue({
+            el: "#app",
+            data: {
+                massagesList: [
+                {
+                    content: `Asmaa Ali Albaik Hello it's me!!`,
+                    date: "5/11/1995",
+                    user: {
+                        id: "",
+                        name: "",
+                        img: "",
+                    },
+                },
+
+                ],
+                massage: {
+                    publishedDate: new Date (),
+                    content: "",
+                }
+            },
+            methods: {
+                sendMsg () {
+                    if (this.massage.content !== ""){
+                        this.massagesList.push({
+                            content: this.massage.content,
+                            date: (new Date ()).toLocaleDateString()
+                    })
+                }
+                this.scrollToEnd();
+                this.massage.content = "";
+                  
+                },
+                scrollToEnd() {    	
+                    var container = this.$el.querySelector(".mesgs");
+                    container.scrollTop = container.scrollHeight;
+                },
+            },
+          
+        })
+    </script> -->
+ 
+</body>
+</html>

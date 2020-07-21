@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- First Mobile Meta -->
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <!-- Interner Exeplorer (IE) Compatibility Meta -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#12c5bc" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+
+    <!-- <link rel="icon" href="dist/img/logo.png?v='.env('APP_VERSION" type="image/x-icon"> -->
+    <!-- Add to home screen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="Weather PWA" />
+    <link rel="apple-touch-icon" href="" />
+    <meta name="msapplication-TileImage" content="" />
+    <meta name="msapplication-TileColor" content="#2F3BA2" />
+
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js?v='.env('APP_VERSION"></script>
+      <script src="js/respond.min.js?v='.env('APP_VERSION"></script>
+    <![endif]-->
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+      integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../dist/css/global.css" />
+    <link rel="stylesheet" href="../dist/css/login.css" />
+  </head>
+  <body>
+    <!-- start preview div -->
+    <div class="login login--meeting">
+      <div class="overlay">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-5 offset-lg-4">
+              <div class="login__content">
+                <h4 class="text-center">
+                  <img
+                    class="img-responsive logo"
+                    src="../dist/img/logo.svg"
+                    alt="logo"
+                  />
+                </h4>
+                <div class="box">
+                  <form action="" id="login">
+                    <div class="form-group custom-input">
+                      <input
+                        required
+                        class="form-control"
+                        type="text"
+                        name="text"
+                      />
+                      <label class="form__label" for="text"
+                        >اسم المستخدم</label
+                      >
+                    </div>
+                    <div class="form-group custom-input d-none" id="show-password">
+                      <input
+                        required
+                        class="form-control"
+                        type="password"
+                        name="password"
+                      />
+                      <label class="form__label password" for="password"
+                        >كلمة المرور</label
+                      >
+                      <i class="fas fa-eye fa-lg hide-show-pass"></i>
+                    </div>
+                    <div class="row d-flex">
+                      <div class="col-12 col-lg-12">
+                        <div class="custom-checkbox float-right">
+                          <input class="" id="check-password" type="checkbox" />
+                          <label for="check-password" class="remmeber">قفل بكلمة مرور</label>
+                        </div>
+                      </div>
+                      <div class="col-12 col-lg-12">
+                        <label class="meeting-type">نوع الاجمتاع :</label>
+                        <div class="form-group d-flex">
+                            <span class="custom-radio">
+                                <input class="" id="meeting-type" name="meeting-type" type="radio" />
+                                <label for="meeting-type" class="remmeber">فيديو</label>
+                            </span>
+                            <span class="custom-radio">
+                                <input class="" id="meeting-type2"  name="meeting-type" type="radio" />
+                                <label for="meeting-type2" class="remmeber">صوت</label>
+                            </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group text-center">
+                      <input
+                        class="custom-btn custom-btn--blue custom-btn--shadow custom-btn--large"
+                        type="submit"
+                        value="بدء الاجتماع"
+                      />
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end preview div -->
+  </body>
+  <script src="../dist/js/allPage.js"></script>
+  <script src="../dist/js/login.js"></script>
+  <script>
+      $("#check-password").click(function(){
+            if($(this).prop("checked") == true){
+                $('#show-password').toggleClass('d-none');
+            }
+            else if($(this).prop("checked") == false){
+                $('#show-password').toggleClass('d-none');
+            }
+        });
+  </script>
+</html>

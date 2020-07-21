@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="83" height="83" viewBox="0 0 83 83">
+    <defs>
+        <linearGradient id="prefix__a" x1="100%" x2="0%" y1="100%" y2="0%">
+            <stop offset="0%" stop-color="#0C9EE2"/>
+            <stop offset="100%" stop-color="#00D0D3"/>
+        </linearGradient>
+        <linearGradient id="prefix__b" x1="100%" x2="0%" y1="51.484%" y2="48.516%">
+            <stop offset="0%" stop-color="#0C9EE2"/>
+            <stop offset="100%" stop-color="#00D0D3"/>
+        </linearGradient>
+        <linearGradient id="prefix__c" x1="62.5%" x2="37.5%" y1="100%" y2="0%">
+            <stop offset="0%" stop-color="#0C9EE2"/>
+            <stop offset="100%" stop-color="#00D0D3"/>
+        </linearGradient>
+        <linearGradient id="prefix__d" x1="100%" x2="0%" y1="51.557%" y2="48.443%">
+            <stop offset="0%" stop-color="#0C9EE2"/>
+            <stop offset="100%" stop-color="#00D0D3"/>
+        </linearGradient>
+        <linearGradient id="prefix__e" x1="100%" x2="0%" y1="66.056%" y2="33.944%">
+            <stop offset="0%" stop-color="#0C9EE2"/>
+            <stop offset="100%" stop-color="#00D0D3"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(1 1)">
+        <circle cx="40.5" cy="40.5" r="40.5" stroke="url(#prefix__a)" stroke-width="1.8"/>
+        <g stroke-linecap="round" stroke-linejoin="round" stroke-width="1.89">
+            <path stroke="url(#prefix__b)" d="M21.55 33.075L16.065 31.37 10.58 33.075" transform="translate(23.445 23.445)"/>
+            <path stroke="url(#prefix__c)" d="M16.065 27.405L16.065 31.185" transform="translate(23.445 23.445)"/>
+            <path stroke="url(#prefix__d)" d="M29.594 5.67H2.536C.67 5.67 0 4.4 0 2.835S.67 0 2.536 0h27.058c1.867 0 2.536 1.27 2.536 2.835s-.671 2.835-2.536 2.835z" transform="translate(23.445 23.445)"/>
+            <path stroke="url(#prefix__e)" d="M30.24 8.505V22.68c0 1.044-.846 1.89-1.89 1.89H3.78c-1.044 0-1.89-.846-1.89-1.89V8.505" transform="translate(23.445 23.445)"/>
+        </g>
+    </g>
+</svg>

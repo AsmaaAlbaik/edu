@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset="UTF-8">
+            <!-- First Mobile Meta -->
+            <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+            <!-- Interner Exeplorer (IE) Compatibility Meta -->
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <meta name="theme-color" content="#12c5bc">
+            <meta content="" name="description"/>
+            <meta content="" name="author"/>
+            <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    
+            <!-- <link rel="icon" href="dist/img/logo.png?v='.env('APP_VERSION" type="image/x-icon"> -->
+            <!-- Add to home screen for Safari on iOS -->
+            <meta name="apple-mobile-web-app-capable" content="yes">
+            <meta name="apple-mobile-web-app-status-bar-style" content="black">
+            <meta name="apple-mobile-web-app-title" content="Weather PWA">
+            <link rel="apple-touch-icon" href="">
+            <meta name="msapplication-TileImage" content="">
+            <meta name="msapplication-TileColor" content="#2F3BA2">
+    
+            <!--[if lt IE 9]>
+            <script src="js/html5shiv.min.js?v='.env('APP_VERSION"></script>
+            <script src="js/respond.min.js?v='.env('APP_VERSION"></script>
+            <![endif]-->
+    
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+                  integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+           <link rel="stylesheet" href="dist/css/global.css">
+           <link rel="stylesheet" href="dist/css/student-subscriptions.css">
+
+    </head>
+<body>
+    <!-- header and navbar -->
+    <div class="fixed-menu">
+         <div class="container">
+             <!-- <i class="far fa-times-circle fa-2x"></i> -->
+             <img src="dist/img/close.svg" alt="close">
+            <ul class="list-unstyled">
+                <li class="active"><a href="#">الرئيسية</a></li>
+                <li><a href="#">طلب كورس</a></li>
+                <li><a href="#">عن أكاديمي</a></li>
+                <li><a href="#">الخدمات</a></li>
+                <li class="login" data-toggle="modal" data-target="#login-modal"><a href="#">تسجيل الدخول</a></li>
+                <li class="register" data-toggle="modal" data-target="#register-modal"><a href="#">انضم الينا</a></li>
+            </ul>
+         </div>           
+    </div>
+    <header class="home-header">
+        <div class="container-fluid">
+            <nav class="navbar navbar--padding-right navbar-expand-lg">
+                <a class="navbar-brand" href="#"> 
+                    <img class="img-responsive" src="dist/img/logo.svg" alt="logo">
+                </a>
+                <div class="navbar-toggler">
+                    <!-- <i class="fas fa-stream fa-1x"></i> -->
+                    <img src="dist/img/menu.svg" alt="menu" class="menu-icon">
+                </div>
+            
+                <div class="collapse navbar-collapse">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="ايجاد المنهج, كود الكورس, اسم الجامعة و أكثر..." aria-label="Search">
+                        <img src="dist/img/student_dashboard_icons/Слой 2.svg" alt="search">
+                    </form>
+                    <ul class="navbar-nav mr-auto"> 
+                        <li class="nav-item">
+                            <a class="nav-link" href="student-subscriptions.html">كورساتي</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">الرجوع إلى الرئيسية</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img class="teacher-photo" src="dist/img/teacher.jpg" alt="teacher-photo">
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item teacher-name" href="#">أحمد البيك</a>
+                                <a class="dropdown-item teacher-uni" href="#">جامعة الأميرة نورة</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">
+                                    <img src="dist/img/student_dashboard_icons/notification.svg" alt="icon">
+                                    الاشعارات
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </a>
+                                <a class="dropdown-item" href="teacher-profile.html">
+                                    <img src="dist/img/student_dashboard_icons/setting.svg" alt="icon">
+                                    اعدادات العضوية
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <img src="dist/img/student_dashboard_icons/support.svg" alt="icon">
+                                    الدعم الفني
+                                </a>
+                                    
+                                <a class="dropdown-item" href="#">
+                                    <img src="dist/img/student_dashboard_icons/sign out.svg" alt="icon">
+                                    تسجيل الخروج
+                                </a>
+                                              
+                                
+                            </div>
+                        </li>
+                   
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section class="student-courses">     
+        <div class="container-fluid">
+            <div class="box">
+                <div class="box-scroll">
+                     <!-- start course card -->
+                <section class="course-card course-card--subscription">
+                    <div class="container">
+               
+                        <div class="row d-flex">
+                            <div class="col-lg-4 col-md-6">
+                                <a class="course-card__box" href="student-dashboard.html">
+                                    <div class="course-card__img-box">
+                                        <img class="course-card__course-img img-responsive" src="dist/img/vue1.png" alt="course-img">
+                                            <div class="course-card__course-title"><p> Vue js FrameWork</p>
+                                                <div class="course-live">
+                                                    <img class="live" src="dist/svg/live.svg" alt="icon-live">
+                                                </div>
+                                               
+                                            </div>
+                                           
+                                            <div class="overlay">
+                                                <div class="content">
+                                                    <p class="course-card__course-sub-title">Vue js FrameWork</p>
+                                                    <button class="">تفاصيل الكورس</button>
+                                                </div>
+                                            </div>
+                                    </div>
+                                
+                                </a>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <a class="course-card__box" href="student-dashboard.html">
+                                    <div class="course-card__img-box">
+                                        <img class="course-card__course-img img-responsive" src="dist/img/vue1.png" alt="course-img">
+                                        <div class="course-card__course-title"><p> Vue js FrameWork</p>
+                                            <div class="course-progress">
+                                                <div class="circle circle--done">
+                                                    <span class="check">
+                                                        
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>                            
+                                        <div class="overlay ">
+                                            <div class="content">
+                                                <p class="course-card__course-sub-title">Vue js FrameWork</p>
+                                                <button class="">تفاصيل الكورس</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                        
+                            
+                                </a>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <a class="course-card__box" href="student-dashboard.html">
+                                    <div class="course-card__img-box">
+                                        <img class="course-card__course-img img-responsive" src="dist/img/vue1.png" alt="course-img">
+                                        <div class="course-card__course-title"><p> Vue js FrameWork</p>
+                                            <div class="course-progress">
+                                                <div class="progress-number">
+                                                    58%
+                                                </div>
+                                              
+                                            </div>
+                                        </div>                            
+                                        <div class="overlay">
+                                            <div class="content">
+                                                <p class="course-card__course-sub-title">Vue js FrameWork</p>
+                                                <button class="">تفاصيل الكورس</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                              
+                            
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </section>
+                <!-- end course card -->
+                </div>
+               
+            </div>
+        </div>
+        <!-- end container -->
+    </section> 
+    </body>
+    <script src="dist/js/allPage.js"></script>
+    <script src="dist/js/student-subscription.js"></script>
+   </script>
+</body>
+</html>

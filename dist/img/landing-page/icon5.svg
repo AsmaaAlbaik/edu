@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="84" height="84" viewBox="0 0 84 84">
+    <defs>
+        <linearGradient id="prefix__a" x1="100%" x2="0%" y1="100%" y2="0%">
+            <stop offset="0%" stop-color="#0C9EE2"/>
+            <stop offset="100%" stop-color="#00D0D3"/>
+        </linearGradient>
+        <linearGradient id="prefix__b" x1="68.935%" x2="31.065%" y1="100%" y2="0%">
+            <stop offset="0%" stop-color="#0C9EE2"/>
+            <stop offset="100%" stop-color="#00D0D3"/>
+        </linearGradient>
+        <linearGradient id="prefix__c" x1="100%" x2="0%" y1="52.14%" y2="47.86%">
+            <stop offset="0%" stop-color="#0C9EE2"/>
+            <stop offset="100%" stop-color="#00D0D3"/>
+        </linearGradient>
+        <linearGradient id="prefix__d" x1="86.735%" x2="13.265%" y1="100%" y2="0%">
+            <stop offset="0%" stop-color="#0C9EE2"/>
+            <stop offset="100%" stop-color="#00D0D3"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(1.8 1.8)">
+        <circle cx="40.5" cy="40.5" r="40.5" stroke="url(#prefix__a)" stroke-width="1.8"/>
+        <g stroke-linecap="round" stroke-linejoin="round" stroke-width="1.89">
+            <path stroke="url(#prefix__b)" d="M7.56 5.906v14.175l4.725-2.362 4.725 2.362V5.906c0-.652-.529-1.181-1.181-1.181H8.74c-.652 0-1.181.529-1.181 1.181z" transform="translate(26.145 22.545)"/>
+            <path stroke="url(#prefix__c)" d="M4.725 5.67h-1.89C1.269 5.67 0 4.4 0 2.835 0 1.269 1.27 0 2.835 0h24.57" transform="translate(26.145 22.545)"/>
+            <path stroke="url(#prefix__d)" d="M0 2.835V34.02c0 1.044.846 1.89 1.89 1.89h24.57c1.044 0 1.89-.846 1.89-1.89V7.56c0-1.044-.846-1.89-1.89-1.89h-6.615" transform="translate(26.145 22.545)"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset="UTF-8">
+            <!-- First Mobile Meta -->
+            <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+            <!-- Interner Exeplorer (IE) Compatibility Meta -->
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <meta name="theme-color" content="#12c5bc">
+            <meta content="" name="description"/>
+            <meta content="" name="author"/>
+            <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    
+            <!-- <link rel="icon" href="dist/img/logo.png?v='.env('APP_VERSION" type="image/x-icon"> -->
+            <!-- Add to home screen for Safari on iOS -->
+            <meta name="apple-mobile-web-app-capable" content="yes">
+            <meta name="apple-mobile-web-app-status-bar-style" content="black">
+            <meta name="apple-mobile-web-app-title" content="Weather PWA">
+            <link rel="apple-touch-icon" href="">
+            <meta name="msapplication-TileImage" content="">
+            <meta name="msapplication-TileColor" content="#2F3BA2">
+    
+            <!--[if lt IE 9]>
+            <script src="js/html5shiv.min.js?v='.env('APP_VERSION"></script>
+            <script src="js/respond.min.js?v='.env('APP_VERSION"></script>
+            <![endif]-->
+    
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+                  integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+           <link rel="stylesheet" href="dist/css/global.css?v='.env('APP_VERSION">
+           <link rel="stylesheet" href="dist/css/after-payment.css">
+
+
+    </head>
+<body>
+ <!-- header and navbar -->
+ <div class="fixed-menu">
+    <div class="container">
+        <!-- <i class="far fa-times-circle fa-2x"></i> -->
+        <img src="dist/img/close.svg" alt="close">
+        <ul class="list-unstyled">
+           <li class="active"><a href="index.html">الرئيسية</a></li>
+           <li><a data-toggle="modal" data-target="#course-request">طلب كورس</a></li>
+           <li><a href="about.html">عن أكاديمي</a></li>
+           <li><a href="service.html">الخدمات</a></li>
+           <li class="login" data-toggle="modal" data-target="#login-modal"><a href="#">تسجيل الدخول</a></li>
+           <li class="register" data-toggle="modal" data-target="#register-modal"><a href="#">انضم الينا</a></li>
+       </ul>
+    </div>           
+</div>
+<header class="home-header">
+   <div class="container">
+       <nav class="navbar navbar-expand-lg">
+           <a class="navbar-brand" href="index.html"> 
+               <img class="img-responsive" src="dist/img/logo.svg" alt="logo"> 
+           </a>
+           <div class="navbar-toggler">
+               <!-- <i class="fas fa-stream fa-1x"></i> -->
+               <img src="dist/img/menu.svg" alt="menu" class="menu-icon">
+           </div>
+       
+           <div class="collapse navbar-collapse" >
+               <ul class="navbar-nav mr-auto">
+                   <li class="nav-item active">
+                   <a class="nav-link" href="index.html">الرئيسية <span class="sr-only">(current)</span></a>
+                   </li>
+                   <li class="nav-item">
+                   <a class="nav-link" href="service.html">الخدمات</a>
+                   </li>
+                   <li class="nav-item">
+                       <a class="nav-link" href="about.html">عن أكاديمي</a>
+                   </li>
+                   <li class="nav-item"  data-toggle="modal" data-target="#course-request"> 
+                       <a class="nav-link" href="#">طلب كورس</a>
+                   </li>
+                   <!-- Button to Open the Modal -->
+                   <li class="nav-item login"  data-toggle="modal" data-target="#login-modal">
+                       <a class="nav-link" href="#">تسجيل دخول</a>
+                   </li>
+                   <li class="nav-item register" data-toggle="modal" data-target="#register-modal">
+                       <a class="nav-link" href="#">انضم إلينا</a>
+                   </li>
+               </ul>
+           </div>
+       </nav>
+   </div>
+</header>
+  <!-- The login Modal -->
+  <div class="modal modal--login" id="login-modal">
+       <div class="modal-dialog modal-lg">
+           <div class="modal-content">
+               <!-- Modal body -->
+               <div class="modal-body">
+                   <div class="row d-flex">
+                       <div class="col-md-5">
+                           <div class="modal--login__bg">
+                               <div class="overlay"></div>
+                           </div>
+                       </div>
+                       <div class="col-md-7">
+                           <button type="button" class="close" data-dismiss="modal">&times;</button>
+                           <div class="login-form">
+                               <h2 class="login-form__title">تسجيل الدخول</h2>
+                               <p class="lead login-form__text">
+                                   قم بتسجيل الدخول الان لتستمتع بجميع المميزات التي يقدمها لك فريق عمل أكاديمي . 
+                               </p>
+                               <p class="lead login-form__join"> ليس لديك حساب على أكاديمي ؟ <a href=""> انضم الآن</a></p>
+                               <form action="" id="login">
+                                   <div class="form-group custom-input">
+                                       <input required class="form-control" id="email" type="email"  name="email">
+                                       <label class="form__label" for="email">البريد الالكتروني</label>
+                                   </div>
+                                   <div class="form-group custom-input">
+                                       <input required class="form-control" id="password" type="password" name="password">
+                                       <label class="form__label" for="password">كلمة المرور</label>
+                                       <i class="fas fa-eye fa-lg hide-show-pass"></i>
+                                   </div>
+                                   <div class="row d-flex">
+                                       <div class="col-12 col-sm-6">
+                                           <div class="custom-radio">
+                                               <input class="" id="remmeber" type="radio">
+                                               <label for="remmeber">تذكر بياناتي</label>
+                                           </div>
+                                       </div>
+                                       <div class="col-12 col-sm-6">
+                                           <a href="#" class="form__forget">هل نسيت كلمة المرور ؟</a>
+                                       </div>
+                                   </div>
+                                   <div class="form-group">
+                                       <input class="login-form__submit" type="submit" value="تسجيل الدخول">
+                                   </div>
+                               </form>
+                           </div>
+                           <!-- end login-form div -->
+                       </div>
+                       <!-- end col -->
+                   </div>
+                   <!-- end row -->
+               </div>
+               <!-- end modal body div -->
+           </div>
+       </div>
+   </div>
+   <!-- end login modal -->
+
+   <!-- The register Modal -->
+   <div class="modal modal--register" id="register-modal">
+       <div class="modal-dialog modal-sm">
+           <div class="modal-content">
+               <!-- Modal body -->
+               <div class="modal-body">
+                   <div class="row d-flex">
+                       <div class="col-6">
+                           <a href="" class="modal--register__student"  data-toggle="modal" data-target="#student-modal">
+                               <!-- <img class="svg" src="dist/img/student.svg" alt="student"> -->
+                               <svg id="student" xmlns="http://www.w3.org/2000/svg" width="39.99" height="39.858" viewBox="0 0 39.99 39.858">
+                                   <g id="Group_85" data-name="Group 85" transform="translate(0 8.636)">
+                                     <g id="Group_81" data-name="Group 81" transform="translate(0 16.653)">
+                                       <path id="Path_178" data-name="Path 178" d="M39.193,33.6H.664A.628.628,0,0,1,0,32.939V31.345a10.881,10.881,0,0,1,7.174-10.1l4.251-2.126a.626.626,0,0,1,.8.133,10.545,10.545,0,0,0,7.706,3.587,10.772,10.772,0,0,0,7.706-3.587.626.626,0,0,1,.8-.133l4.517,2.524A10.586,10.586,0,0,1,39.99,31.61v1.2c0,.133-.133.4-.133.531S39.326,33.6,39.193,33.6ZM1.329,32.275h37.2v-.531a9.307,9.307,0,0,0-6.244-8.769h-.133l-4.119-2.259A11.95,11.95,0,0,1,19.8,24.3a11.325,11.325,0,0,1-8.237-3.72L7.706,22.576a9.378,9.378,0,0,0-6.377,8.769v.93Z" transform="translate(0 -19.034)" fill="#254a5d"/>
+                                     </g>
+                                     <g id="Group_82" data-name="Group 82" transform="translate(14.614 5.979)">
+                                       <path id="Path_179" data-name="Path 179" d="M12.993,12.329H11.664a.664.664,0,0,1,0-1.329h1.329a.664.664,0,0,1,0,1.329Z" transform="translate(-11 -11)" fill="#254a5d"/>
+                                     </g>
+                                     <g id="Group_83" data-name="Group 83" transform="translate(22.586 5.979)">
+                                       <path id="Path_180" data-name="Path 180" d="M18.993,12.329H17.664a.664.664,0,1,1,0-1.329h1.329a.664.664,0,1,1,0,1.329Z" transform="translate(-17 -11)" fill="#254a5d"/>
+                                     </g>
+                                     <g id="Group_84" data-name="Group 84" transform="translate(7.972)">
+                                       <path id="Path_181" data-name="Path 181" d="M17.824,25.764c-4.119,0-7.972-3.587-9.433-8.636h0C7.063,17.129,6,15.4,6,13.143c0-2.126.531-3.454,1.329-3.853V7.164a.664.664,0,0,1,1.329,0V9.423c0,.4,0,.664-.133.8a1.007,1.007,0,0,1-.531.266c-.266,0-.664.8-.664,2.657,0,1.594.664,2.657,1.063,2.657h.133a.593.593,0,0,1,.664,0c.133.133.4.266.4.4,1.2,4.783,4.783,8.237,8.37,8.237,3.986,0,7.573-3.189,8.636-7.573a.352.352,0,0,1,.4-.4c.133-.133.4,0,.664,0h.133c.4,0,1.063-1.063,1.063-2.657,0-1.86-.4-2.657-.664-2.657h0c-.664,0-.93-.266-.93-.664V7.164a.664.664,0,0,1,1.329,0v2.79c.8.4,1.329,1.727,1.329,3.853,0,2.259-1.063,3.986-2.391,3.986h0C26.062,22.443,22.076,25.764,17.824,25.764Z" transform="translate(-6 -6.5)" fill="#254a5d"/>
+                                     </g>
+                                   </g>
+                                   <g id="Group_86" data-name="Group 86" transform="translate(5.314)">
+                                     <path id="Path_182" data-name="Path 182" d="M19.279,6.643h0L4.664,5.314A.628.628,0,0,1,4,4.65a.678.678,0,0,1,.531-.664L17.817,0h.266L32.7,1.329a.571.571,0,0,1,.531.531c0,.266-.133.664-.531.664L19.412,6.51A.13.13,0,0,1,19.279,6.643ZM8.119,4.251,19.146,5.314l9.832-2.923L18.083,1.329Z" transform="translate(-4)" fill="#254a5d"/>
+                                   </g>
+                                   <g id="Group_87" data-name="Group 87" transform="translate(9.3 2.657)">
+                                     <path id="Path_183" data-name="Path 183" d="M17.629,11.3c-6.643,0-10.1-1.993-10.23-2.126-.266-.133-.4-.266-.4-.531V4.657a.664.664,0,1,1,1.329,0V8.244a24.413,24.413,0,0,0,9.3,1.727,24.413,24.413,0,0,0,9.3-1.727V2.664a.664.664,0,1,1,1.329,0V8.643c0,.266-.133.4-.4.531C27.726,9.307,24.272,11.3,17.629,11.3Z" transform="translate(-7 -2)" fill="#254a5d"/>
+                                   </g>
+                                   <g id="Group_88" data-name="Group 88" transform="translate(31.886 1.329)">
+                                     <path id="Path_184" data-name="Path 184" d="M25.993,15.614a.731.731,0,0,1-.664-.4L24,11.23V10.7l1.329-2.524V1.664a.664.664,0,1,1,1.329,0v6.51l1.2,2.524c.133.133.133.266.133.531l-1.329,3.986A.731.731,0,0,1,25.993,15.614Zm-.664-4.65.664,1.86.664-1.86-.664-1.2Z" transform="translate(-24 -1)" fill="#254a5d"/>
+                                   </g>
+                                 </svg>                                      
+                               <h5>انضم كطالب</h5>
+                           </a>
+                       </div>
+                       <div class="col-6">
+                           <a href="teacher-register.html" class="modal--register__teacher">
+                               <svg id="business-man" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+                                   <g id="Group_91" data-name="Group 91" transform="translate(7.941)">
+                                     <path id="Path_185" data-name="Path 185" d="M18.015,28c-4.267,0-8.133-3.333-9.6-8.133h0c-1.333,0-2.4-1.733-2.4-4V15.2a3.625,3.625,0,0,1,0-1.2,8.711,8.711,0,0,1,0-1.867v-.8C6.015,4.667,11.215,0,18.681,0A11.158,11.158,0,0,1,30.015,11.333V12a4.445,4.445,0,0,1,0,1.333,5.378,5.378,0,0,1,0,1.467v.667c0,2.267-1.067,4-2.4,4h0C26.148,24.4,22.148,28,18.015,28Zm-9.2-9.6h.267c.133.133.4.267.4.4,1.067,4.533,4.667,7.867,8.533,7.867,3.733,0,7.333-3.467,8.533-8.133a.354.354,0,0,1,.4-.4c.133-.133.4,0,.667,0h.133c.4,0,1.067-1.067,1.067-2.667v-.8c0-.4.133-.933,0-1.2v-.4a2.869,2.869,0,0,0,0-1.067v-.8A10.075,10.075,0,0,0,18.681,1.333c-6.8,0-11.333,4-11.333,10v.933a6.4,6.4,0,0,0,0,1.6v.4c-.133.267,0,.533,0,.933V16c0,1.6.667,2.667,1.067,2.667h.133C8.548,18.4,8.681,18.4,8.815,18.4Z" transform="translate(-5.956)" fill="#254a5d"/>
+                                   </g>
+                                   <g id="Group_92" data-name="Group 92" transform="translate(8.667 5.333)">
+                                     <path id="Path_186" data-name="Path 186" d="M28.5,13.333h-2c-.267,0-.533-.133-.533-.4a14.6,14.6,0,0,1-1.467-3.6C20.9,9.2,17.567,7.867,16.1,6.4a1.331,1.331,0,0,1-.533.667c-1.2,1.2-3.333,1.067-4.533.933h-.4c-.4.4-.8,2.533-.8,4.667a.63.63,0,0,1-.667.667h-2a.667.667,0,0,1,0-1.333H8.5c.133-3.6.8-5.333,2-5.333h.667c1.067.133,2.667.133,3.467-.533a1.821,1.821,0,0,0,.533-1.467.667.667,0,1,1,1.333,0C16.5,5.467,19.967,8,25.167,8a.63.63,0,0,1,.667.667A9.763,9.763,0,0,0,26.9,12h1.6a.667.667,0,0,1,0,1.333Z" transform="translate(-6.5 -4)" fill="#254a5d"/>
+                                   </g>
+                                   <g id="Group_93" data-name="Group 93" transform="translate(14.667 14.667)">
+                                     <path id="Path_187" data-name="Path 187" d="M13,12.333H11.667a.667.667,0,0,1,0-1.333H13a.667.667,0,1,1,0,1.333Z" transform="translate(-11 -11)" fill="#254a5d"/>
+                                   </g>
+                                   <g id="Group_94" data-name="Group 94" transform="translate(22.667 14.667)">
+                                     <path id="Path_188" data-name="Path 188" d="M19,12.333H17.667a.667.667,0,1,1,0-1.333H19a.667.667,0,1,1,0,1.333Z" transform="translate(-17 -11)" fill="#254a5d"/>
+                                   </g>
+                                   <g id="Group_95" data-name="Group 95" transform="translate(0 26.667)">
+                                     <path id="Path_189" data-name="Path 189" d="M39.333,33.333H.667a.693.693,0,0,1-.533-.267A.8.8,0,0,1,0,32.533l1.333-5.467A3.929,3.929,0,0,1,3.467,24.4L12,20h.533q.2,0,.4.4l4.4,10.667,1.2-2.267a5.428,5.428,0,0,1-1.2-2.8c0-1.6,1.067-3.333,2.667-3.333S22.667,24.4,22.667,26a5.428,5.428,0,0,1-1.2,2.8l1.067,2.267,4.133-10.533.4-.4c.133-.133.4,0,.533,0L36.533,24.8a4.322,4.322,0,0,1,2.133,2.667L40,32.667a.8.8,0,0,1-.133.533C39.733,33.2,39.6,33.333,39.333,33.333ZM23.6,32H38.4l-1.067-4.4A2.516,2.516,0,0,0,36,25.867L27.733,21.6Zm-5.2,0h3.2l-1.467-3.067a.628.628,0,0,1,.133-.8c.267-.4,1.2-1.467,1.2-2.267,0-.933-.533-2-1.333-2s-1.333,1.067-1.333,2A4.148,4.148,0,0,0,20,28.133a.882.882,0,0,1,.133.8ZM1.467,32h14.8L12,21.6l-8,4a2.516,2.516,0,0,0-1.333,1.733Z" transform="translate(0 -20)" fill="#254a5d"/>
+                                   </g>
+                               </svg>
+                                 
+                               <!-- <img class="svg" src="dist/img/teacher.svg" alt="teacher"> -->
+                               <h5>انضم كمعلم</h5>
+                           </a>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+   <!-- end register modal -->
+   <!-- The student register Modal -->
+   <div class="modal modal--student-register" id="student-modal">
+   <div class="modal-dialog modal-md">
+       <div class="modal-content">
+           <!-- Modal body -->
+           <div class="modal-body text-center">
+               <h4 class="modal-title">بيانات الاشتراك</h4>
+               <form id="student-register-form" class="register-form register-form--student" action="#">
+                   <h3>بيانات شخصية</h3>
+                   <fieldset>
+                       <!-- <legend>بيانات شخصية</legend> -->
+                       <div class="row">
+                           <div class="col-md-12">
+                               <div class="form-group custom-input">
+                                   <input required class="form-control" id="student-name" type="text"  name="student-name">
+                                   <label class="form__label" for="student-name">الاسم</label>
+                               </div>
+                           </div> 
+               
+                       </div>
+                       <div class="row">
+                           <div class="col-md-12">
+                               <div class="form-group custom-input">
+                                   <input required class="form-control" id="mobileNumber" 
+                                   type="tel"  name="mobileNumber">
+                                   <label class="form__label" for="mobileNumber">رقم الجوال</label>
+                               </div>
+                           </div>
+                           <div class="col-md-12">
+                               <div class="form-group custom-input">
+                                   <input required class="form-control" id="new-password" type="password" name="new-password">
+                                   <label class="form__label password" for="new-password">كلمة المرور جديدة</label>
+                                   <i class="fas fa-eye fa-lg hide-show-pass"></i>
+                               </div>
+                               <div class="form-group custom-input">
+                                   <input required class="form-control password" id="re-password" type="password" name="re-password">
+                                   <label class="form__label" for="re-password">تأكيد كلمة المرور </label>
+                                   <i class="fas fa-eye fa-lg hide-show-pass"></i>
+                               </div>
+                           </div>
+                       </div>
+                   </fieldset>
+                   
+                   <h3>مجالات التدريس</h3>
+                   <fieldset>
+                       <div class="row">
+                           <div class="col-md-12">
+                               <div class="form-group custom-input">
+                                   <input required class="form-control" id="code-number" 
+                                   type="text"  name="code-number">
+                                   <label class="form__label" for="code-number">ادخل الكود</label>
+                               </div>                           
+                       
+                           </div>
+                       </div>
+
+                   </fieldset>
+
+
+               </form>
+           </div>
+       </div>
+   </div>
+   </div>
+   <!-- end  student register modal -->
+<!-- The course request Modal -->
+<div class="modal modal--course-request" id="course-request">
+   <div class="modal-dialog modal-md">
+       <div class="modal-content">
+           <!-- Modal body -->
+           <div class="modal-body text-center">
+               <h4 class="text-center">اطلب كورسك</h4>
+               <form action="" id="course-request-form">
+                   <div class="form-group custom-input">
+                       <input required class="form-control" id="course-name" type="text"  name="course-name">
+                       <label class="form__label" for="course-name">اسم المادة</label>
+                   </div>
+                   <div class="form-group custom-input">
+                       <input required class="form-control" id="uni-name" type="text"  name="uni-name">
+                       <label class="form__label" for="uni-name">اسم جامعتك</label>
+                   </div>
+                   <div class="form-group custom-input">
+                       <input required class="form-control" id="teacher-name" type="text"  name="teacher-name">
+                       <label class="form__label" for="teacher-name">اسم معلمك المفضل</label>
+                   </div>
+                   <div class="form-group custom-input">
+                       <input required class="form-control" id="email-name" type="text"  name="email">
+                       <label class="form__label" for="email">البريد الالكتروني</label>
+                   </div>
+                   <div class="form-group text-center">
+                       <input class="custom-btn custom-btn--blue custom-btn--shadow custom-btn--large" type="submit" value="اطلب الآن">
+                   </div>
+
+               </form>
+           </div>
+           <!-- end modal body div -->
+       </div>
+   </div>
+</div>
+<!-- end course request modal -->
+
+<!-- start preview div -->
+<div class="preview">
+   <div class="overlay">
+       <div class="container">
+
+       </div>
+   </div>
+</div>
+<!-- end preview div -->
+
+<div class="bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <div class="finished-payment text-center">
+                    <span class="circle circle--done circle--large">
+                        <div class="check"></div>
+                    </span>
+                    <p>تم الدفع بنجاح</p>
+                    <a  href="http://facebook.com"
+                        data-applink="www.fbwat.ch"
+                        class="custom-btn custom-btn--blue custom-btn--shadow custom-btn--large">العودة إلى الطبيق</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  
+
+  
+    </body>
+    <script src="dist/js/allPage.js"></script>
+    <script src="assets/js/plugin/jquery.applink.js"></script>
+
+    <script>
+    $(document).ready(function () {
+    $('a[data-applink]').applink();
+    });
+    </script>
+</body>
+</html>

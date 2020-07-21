@@ -1,0 +1,113 @@
+.custom-input {
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: $veryDarkBlue;
+        opacity: 0.4; /* Firefox */
+        font-size: 12px;
+      }
+
+      :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: $veryDarkBlue;
+        opacity: 0.4;
+        font-size: 12px;
+      }
+
+      ::-ms-input-placeholder { /* Microsoft Edge */
+        color: $veryDarkBlue;
+        opacity: 0.4;
+        font-size: 12px;
+      }
+    position: relative;
+    label {
+        text-align: right;
+        color: $veryDarkBlue;
+        font-size: 0.825em;
+        font-weight: bold;
+        display: block;
+        i {
+            position: inherit;
+            padding-right: 10px;
+        }
+        &.error {
+            color: #E45D50;
+        }
+    }
+    .iti {
+        label {
+            &.error {
+                position: absolute;
+                right: 0;
+                bottom: -70px;
+                @media (max-width:767px) {
+                    bottom: -35px;
+                }
+            }
+        }
+    }
+    i {
+        position: absolute;
+        left: 10px;
+        top: 19px;
+        cursor: pointer;
+        color: $gray;
+    }
+    .form__label {
+        position: absolute;
+        top: 19px;
+        right: 15px;
+        color: $veryDarkBlue;
+        font-size: 0.825em;
+        font-weight: bold;
+        transition: all 0.5s ease-in-out;
+    }
+    input:focus {
+        ~ .form__label {
+            top: -7px !important;
+            background: #fff;
+            font-size: 0.625em !important;
+            color: $mainGreen !important;
+            // width: 120px;
+        }
+    }
+    textarea {
+
+        ~ .form__label {
+            top: -7px !important;
+            background: #fff;
+            font-size: 12px !important;
+            color: $veryDarkBlue !important;
+            width: 120px;
+        }
+    }
+    textarea:focus {
+        ~ .form__label {
+            top: -7px !important;
+            background: #fff;
+            font-size: 12px !important;
+            color: $mainGreen !important;
+            // width: 120px;
+        }
+    }
+
+    .form-control {
+        padding: 1.575rem .75rem;
+    }
+    select.form-control {
+        padding: 0.375rem 0.75rem;
+        height: calc(1.5em + 1.86rem + 2px);
+        font-size: 0.825em;
+        font-weight: bold;
+        color: $veryDarkBlue;
+    }
+    .form-control:focus {
+        border-color: $mainGreen;
+        box-shadow: none;
+    }
+    .has-data {
+        top: -7px !important;
+        font-size: 0.625em !important;
+        background: #fff;
+        color: $mainGreen;
+    }
+    
+    
+}

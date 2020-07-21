@@ -1,0 +1,23 @@
+.chat-icon {
+    position: fixed;
+    right: 50px;
+    bottom: 5%;
+    background-image: linear-gradient(to left, $mainBlue, $mainGreen);
+    line-height: 60px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    z-index: 9;
+    // box-shadow: 0.25rem 0.25rem 0.8125rem 0.5rem $lightBlue;
+    text-align: center;
+    .online {
+        border: 2px solid #fff;
+        background: #26D07C;
+        width: 15px;
+        height: 15px;
+        display: block;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+    }
+}

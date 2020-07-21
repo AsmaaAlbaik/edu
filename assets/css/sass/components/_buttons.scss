@@ -1,0 +1,105 @@
+.custom-btn {
+    border-radius: 50px;
+    padding: 12px 20px;
+    color: #fff;
+    min-width: 140px;
+    border: 1px solid transparent;
+    font-family: font-bold;
+    transition: all 0.6s ease-in-out;
+    font-size: 0.875rem;
+    text-decoration: none;
+    // height: 65px;
+    &--light-bg {
+        background: rgba(37, 74, 93, .2);
+    }
+    &--shadow {
+        box-shadow: 0.25rem 0.25rem 0.8125rem 0.5rem $lightBlue;
+    }
+    &--blue {
+        @extend .gradient-background;
+        &:hover {
+            text-decoration: none;
+        //     background: transparent;
+            color: #fff;
+        //     border: 1px solid $gray;
+        }
+    }
+    &--red {
+        // border-radius: 22.5px;
+        @extend .gradient-orange-red-background;
+        box-shadow: 0 0 49px 0 rgba(16, 29, 113, 0.08);
+    }
+    &--small-pd {
+        padding: 7px 20px;
+    }
+    &--small-width {
+        min-width: 100px;
+    }
+    &--with-icon {
+        span {
+            padding-right: 10px;
+            padding-top: 3px;
+            display: inline-block;
+            &.left {
+                padding-left: 10px;
+                padding-right: 0;
+            }
+        }
+    }
+    &--bold {
+        font-weight: bold;
+    }
+    &--gray {
+        box-shadow: 0 0 49px 0 rgba(16, 29, 113, 0.08);
+        background-color: #98a5b9;          
+    }
+    &--gray-border {
+        background: #fff;
+        border: 1px solid $gray; 
+        color: $gray         
+    }
+    &--white {
+        background: #fff;
+        color: $veryDarkBlue;
+    }
+    &--large {
+        min-width: 200px;
+    }
+    &--no-bg {
+        background: transparent;
+        color: $gray;
+        border: 1px solid $gray;
+        &:hover {
+            border: 1px solid transparent;   
+            @extend .gradient-background;
+            color: #fff;
+        }
+    }
+    &--no-bg-with-blue-color {
+        background: transparent;
+        color: $mainBlue;
+        border: 1px solid $mainGreen;
+        // &:hover {
+        //     border: 1px solid transparent;   
+        //     @extend .gradient-background;
+        //     color: #fff !important;
+        //     text-decoration: none;
+        // }
+    }
+    &--very-dark-blue {
+        background: transparent;
+        color: $veryDarkBlue;
+        border: 1px solid $veryDarkBlue;
+    }
+
+}
+button:disabled,
+button[disabled] {
+    background: gray;
+    cursor: not-allowed;
+    color: #fff;
+}
+
+button:focus {
+    outline: none;
+}

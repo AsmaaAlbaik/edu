@@ -1,0 +1,93 @@
+.application {
+    text-align: center;
+    @media (max-width:767px){
+        margin-top: 15px;
+    }
+    h4 {
+        color: $veryDarkBlue;
+        opacity: 0.6;
+        font-size: 0.875rem;
+    }
+    .img-app {
+        img {
+
+            @media (max-width:767px) {
+                width: 150px;
+                height: 150px;
+                margin-bottom: 15px;
+            }    
+        }
+    }
+    > img {
+        width: 100%;
+        margin-bottom: 20px;
+        @media (max-width:767px) {
+            width: 160px;
+            height: 165px;
+        }
+        @media (min-width:768px) and (max-width:991px) {
+            width: 160px;
+            height: 165px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+    }
+    > p {
+        color: $veryDarkBlue;
+        font-weight: bold;
+        font-size: 1.2rem;
+        // @media (max-width:767px){
+        //     font-size: 0.8rem;
+        // }
+    }
+    .title {
+        display: inline-block;
+        padding-top: 10px;
+    }
+    a {
+        @extend .gradient-background;
+        box-shadow: 0.25rem 0.25rem 0.8125rem 0.5rem $lightBlue;
+        display: inline-block;
+        min-width: 185px;
+        border-radius: 10px;
+        text-decoration: none;
+        margin-left: 20px;
+        color: #fff;
+        padding: 0px 20px;
+        margin-bottom: 10px;
+        @media (max-width:767px) {
+            margin-left: 0px;
+        }   
+        h6 {
+            font-size: 0.75rem;
+            @media (max-width:767px){
+                font-size: 0.7rem;
+            }
+        }
+        p {
+            font-weight: bold;
+            font-size: 1rem;
+            margin-bottom: 7px;
+            @media (max-width:767px){
+                font-size: 0.8rem;
+            }
+        }
+        img,object {
+            margin-top: 18px;
+            margin-left: 15px;
+            float: right;
+            width: 25px;
+        }
+        &.custom {
+            &--shadow {
+                box-shadow: 0.25rem 0.25rem 0.8125rem 0.5rem $lightBlue;
+            }
+            &--large {
+                @media (min-width:992px) {
+                    min-width: 230px;
+                }
+            }
+        }
+       
+    }
+}

@@ -1,0 +1,23 @@
+@import './node_modules/owl.carousel/dist/assets/owl.carousel.min';
+@import './node_modules/owl.carousel/dist/assets/owl.theme.default.min';
+// @import './node_modules/animate.css/animate.min';
+@import './node_modules/dropify/dist/css/dropify.min';
+@import './node_modules/intro.js/minified/introjs.min';
+@import './node_modules/intro.js/minified/introjs-rtl.min';
+// @import './node_modules/lightgallery/dist/css/lightgallery.min';
+@import 'sass/helpers/variables';
+@import 'sass/components/overlay';
+@import 'sass/components/background';
+@import 'sass/components/buttons';
+// @import 'sass/components/application';
+
+@import 'sass/components/tab';
+
+@import 'sass/pages/student-dashboard';
+@import 'sass/pages/conference';
+
+@import 'sass/layout/allpages';
+
+@import 'sass/layout/navbar';
+@import 'sass/layout/header';
+@import 'sass/layout/footer';

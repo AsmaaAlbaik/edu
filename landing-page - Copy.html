@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset="UTF-8">
+            <!-- First Mobile Meta -->
+            <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+            <!-- Interner Exeplorer (IE) Compatibility Meta -->
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <meta name="theme-color" content="#12c5bc">
+            <meta content="" name="description"/>
+            <meta content="" name="author"/>
+            <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    
+            <!-- <link rel="icon" href="dist/img/logo.png?v='.env('APP_VERSION" type="image/x-icon"> -->
+            <!-- Add to home screen for Safari on iOS -->
+            <meta name="apple-mobile-web-app-capable" content="yes">
+            <meta name="apple-mobile-web-app-status-bar-style" content="black">
+            <meta name="apple-mobile-web-app-title" content="Weather PWA">
+            <link rel="apple-touch-icon" href="">
+            <meta name="msapplication-TileImage" content="">
+            <meta name="msapplication-TileColor" content="#2F3BA2">
+    
+            <!--[if lt IE 9]>
+            <script src="js/html5shiv.min.js?v='.env('APP_VERSION"></script>
+            <script src="js/respond.min.js?v='.env('APP_VERSION"></script>
+            <![endif]-->
+    
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+                  integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+           <link rel="stylesheet" href="dist/css/global.css">
+           <link rel="stylesheet" href="dist/css/landing-page.css">
+		   <link  href="jquery.fancybox.min.css" rel="stylesheet">
+<style>
+	.hidden {
+ display: none;   
+}
+.fancybox-title a {
+ color: #fff;        
+}
+</style>
+		   <script>
+		
+		   </script>
+    </head>
+<body>
+	<!-- data-0="transform:translate(0%,0%);"
+	data-100p="transform:translate(0%,-50%);"
+	data-200p="transform:translate(-50%,-50%);"
+	data-300p="transform:translate(-50%,0%);" -->
+
+	<header class="home-header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="index.html"> 
+                    <img class="img-responsive" src="dist/img/landing-page/combined-shape.svg" alt="logo"> 
+                </a>
+         
+            </nav>
+        </div>
+    </header>
+    <div id="slides-container">
+		<div id="slides">
+			<header class="home-header home-header--sticky">
+				<div class="container">
+					<nav class="navbar navbar-expand-lg">
+						<a class="navbar-brand" href="index.html"> 
+							<img class="img-responsive" src="dist/img/landing-page/logo.svg" alt="logo"> 
+						</a>
+						<div class="collapse navbar-collapse" >
+							<ul class="navbar-nav mr-auto">
+	
+								<li class="nav-item">
+									<a class="nav-link" href="#">
+										<img src="dist/img/landing-page/chat.svg" alt="chat">
+									</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</header>
+
+			<div id="slide-6" class="slide">
+	
+				<div class="container">
+					<div class="step3">
+						<div class="row">
+							<div class="col-md-12">
+							
+									<h2 class="step3__title mb-4">
+										مميزات النظام 
+									</h2>
+								
+									<div style="display: none;" id="content-1" class="content">
+										<img src="dist/img/landing-page/1.svg" class=" " alt="...">
+										<h4>
+											البث المباشر
+										  </h4>
+										<p>إطلاق حتى ١٥٠ جلسة بث مباشر شهرياً 
+											و٥٠٠ مستخدم لكل جلسة بالإضافة الى خاصية مشاركة الشاشة من قبل المعلم
+										</p>
+									</div>
+									<div style="display: none;" id="content-2" class="content">
+										<img src="dist/img/landing-page/2.svg" class=" " alt="...">
+										<h4>
+											التحضير
+										  </h4>
+										<p>
+											تسجيل حضور المستخدمين تلقائيا خلال البث المباشر مع إمكانية تحميل ملف التحضير من قبل المشرف او المعلم
+										</p>
+									</div>
+									<div style="display: none;" id="content-3" class="content">
+										<img src="dist/img/landing-page/3.svg" class=" " alt="...">
+										<h4>
+											معايير الويب
+										  </h4>
+										<p>
+											نظام مصمم 
+											على أعلى وأحدث معايير الويب العالمية لتوفير سرعة معالجة المعلومات والأمن المعلوماتي	
+										</p>
+									</div>
+									<div style="display: none;" id="content-4" class="content">
+										<img src="dist/img/landing-page/4.svg" class=" " alt="...">
+										<h4>
+											API
+										  </h4>
+										<p>
+											يمكنك ربط النظام بأي خدمات طرف ثالث من خلال واجهة خاصة على لوحة التحكم				
+										</p>
+									</div>
+									<div style="display: none;" id="content-5" class="content">
+										<img src="dist/img/landing-page/5.svg" class=" " alt="...">
+										<h4>
+											دمج الخدمات
+										  </h4>
+										<p>
+											النظام مدموج مع خدمات متعددة تدعم الجهود التسويقية والإدارية كما يمكن دمج أي خدمة أخرى	
+										</p>
+									</div>
+									<div style="display: none;" id="content-6" class="content">
+										<img src="dist/img/landing-page/6.svg" class=" " alt="...">
+										<h4>
+											بوابة الدفع
+										  </h4>
+										<p>
+											ربط بوابة الدفع الخاصة بالمستخدم أو أي خدمة دفع إلكتروني يرغب المستخدم بتوفيرها على النظام
+										</p>
+									</div>
+									<div style="display: none;" id="content-7" class="content">
+										<img src="dist/img/landing-page/7.svg" class=" " alt="...">
+										<h4>
+											التوافقية
+										  </h4>
+										<p>
+											توافقية النظام مع جميع محركات البحث ونظم التشغيل
+										</p>
+									</div>
+									<div style="display: none;" id="content-8" class="content">
+										<img src="dist/img/landing-page/8.svg" class=" " alt="...">
+										<h4>
+											تصاميم متجاوبة
+										  </h4>
+										<p>
+											تصاميم وواجهات النظام تتجاوب من أي جهاز كمبيوتر/لوحي/أو هاتف ذكي مهما كان مقاس شاشة العرض
+										</p>
+									</div>
+									<div style="display: none;" id="content-9" class="content">
+										<img src="dist/img/landing-page/9.svg" class=" " alt="...">
+										<h4>
+											الأرشفة
+										  </h4>
+										<p>
+											أرشفة المرفقات أو المواد التعليمية أو مسارات تعليمية كاملة دون الحاجة لخسارتها
+										</p>
+									</div>
+									<div style="display: none;" id="content-10" class="content">
+										<img src="dist/img/landing-page/10.svg" class=" " alt="...">
+										<h4>
+											المواسم
+										  </h4>
+										<p>
+											تحديد بداية ونهاية الموسم بحيث يمكن مقارنة الأداء في موسم محدد مقابل المواسم الأخرى أو لقياس الأداء خلال فترة معينة
+										</p>
+									</div>
+									<div style="display: none;" id="content-11" class="content">
+										<img src="dist/img/landing-page/11.svg" class=" " alt="...">
+										<h4>
+											نماذج استطلاعات الرأي
+										  </h4>
+										<p>
+											بناء نموذج استطلاع من خلال لوحة التحكم وتحديد المرحلة التي يظهر فيها النموذج للمستخدمين	
+										</p>
+									</div>
+									<div style="display: none;" id="content-12" class="content">
+										<img src="dist/img/landing-page/12.svg" class=" " alt="...">
+										<h4>
+											التنبيهات والإشعارات
+										  </h4>
+										<p>
+											إطلاق تنبيهات لجميع مستخدمي النظام أو لفئة مختاره بشكل يدوي او تلقائي
+										</p>
+									</div>
+									<div style="display: none;" id="content-13" class="content">
+										<img src="dist/img/landing-page/13.svg" class=" " alt="...">
+										<h4>
+											نظام الرسائل البريدية
+										  </h4>
+										<p>
+											بناء قوالب الرسائل البريدية وتحديد الخطوات التي يتم ارسالها عندها مثل (بريد مستخدم جديد، بريد استعادة كلمة المرور، إلخ...)
+											 كما يمكن ارسال بريد الكتروني الى مجموعة من مستخدمي النظام او جميعهم دفعه واحدة
+										</p>
+									</div>
+									<div style="display: none;" id="content-14" class="content">
+										<img src="dist/img/landing-page/14.svg" class=" " alt="...">
+										<h4>
+											المتابعة والتقارير
+										  </h4>
+										<p>
+											متابعة أداء المستخدمين والاطلاع على تقارير متنوعة في الشؤون المالية والعملية والتقنية والتسويقية
+										</p>
+									</div>
+									<div style="display: none;" id="content-15" class="content">
+										<img src="dist/img/landing-page/15.svg" class=" " alt="...">
+										<h4>
+											إدارة المستخدمين
+										  </h4>
+										<p>
+											الاطلاع على كل ما يخص المستخدمين وإمكانية تعديل/حذف/إضافة/إعطاء اذن ولوج/أو حظر أي مستخدم أو فئة من المستخدمين
+										</p>
+									</div>
+									<div style="display: none;" id="content-16" class="content">
+										<img src="dist/img/landing-page/16.svg" class=" " alt="...">
+										<h4>
+											تصنيفات المستخدمين
+										  </h4>
+										<p>
+											تصنيف المستخدمين حسب التصنيفات التالية: طالب/معلم/مشرف/خدمة العملاء/مسؤول تسويق/مسؤول مالي/مدير كما يمكن إضافة تصنيفات أخرى أو التعديل على صلاحيات التصنيفات
+										</p>
+									</div>
+									<div style="display: none;" id="content-17" class="content">
+										<img src="dist/img/landing-page/17.svg" class=" " alt="...">
+										<h4>
+											خدمة التقييم
+										  </h4>
+										<p>
+											بناء واضافة نموذج لتقييم مقدم المحتوى/المحتوى/التقنية/التجربة والحصول على تقييم المستخدمين لها
+										</p>
+									</div>
+									<div style="display: none;" id="content-18" class="content">
+										<img src="dist/img/landing-page/18.svg" class=" " alt="...">
+										<h4>
+											كوبونات الخصومات
+										  </h4>
+										<p>
+											إصدار كوبونات خصم لتحفيز الحملات التسويقية أو لقياس أداء المبيعات كما يمكن إضافة مسؤول عن كل كوبون وقياس أداء المسؤول
+										</p>
+									</div>
+									<div style="display: none;" id="content-19" class="content">
+										<img src="dist/img/landing-page/19.svg" class=" " alt="...">
+										<h4>
+											فهرس المواد
+										  </h4>
+										<p>
+											إضافة فهرس للمواد أو لمسارات التعلم يبرز المحتوى العلمي وتفاصيل المادة
+										</p>
+									</div>
+									<div style="display: none;" id="content-20" class="content">
+										<img src="dist/img/landing-page/20.svg" class=" " alt="...">
+										<h4>
+											إدارة المحتوى
+										  </h4>
+										<p>
+											مرونة إدارة المحتوى وإمكانية نسخه وتكراره أو إضافة المحتوى لمواد أخرى أو إعادة نشره داخل النظام أو خارجه
+										</p>
+									</div>
+									<div style="display: none;" id="content-21" class="content">
+										<img src="dist/img/landing-page/21.svg" class=" " alt="...">
+										<h4>
+											محتوى متعدد
+										  </h4>
+										<p>
+											إمكانية إضافة محتوى تعليمي متنوع (مقاطع فيديو، مقاطع صوتية، ملف PDF، أو ملفات Microsoft Office)
+										</p>
+									</div>
+									<div style="display: none;" id="content-22" class="content">
+										<img src="dist/img/landing-page/22.svg" class=" " alt="...">
+										<h4>
+											حماية المحتوى
+										  </h4>
+										<p>
+											يوفر النظام حماية المحتوى من التسرب أو السرقة من خلال تطبيق أعلى معايير الحماية التقنية
+										</p>
+									</div>
+									<div style="display: none;" id="content-23" class="content">
+										<img src="dist/img/landing-page/23.svg" class=" " alt="...">
+										<h4>
+											تحميل متعدد دفعه واحدة
+										  </h4>
+										<p>
+											النظام يدعم رفع مجموعة من المحتويات التعليمية دفعه واحده مهما كان حجمها او عددها كما يمكن رفع المحتوى من YouTube
+										</p>
+									</div>
+									<div style="display: none;" id="content-24" class="content">
+										<img src="dist/img/landing-page/24.svg" class=" " alt="...">
+										<h4>
+											إضافة الهوية على المحتوى
+										  </h4>
+										<p>
+											إضافة شعار وهوية المستخدم للمحتوى المرئي
+										</p>
+									</div>
+									<div style="display: none;" id="content-25" class="content">
+										<img src="dist/img/landing-page/25.svg" class=" " alt="...">
+										<h4>
+											مسارات التعلم
+										  </h4>
+										<p>
+											بناء مسارات تعلم تضم مجموعة من المواد ووضع الشروط والمعايير لانتقال المتعلمين فيها من مستوى الى الذي يليه
+										</p>
+									</div>
+	
+									<div class="system-features">
+										<div class="owl-carousel owl-theme">
+											<a href="dist/img/landing-page/1.svg" 
+											   data-fancybox="gallery"
+											   data-src="#content-1"
+											
+											   class="item fancybox">
+												<div class="item-content">
+													<img src="dist/img/landing-page/1.svg" class="d-block " alt="...">
+													<h4>
+													  البث المباشر
+													</h4>
+												</div>
+												
+											 
+											</a>
+											
+											<a  href="dist/img/landing-page/2.svg" 
+												class="item fancybox" 
+												data-fancybox="gallery"
+												data-src="#content-2"
+												>
+												<div class="item-content">
+													<img src="dist/img/landing-page/2.svg" class="d-block " alt="...">
+													<h4>
+														التحضير
+													</h4>
+												</div>
+											
+											</a>
+											<a 	href="dist/img/landing-page/3.svg" 
+												class="item" 
+												data-fancybox="gallery"
+												data-src="#content-3"
+												>
+												<div class="item-content">
+													<img src="dist/img/landing-page/3.svg" class="d-block " alt="...">
+													<h4>
+														معايير الويب
+													</h4>
+												</div>
+											
+											</a>
+											<a   href="dist/img/landing-page/4.svg" 
+											class="item" 
+											data-fancybox="gallery"
+											data-src="#content-4"
+											>
+												<div class="item-content">
+													<img src="dist/img/landing-page/4.svg" class="d-block " alt="...">
+													<h4>
+														API
+													</h4>
+												</div>
+											
+											</a>
+											<a   href="dist/img/landing-page/5.svg" 
+											class="item" 
+											data-fancybox="gallery"
+											data-src="#content-5"
+											>
+												<div class="item-content">
+													<img src="dist/img/landing-page/5.svg" class="d-block " alt="...">
+													<h4>
+														دمج الخدمات
+													</h4>
+												</div>
+											
+											</a>
+											<a   href="dist/img/landing-page/6.svg" 
+											class="item" 
+											data-fancybox="gallery"
+											data-src="#content-6"
+											>
+												<div class="item-content">
+													<img src="dist/img/landing-page/6.svg" class="d-block " alt="...">
+													<h4>
+														بوابة الدفع
+													</h4>
+												</div>
+											
+											</a>
+											<a   href="dist/img/landing-page/7.svg" 
+											class="item" 
+											data-fancybox="gallery"
+											data-src="#content-7"
+											>
+												<div class="item-content">
+													<img src="dist/img/landing-page/7.svg" class="d-block " alt="...">
+													<h4>
+														التوافقية
+													</h4>
+												</div>
+											
+											</a>
+											<a   href="dist/img/landing-page/8.svg" 
+											class="item" 
+											data-fancybox="gallery"
+											data-src="#content-8"
+											>
+												<div class="item-content">
+													<img src="dist/img/landing-page/8.svg" class="d-block " alt="...">
+													<h4>
+														تصاميم متجاوبة
+													</h4>
+												</div>
+											
+											</a>
+											<a   href="dist/img/landing-page/9.svg" 
+											class="item" 
+											data-fancybox="gallery"
+											data-src="#content-9">
+												<div class="item-content">
+													<img src="dist/img/landing-page/9.svg" class="d-block " alt="...">
+													<h4>
+														الأرشفة
+													</h4>
+												</div>
+												
+											</a>
+											<a   href="dist/img/landing-page/10.svg" 
+											class="item" 
+											data-fancybox="gallery"
+											data-src="#content-10">
+												<div class="item-content">
+													<img src="dist/img/landing-page/10.svg" class="d-block " alt="...">
+													<h4>
+														المواسم
+													</h4>
+												</div>
+												
+											</a>
+											<a   href="dist/img/landing-page/11.svg" 
+											class="item" 
+											data-fancybox="gallery"
+											data-src="#content-11">
+												<div class="item-content">
+													<img src="dist/img/landing-page/11.svg" class="d-block " alt="...">
+													<h4>
+														نماذج استطلاعات الرأي
+													</h4>
+												</div>
+											
+											</a>
+											<a   href="dist/img/landing-page/12.svg" 
+											class="item" 
+											data-fancybox="gallery"
+											data-src="#content-12">
+												<div class="item-content">
+													<img src="dist/img/landing-page/12.svg" class="d-block " alt="...">
+													<h4>
+														التنبيهات والإشعارات
+													</h4>
+												</div>
+											
+											</a>
+											<a   href="dist/img/landing-page/13.svg" 
+											class="item" 
+											data-fancybox="gallery"
+											data-src="#content-13">
+												<div class="item-content">
+													<img src="dist/img/landing-page/13.svg" class="d-block " alt="...">
+													<h4>
+														نظام الرسائل البريدية
+													</h4>
+												</div>
+												
+											</a>
+											<a  href="dist/img/landing-page/14.svg" 
+											class="item" 
+											data-fancybox="gallery"
+											data-src="#content-14">
+												<div class="item-content">
+													<img src="dist/img/landing-page/14.svg" class="d-block " alt="...">
+													<h4>
+														المتابعة والتقارير
+													</h4>
+												</div>
+											
+											</a>
+											<a   href="dist/img/landing-page/15.svg" 
+											class="item" 
+											data-fancybox="gallery"
+											data-src="#content-15">
+												<div class="item-content">
+													<img src="dist/img/landing-page/15.svg" class="d-block " alt="...">
+													<h4>
+														إدارة المستخدمين
+													</h4>
+												</div>
+											
+											</a>
+											<a   href="dist/img/landing-page/16.svg" 
+											class="item" 
+											data-fancybox="gallery"
+											data-src="#content-16">
+												<div class="item-content">
+													<img src="dist/img/landing-page/16.svg" class="d-block " alt="...">
+													<h4>
+														تصنيفات المستخدمين
+													</h4>
+												</div>
+												
+											</a>
+											<a  href="dist/img/landing-page/17.svg" 
+												class="item" 
+												data-fancybox="gallery"
+												data-src="#content-17">
+												<div class="item-content">
+													<img src="dist/img/landing-page/17.svg" class="d-block " alt="...">
+													<h4>
+														خدمة التقييم
+													</h4>
+												</div>
+												
+											</a>
+											<a   href="dist/img/landing-page/18.svg" 
+											class="item" 
+											data-fancybox="gallery"
+											data-src="#content-18">
+												<div class="item-content">
+													<img src="dist/img/landing-page/18.svg" class="d-block " alt="...">
+													<h4>
+														كوبونات الخصومات
+													</h4>
+												</div>
+											
+											</a>
+											<a   href="dist/img/landing-page/19.svg" 
+											class="item" 
+											data-fancybox="gallery"
+											data-src="#content-19">
+												<div class="item-content">
+													<img src="dist/img/landing-page/19.svg" class="d-block " alt="...">
+													<h4>
+														فهرس المواد
+													</h4>
+												</div>
+												
+											</a>
+											<a   href="dist/img/landing-page/20.svg" 
+											class="item" 
+											data-fancybox="gallery"
+											data-src="#content-20">
+												<div class="item-content">
+													<img src="dist/img/landing-page/20.svg" class="d-block " alt="...">
+													<h4>
+														إدارة المحتوى
+													</h4>
+												</div>
+											
+											</a>
+											<a   href="dist/img/landing-page/21.svg" 
+											class="item" 
+											data-fancybox="gallery"
+											data-src="#content-21">
+												<div class="item-content">
+													<img src="dist/img/landing-page/21.svg" class="d-block " alt="...">
+													<h4>
+														محتوى متعدد
+													</h4>
+												</div>
+											
+											</a>
+											<a  href="dist/img/landing-page/22.svg" 
+											class="item" 
+											data-fancybox="gallery"
+											data-src="#content-22">
+												<div class="item-content">
+													<img src="dist/img/landing-page/22.svg" class="d-block " alt="...">
+													<h4>
+														حماية المحتوى
+													</h4>
+												</div>
+											
+											</a>
+											<a   href="dist/img/landing-page/23.svg" 
+											class="item" 
+											data-fancybox="gallery"
+											data-src="#content-23">
+												<div class="item-content">
+													<img src="dist/img/landing-page/23.svg" class="d-block " alt="...">
+													<h4>
+														تحميل متعدد دفعه واحدة
+													</h4>
+												</div>
+											
+											</a>
+											<a   href="dist/img/landing-page/24.svg" 
+											class="item" 
+											data-fancybox="gallery"
+											data-src="#content-24">
+												<div class="item-content">
+													<img src="dist/img/landing-page/24.svg" class="d-block " alt="...">
+													<h4>
+														إضافة الهوية على المحتوى
+													</h4>
+												</div>
+											
+											</a>
+											<a   href="dist/img/landing-page/25.svg" 
+											class="item" 
+											data-fancybox="gallery"
+											data-src="#content-25">
+												<div class="item-content">
+													<img src="dist/img/landing-page/25.svg" class="d-block " alt="...">
+													<h4>
+														مسارات التعلم
+													</h4>
+												</div>
+											
+											</a>
+										</div>
+									
+							
+									</div>
+									
+							
+							</div>
+					
+						</div>
+					</div>
+				
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<script type="text/javascript" src="dist/js/allPage.js"></script>
+	<script type="text/javascript" src="dist/js/landing.js"></script>
+	<script src="jquery.fancybox.min.js"></script>
+	<script type="text/javascript">
+
+// $(document).ready(function() {
+// 	$(".fancybox").fancybox({
+// 		openEffect	: 'none',
+// 		closeEffect	: 'none'
+// 	});
+// });
+		$(document).ready(function () {
+		"use strict";
+		$('[data-fancybox="gallery"]').fancybox({
+			arrows: true,
+			infobar: true,
+			prevEffect  : 'none',
+            nextEffect  : 'none',
+            helpers : {
+                title   : {
+                    type: 'outside'
+                },
+                thumbs  : {
+                    width   : 50,
+                    height  : 50
+                }
+            },
+			beforeShow : function(){
+			this.title =  this.title + " - " + $(this.element).data("caption");
+			},
+			iframe : {
+					css : {
+						width : '800px',
+						height : '800px',
+
+					}
+				}
+			// helpers : {
+        // title: {
+        //     type: 'inside',
+        //     position: 'bottom'
+        // }
+    // },
+		// 	beforeLoad: function() {
+        //     var el, id = $(this.element).data('title-id');
+
+        //     if (id) {
+        //         el = $('#' + id);
+            
+        //         if (el.length) {
+        //             this.title = el.html();
+        //         }
+        //     }
+        // }
+					// Options will go here
+		});
+
+			$(window).scroll(function () {
+
+				$('.slide').each(function() {
+
+					if ($(window).scrollTop() >= $(this).offset().top ) {
+						console.log("offset of window: "+ $(window).scrollTop())
+						console.log('offset')
+						console.log($(this).offset().top)
+
+					var slideId = $(this).attr('id');
+
+					console.log($('.dot-slides > span[data-value="'+ slideId +'"]'));
+					$('.dot-slides > span').removeClass('active');
+
+					$('.dot-slides > span[data-value="'+ slideId +'"]').addClass('active'); 
+
+					}   
+				});
+			});
+			$('.dot-slides > span').on('click', function () {
+				var slideId = $(this)
+				// $(this).addClass('active').siblings().removeClass('active');
+       
+				$('html, body').animate({
+					scrollTop: $('#'+ $(this).data('value')).offset().top 
+				},1000, function () {
+					console.log("offset of slide div: ");
+					console.log($('#'+ slideId.data('value')).offset().top)
+					// console.log($('#'+ $(this).data('value')).offset().top )
+					
+				});
+
+			});
+			
+			$('#see-features').click(function() {
+
+				$('html, body').animate({
+
+					scrollTop: $('#slide-6').offset().top
+
+				},1000);
+
+
+			});
+			$('#back-to-home').on('click', function () {
+				$('html, body').animate({
+
+				scrollTop: $('#slide-1').offset().top
+
+				},1500);
+			})
+		});
+	</script>
+	<!-- <script type="text/javascript" src="assets/js/plugin/skrollr.min.js"></script> -->
+	<!-- <script type="text/javascript" src="assets/js/plugin/skrollr-slideshow.js"></script> -->
+
+	<!--[if lt IE 9]>
+	<script type="text/javascript" src="dist/skrollr.ie.min.js"></script>
+	<![endif]-->
+
+	<!-- <script type="text/javascript">
+
+		var s = skrollr.init();
+		skrollr.slideShow.init(s, "div.skrllrGallery");
+
+	</script> -->
+
+</body>
+</html>

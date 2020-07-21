@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- First Mobile Meta -->
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <!-- Interner Exeplorer (IE) Compatibility Meta -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#12c5bc" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+
+    <!-- <link rel="icon" href="dist/img/logo.png?v='.env('APP_VERSION" type="image/x-icon"> -->
+    <!-- Add to home screen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="Weather PWA" />
+    <link rel="apple-touch-icon" href="" />
+    <meta name="msapplication-TileImage" content="" />
+    <meta name="msapplication-TileColor" content="#2F3BA2" />
+
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js?v='.env('APP_VERSION"></script>
+      <script src="js/respond.min.js?v='.env('APP_VERSION"></script>
+    <![endif]-->
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+      integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="../dist/css/global.css" />
+    <link rel="stylesheet" href="../dist/css/conference.css" />
+  </head>
+  <body>
+    <!-- header and navbar -->
+    <div class="fixed-menu">
+      <div class="container">
+        <!-- <i class="far fa-times-circle fa-2x"></i> -->
+        <img src="dist/img/close.svg" alt="close" />
+        <ul class="list-unstyled">
+          <li class="active"><a href="#">الرئيسية</a></li>
+          <li><a href="#">طلب كورس</a></li>
+          <li><a href="#">عن أكاديمي</a></li>
+          <li><a href="#">الخدمات</a></li>
+          <li class="login" data-toggle="modal" data-target="#login-modal">
+            <a href="#">تسجيل الدخول</a>
+          </li>
+          <li
+            class="register"
+            data-toggle="modal"
+            data-target="#register-modal"
+          >
+            <a href="#">انضم الينا</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="loading text-center">
+      <container>
+        <row>
+          <col cols>
+           <div class="contant">
+              <i class="fas fa-spinner fa-spin fa-6x"></i>
+                  <h3>يرجى الانتظار , جاري بدء الجلسة</h3>
+              </div>
+          </col>
+        </row>
+      </container>
+    </div>
+    
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body text-center">
+        <div class="session">
+          <img src="../dist/img/live-stream.svg" alt="icon">
+          <h4 class="text-center">تم بدء الجلسة الآن</h4>
+          <div class="from-group custom-input">
+            <textarea class="form-control" placeholder="الرابط"></textarea>
+          </div>
+         
+          <button class="custom-btn custom-btn--blue">
+            <span>
+              انتقل إلى الجلسة
+            </span>
+          </button>
+          <button class="custom-btn custom-btn--gray-border">
+            <span>
+              نسخ الرابط
+            </span>
+          </button>
+        </div>
+    
+      </div>
+    
+    </div>
+  </div>
+</div>
+    <header class="home-header">
+      <div class="container-fluid">
+        <nav class="navbar navbar--padding-right navbar-expand-lg">
+          <a class="navbar-brand" href="#">
+            <img class="img-responsive" src="../dist/img/logo.svg" alt="logo" />
+          </a>
+          <div class="navbar-toggler">
+            <img src="../dist/img/menu.svg" alt="menu" class="menu-icon" />
+          </div>
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                 <li class="nav-item">
+                <a
+                  class="nav-link custom-btn custom-btn--light-bg"
+                  href="#"
+                  id=""
+                  data-toggle="modal" data-target="#exampleModal"
+                >
+                  <svg
+                    class="float-right"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="22"
+                    viewBox="0 0 24 22"
+                  >
+                    <path
+                      fill="#FFF"
+                      d="M2.854.185C2.745.067 2.594 0 2.434 0c-.158 0-.31.067-.42.185L1.38.833c-.116.11-.182.266-.182.428 0 .162.066.316.182.427L4.497 4.89C2.467 6.273.92 8.275.072 10.609c-.045.125-.07.258-.072.391 0 .13.024.259.072.379 1.95 4.96 6.677 8.202 11.92 8.175 1.942-.011 3.856-.467 5.601-1.332l3.538 3.593c.109.118.26.185.42.185.159 0 .31-.067.42-.185l.635-.648c.116-.11.182-.266.182-.428 0-.162-.066-.316-.182-.427L2.854.185zm9.139 16.925C7.935 17.1 4.24 14.727 2.483 11c.798-1.799 2.105-3.314 3.753-4.35l2.59 2.64c-.656 1.401-.375 3.073.703 4.171 1.078 1.099 2.719 1.386 4.095.716l2.11 2.151c-1.191.485-2.458.75-3.741.782zm11.992-6.477C21.53 4.416 14.863 1.093 8.54 2.935L10.566 5c.472-.073.949-.11 1.427-.11 4.058.01 7.752 2.383 9.51 6.11-.48 1.144-1.191 2.172-2.087 3.018l1.703 1.736c1.256-1.205 2.213-2.696 2.794-4.35.052-.129.076-.266.072-.404.02-.121.02-.245 0-.367z"
+                    />
+                  </svg>
+                  <span>
+                     مشاركة رابط الإجتماع
+                  </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link custom-btn custom-btn--light-bg"
+                  href="#"
+                  id="showChat"
+                >
+                  <svg
+                    class="float-right"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="22"
+                    viewBox="0 0 24 22"
+                  >
+                    <path
+                      fill="#FFF"
+                      d="M2.854.185C2.745.067 2.594 0 2.434 0c-.158 0-.31.067-.42.185L1.38.833c-.116.11-.182.266-.182.428 0 .162.066.316.182.427L4.497 4.89C2.467 6.273.92 8.275.072 10.609c-.045.125-.07.258-.072.391 0 .13.024.259.072.379 1.95 4.96 6.677 8.202 11.92 8.175 1.942-.011 3.856-.467 5.601-1.332l3.538 3.593c.109.118.26.185.42.185.159 0 .31-.067.42-.185l.635-.648c.116-.11.182-.266.182-.428 0-.162-.066-.316-.182-.427L2.854.185zm9.139 16.925C7.935 17.1 4.24 14.727 2.483 11c.798-1.799 2.105-3.314 3.753-4.35l2.59 2.64c-.656 1.401-.375 3.073.703 4.171 1.078 1.099 2.719 1.386 4.095.716l2.11 2.151c-1.191.485-2.458.75-3.741.782zm11.992-6.477C21.53 4.416 14.863 1.093 8.54 2.935L10.566 5c.472-.073.949-.11 1.427-.11 4.058.01 7.752 2.383 9.51 6.11-.48 1.144-1.191 2.172-2.087 3.018l1.703 1.736c1.256-1.205 2.213-2.696 2.794-4.35.052-.129.076-.266.072-.404.02-.121.02-.245 0-.367z"
+                    />
+                  </svg>
+                  <span>
+                    اظهار المحادثة
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <section class="student-dashboard" id="app">
+      <div class="tab tab--user">
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="pill">
+              <img src="../dist/svg/video2.svg" alt="icon" />
+              <span>فتح الكاميرا</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link question-and-answer" data-toggle="pill">
+              <img src="../dist/svg/share2.svg" alt="icon" />
+
+              <span>مشاركة الشاشة</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="pill">
+              <img src="../dist/svg/power2.svg" alt="icon" />
+              <span>إغلاق البث</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="container-fluid">
+        <!-- Tab panes -->
+        <div class="student-dashboard__content tab-content">
+          <div class="row">
+            <div class="col-xl-12 col-lg-12 collapse-div">
+              <div
+                class="student-dashboard__left-content student-dashboard__left-content--conference"
+              >
+                <div class="student-dashboard__about-course">
+                  <h4 class="video-title">نظرية الحوسبة من جامعة طيبة في</h4>
+                  <label
+                    class="custom-btn custom-btn--red custom-btn--with-icon custom-btn--small-pd float-left mb-2"
+                  >
+                    <span>1:05:55</span>
+                    <!-- <img src="dist/svg/clock.svg"> -->
+                    <svg
+                      class="float-left"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="22"
+                      viewBox="0 0 20 22"
+                    >
+                      <path
+                        fill="#FFF"
+                        d="M17.619 5.799l1.244-1.22c.21-.21.21-.546 0-.756l-.782-.767c-.103-.102-.244-.16-.39-.16-.148 0-.288.058-.392.16l-1.222 1.263c-1.158-.921-2.513-1.574-3.964-1.911V1.08c0-.597-.493-1.08-1.101-1.08H8.809c-.608 0-1.1.483-1.1 1.08v1.328C3.2 3.415.002 7.345 0 11.878c.06 5.235 4.29 9.506 9.624 9.718 3.86.102 7.427-2.003 9.143-5.394 1.716-3.391 1.268-7.451-1.148-10.403zM9.91 19.437c-4.257 0-7.708-3.384-7.708-7.559 0-4.175 3.451-7.559 7.708-7.559 4.258 0 7.709 3.384 7.709 7.56 0 4.174-3.451 7.558-7.709 7.558zm.419-12.958h-.837c-.304 0-.55.242-.55.54v5.399c0 .298.246.54.55.54h.837c.304 0 .55-.242.55-.54v-5.4c0-.297-.246-.54-.55-.54z"
+                      />
+                    </svg>
+                  </label>
+                  <iframe
+                    src="<https://player.vimeo.com/video/407060756"
+                    width="640"
+                    height="480"
+                    frameborder="0"
+                    allow="autoplay; fullscreen"
+                    allowfullscreen
+                  ></iframe>
+                  <ul class="list-unstyled user-list">
+                    <li>
+                      <iframe
+                        src="<https://player.vimeo.com/video/407060756"
+                        width="640"
+                        height="480"
+                        frameborder="0"
+                        allow="autoplay; fullscreen"
+                        allowfullscreen
+                      ></iframe>
+                    </li>
+                    <li>
+                      <iframe
+                        src="<https://player.vimeo.com/video/407060756"
+                        width="640"
+                        height="480"
+                        frameborder="0"
+                        allow="autoplay; fullscreen"
+                        allowfullscreen
+                      ></iframe>
+                    </li>
+                    <li>
+                      <iframe
+                        src="<https://player.vimeo.com/video/407060756"
+                        width="640"
+                        height="480"
+                        frameborder="0"
+                        allow="autoplay; fullscreen"
+                        allowfullscreen
+                      ></iframe>
+                    </li>
+                    <li>
+                      <iframe
+                        src="<https://player.vimeo.com/video/407060756"
+                        width="640"
+                        height="480"
+                        frameborder="0"
+                        allow="autoplay; fullscreen"
+                        allowfullscreen
+                      ></iframe>
+                    </li>
+                    <li>
+                      <iframe
+                        src="<https://player.vimeo.com/video/407060756"
+                        width="640"
+                        height="480"
+                        frameborder="0"
+                        allow="autoplay; fullscreen"
+                        allowfullscreen
+                      ></iframe>
+                    </li>
+                    <li>
+                      <iframe
+                        src="<https://player.vimeo.com/video/407060756"
+                        width="640"
+                        height="480"
+                        frameborder="0"
+                        allow="autoplay; fullscreen"
+                        allowfullscreen
+                      ></iframe>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- student-dashboard__right-content -->
+            </div>
+            <!-- end col-4 -->
+            <div class="col-xl-6 col-lg-6 showandhide">
+              <div
+                class="student-dashboard__left-content student-dashboard__left-content--chat"
+              >
+                <div
+                  class="student-dashboard__about-course student-dashboard__chat container"
+                >
+                  <div class="mesgs">
+                    <div class="msg_history">
+                      <div class="incoming_msg">
+                        <div class="received_msg">
+                          <div class="received_withd_msg">
+                            <p>
+                              incomming asmas
+                            </p>
+                            <span class="time_date"> 11:01 AM | June 9</span>
+                            <div class="incoming_msg_img">
+                              <img src="../dist/img/student.jpg" alt="sunil" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="outgoing_msg" v-for="msg in massagesList">
+                        <div class="sent_msg">
+                          <div class="content">
+                            <p>{{ msg.content }}</p>
+                          </div>
+
+                          <span class="time_date">
+                            {{ msg.date }} | June 9</span
+                          >
+                        </div>
+                      </div>
+                      <div class="incoming_msg">
+                        <div class="received_msg">
+                          <div class="received_withd_msg">
+                            <p>
+                              incomming asmmmmmmmmmmmmmmmmmaaa incomeing
+                            </p>
+                            <span class="time_date"> 11:01 AM | June 9</span>
+                            <div class="incoming_msg_img">
+                              <img src="../dist/img/student.jpg" alt="sunil" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end mesgs div -->
+                </div>
+
+                <div class="type_msg">
+                  <div class="input_msg_write">
+                    <div class="row">
+                      <div class="col-6 col-sm-9 col-lg-8 col-xl-9">
+                        <img
+                          class="smile"
+                          src="../dist/img/student_dashboard_icons/smile.svg"
+                          alt="smile"
+                        />
+                        <input
+                          type="text"
+                          class="write_msg form-control"
+                          placeholder="اكتب رسالتك هنا..."
+                        />
+                      </div>
+                      <div class="col-6 col-sm-3 col-lg-4 col-xl-3">
+                        <div class="chat-icon">
+                          <a href="">
+                            <img
+                              src="../dist/img/student_dashboard_icons/attachment.svg"
+                              alt="chat-icon"
+                            />
+                          </a>
+
+                          <a href="">
+                            <img
+                              src="../dist/img/student_dashboard_icons/send-mail.svg"
+                              alt="chat-icon"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end col-8 -->
+          </div>
+        </div>
+      </div>
+      <!-- end container -->
+    </section>
+  </body>
+  <script src="../dist/js/allPage.js"></script>
+  <script>
+    $(document).ready(() => {
+      let show = false;
+      $("#showChat").on("click", function () {
+        var button = $(this).find("span");
+        show = !show;
+        console.log(show);
+        $(".collapse-div")
+          .toggleClass("col-xl-12 col-lg-12", 1000, "easeInOutQuad")
+          .toggleClass("col-xl-6 col-lg-6", 1000, "easeInOutQuad");
+        if (show) {
+          $(".showandhide").css({ display: "block" });
+          button.text("إخفاء المحادثة");
+        } else {
+          $(".showandhide").css("display", "none");
+          button.text("إظهار المحادثة");
+        }
+
+        console.log("this");
+      });
+    });
+  </script>
+  <!-- <script src="../dist/js/student-dashboard-plugin.js"></script> -->
+  <!-- <script src="../dist/js/student-dashboard.js"></script> -->
+</html>

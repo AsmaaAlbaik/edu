@@ -1,0 +1,155 @@
+
+
+.universities {
+    padding: 65px 0;
+    .owl-carousel {
+        // @media (min-width:992px) {
+        //     left: 47%;
+        //     transform: translateX(-50%);
+        // }
+        .owl-item {
+            a {
+                width: 150px;
+                height: 150px;
+                display: block;
+                background: $lightBlue;
+                border-radius: 15px;
+                padding-top: 26px;
+                @media (max-width:767px) {
+                    margin: auto; 
+                }
+              
+            }
+        }
+        .owl-theme .owl-nav.disabled+.owl-dots {
+          margin-top: 25px;
+        }
+        .owl-theme .owl-dots .owl-dot span {
+            width :8px;
+            height: 8px;
+            border: 1px solid $gray;
+            border-radius: 50%;
+            transition: all 0.4s ease-in-out;
+        }
+        .owl-dots .owl-dot.active span {
+            width : 25px;
+            height: 8px;
+            border: 1px solid $mainGreen;
+            border-radius: 10px;
+            background-image: linear-gradient(to left, $mainBlue, $mainGreen);
+        }
+          // width: auto;
+        // }
+        // .carousel-indicators  {
+        //     // top: 120%;
+        //     @media (min-width:992px) {
+        //         top: 128%;
+        //         right: 20%;
+        //     }
+        //     @media(max-width:991px){
+        //         top: 100%;
+        //     }
+
+        // }
+        // .carousel-inner {
+        //     @media (min-width:992px) {
+        //         width: 70%;
+        //         left: -28%
+        //     }
+            .item {
+                img,object {
+                    width: 90px;
+                    height: 90px;
+                    background: $lightBlue;
+                    border-radius: 15px;
+                    text-align: center;
+                    margin: auto;
+                    object-fit: scale-down;
+                    @media (max-width:991px) {
+                      margin: auto;
+                      margin-bottom: 10px;
+
+                    }
+                    // @media (max-width:768px) {
+                    //     width: 100%;
+                    //     height: 100px;
+                    // }
+                }
+            }
+        }
+    }
+// }
+
+.about {
+    background-image: url('../../dist/img/about_bg.jpg');
+    height: 440px;
+    z-index: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; /* Resize the background image to cover the entire container */
+    position: relative;
+    @media (max-width:768px) {
+        height: 820px;
+    }
+    &__icon {
+        img {
+            padding: 70px 0;
+        }
+    }
+    &__content {
+        text-align: right;
+        margin-right: 30px;
+        color: #fff;
+        padding: 70px 0;
+        padding-top: 50px;
+        h2 {
+            font-family: font-bold;
+            font-size: 2.25em;
+        }
+        p {
+            opacity: 0.6;
+            font-size: 0.8125em;
+            width: 285px;
+            padding: 30px 0;
+            margin: 0;
+            @media (max-width:768px) {
+                width: auto;
+            }
+        }
+        button {
+            border-radius: 50px;
+            border: 1px solid #fff;
+            color: #fff;
+            padding: 10px 30px;
+            background: transparent;
+            // margin-top: 50px;
+            font-family: font-bold;
+            transition: all 0.4s ease-in-out;
+            &:hover {
+                background: #fff;
+                color: $mainBlue;
+            }
+        }
+    }
+    &__bg {
+        position: relative;
+        img,object {
+            position: absolute;
+            left: 0%;
+            top: -88px;
+            width: 100%;
+            // @media (min-width:992px) and (max-width:1200px){
+            //     bottom: -35px;
+            //     left: 0%;
+            // }
+            @media (min-width:769px) and (max-width:991px){
+                top: 0;
+            }
+            @media (max-width:768px){
+                width: 90%;
+            }
+        }
+
+    }
+
+}
