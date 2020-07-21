@@ -18,7 +18,7 @@
     "dropzone": "^5.5.1",
     "gulp-sourcemaps": "^2.6.5",
     "intro.js": "^2.9.3",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jquery-circle-progress": "^1.2.2",
     "jquery-steps": "^1.1.0",
     "jquery-validation": "^1.19.1",
