@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128" height="118" viewBox="0 0 128 118">
+    <defs>
+        <linearGradient id="prefix__c" x1="100%" x2="0%" y1="74.913%" y2="25.087%">
+            <stop offset="0%" stop-color="#0C9EE2"/>
+            <stop offset="100%" stop-color="#00D0D3"/>
+        </linearGradient>
+        <filter id="prefix__a" width="532.4%" height="712.5%" x="-216.2%" y="-306.2%" filterUnits="objectBoundingBox">
+            <feOffset in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="24.5"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.063 0 0 0 0 0.114 0 0 0 0 0.443 0 0 0 0.0767864948 0"/>
+        </filter>
+        <path id="prefix__b" d="M136.65 8.329h-.153c-.446.001-.873.18-1.19.497L130.7 13.47V8.33c0-1.894-1.522-3.429-3.4-3.429h-20.4c-1.878 0-3.4 1.535-3.4 3.429V25.47c0 1.894 1.522 3.429 3.4 3.429h20.4c1.878 0 3.4-1.535 3.4-3.429V20.33l4.607 4.645c.317.317.744.496 1.19.497h.153c.47 0 .85-.383.85-.857V9.186c0-.474-.38-.857-.85-.857zm-27.2 6.651c-.47 0-.85-.384-.85-.857V12.82c0-.473.38-.857.85-.857h6.8c.47 0 .85.384.85.857v1.303c0 .473-.38.857-.85.857h-6.8z"/>
+    </defs>
+    <g fill="none" transform="translate(-56.5 42.1)">
+        <use fill="#000" filter="url(#prefix__a)" xlink:href="#prefix__b"/>
+        <use fill="url(#prefix__c)" xlink:href="#prefix__b"/>
+    </g>
+</svg>

@@ -1,0 +1,118 @@
+.service {
+
+    .col-md-4:nth-of-type(3n - 1) {
+        .features__box {
+            @media (min-width:768px) {
+                margin-top: 60px;
+            }
+        }
+    }
+    &__items {
+        margin-top: 100px; 
+    }
+    &__box {
+        box-shadow: 0.25rem 0.25rem 0.8125rem 0.5rem $lightBlue;
+        padding: 50px 30px;
+        border-radius: 10px;
+        &__title {
+            font-size: 1.5rem;
+            font-family: font-bold;
+            margin: 15px 0;
+            color: $veryDarkBlue;
+        }
+        &__text {
+            font-size: 0.75rem;
+            color: $veryDarkBlue;
+            opacity: 0.6;
+        }
+    }
+
+    .features {
+        padding: 100px 0;
+        .title {
+            font-size: 33px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: $veryDarkBlue;
+        }
+ 
+        &__box {
+            margin-bottom: 70px;
+        }
+        &__title {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0;
+            color: $veryDarkBlue;
+        }
+        &__box-img {
+            border: 2px solid $mainBlue;
+            border-radius: 20px;
+            transform: rotate(45deg);
+            width: 80px;
+            height: 80px;
+            margin: 10px auto;
+
+            img,object {
+                transform: rotate(-45deg);
+                width: 70px;
+                height: 75px;
+                padding: 15px;
+            }
+        }
+    }
+    .would-complete {
+        background-image: url(../../dist/img/profile/profile-bg.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 450px;
+        overflow: hidden;
+        @media (max-width:767px) {
+            height: auto;
+            min-height: 450px;
+  
+        }
+        .offset-md-1 {
+            @media (min-width: 768px) {
+                margin-right: 8.333333%;
+                margin-left: auto;
+            }
+        }
+        .content {
+            text-align: right;
+            margin-top: 50%;
+            transform: translateY(-50%);
+            h3 {
+                font-size: 36px;
+                font-weight: bold;
+                color: $mainGreen;
+                span {
+                    font-weight: normal;
+                    font-size: 32px;
+                }
+            }
+            p {
+                color: $veryDarkBlue;
+                opacity: 0.6;
+                font-size: 0.875rem;
+            }
+        }
+        .application {
+            @media (min-width:768px) {
+                margin-top: 50%;
+            }
+            @media (max-width:767px) {
+                margin-bottom: 20px;
+                margin-top: 20px;
+            }
+        }
+        .background-img {
+            background: url(../../dist/img/service/iPhone.svg) center no-repeat;
+            min-height: 500px;
+            // img {
+            //     display: block;
+            //     margin: auto;
+            // }
+        }
+    }
+}

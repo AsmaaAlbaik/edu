@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+  <g id="menu" transform="translate(-42 -28)">
+    <path id="Path_2799" data-name="Path 2799" d="M25,0A25,25,0,1,1,0,25,25,25,0,0,1,25,0Z" transform="translate(42 28)" fill="#fff"/>
+    <path id="menu-left-2-icon" d="M8.242,16.129a1.177,1.177,0,1,0,0-2.355H1.177a1.177,1.177,0,0,0,0,2.355Zm9.419-5.887a1.177,1.177,0,1,0,0-2.355H1.177a1.177,1.177,0,1,0,0,2.355Zm-4.71-5.887a1.177,1.177,0,0,0,0-2.355H1.177a1.177,1.177,0,1,0,0,2.355Z" transform="translate(58 44)" fill="#254a5d" fill-rule="evenodd"/>
+  </g>
+</svg>

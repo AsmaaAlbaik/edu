@@ -1,0 +1,18 @@
+<svg class="ml-2 mt-2" xmlns="http://www.w3.org/2000/svg" width="16.25" height="30" viewBox="0 0 16.25 30">
+    <g id="microphone_3" transform="translate(-5.5)">
+        <path id="Path_2764" data-name="Path 2764" d="M18.744,23.93A3.129,3.129,0,0,0,15.625,21h-5A3.129,3.129,0,0,0,7.5,24.125a.625.625,0,0,0,.625.625h10a.166.166,0,0,0,.025,0,.625.625,0,0,0,.625-.625A.59.59,0,0,0,18.744,23.93Z" transform="translate(0.5 5.25)" fill="#fff"/>
+        <g id="Group_3109" data-name="Group 3109" transform="translate(5.5 12.5)">
+        <path id="Path_2765" data-name="Path 2765" d="M13.625,20A8.134,8.134,0,0,1,5.5,11.875v-1.25A.624.624,0,0,1,6.125,10h2.5a.625.625,0,1,1,0,1.25H6.75v.625a6.875,6.875,0,1,0,13.75,0V11.25H18.625a.625.625,0,1,1,0-1.25h2.5a.625.625,0,0,1,.625.625v1.25A8.134,8.134,0,0,1,13.625,20Z" transform="translate(-5.5 -10)" fill="#fff"/>
+        </g>
+        <g id="Group_3110" data-name="Group 3110" transform="translate(13 21.25)">
+        <path id="Path_2766" data-name="Path 2766" d="M12.125,23.25a.625.625,0,0,1-.625-.625v-5a.625.625,0,0,1,1.25,0v5A.625.625,0,0,1,12.125,23.25Z" transform="translate(-11.5 -17)" fill="#fff"/>
+        </g>
+        <g id="Group_3111" data-name="Group 3111" transform="translate(8.625 8.125)">
+        <path id="Path_2767" data-name="Path 2767" d="M8,6.5" transform="translate(-8 -6.5)" fill="#fff"/>
+        </g>
+        <g id="Group_3112" data-name="Group 3112" transform="translate(8)">
+        <path id="Path_2768" data-name="Path 2768" d="M10.625,5a.625.625,0,1,1,0,1.25H7.5V7.5h3.125a.625.625,0,1,1,0,1.25H7.5v2.5H18.75V8.75H15.625a.625.625,0,1,1,0-1.25H18.75V6.25H15.625a.625.625,0,1,1,0-1.25h3.061A5.593,5.593,0,0,0,7.564,5Z" transform="translate(-7.5)" fill="#fff"/>
+        <path id="Path_2769" data-name="Path 2769" d="M7.5,10v1.875a5.625,5.625,0,0,0,11.25,0V10Z" transform="translate(-7.5 2.5)" fill="#fff"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset="UTF-8">
+            <!-- First Mobile Meta -->
+            <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+            <!-- Interner Exeplorer (IE) Compatibility Meta -->
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <meta name="theme-color" content="#12c5bc">
+            <meta content="" name="description"/>
+            <meta content="" name="author"/>
+            <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    
+            <!-- <link rel="icon" href="dist/img/logo.png?v='.env('APP_VERSION" type="image/x-icon"> -->
+            <!-- Add to home screen for Safari on iOS -->
+            <meta name="apple-mobile-web-app-capable" content="yes">
+            <meta name="apple-mobile-web-app-status-bar-style" content="black">
+            <meta name="apple-mobile-web-app-title" content="Weather PWA">
+            <link rel="apple-touch-icon" href="">
+            <meta name="msapplication-TileImage" content="">
+            <meta name="msapplication-TileColor" content="#2F3BA2">
+    
+            <!--[if lt IE 9]>
+            <script src="js/html5shiv.min.js?v='.env('APP_VERSION"></script>
+            <script src="js/respond.min.js?v='.env('APP_VERSION"></script>
+            <![endif]-->
+    
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+                  integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+           <link rel="stylesheet" href="dist/css/global.css">
+           <link rel="stylesheet" href="dist/css/profile.css">
+
+
+    </head>
+<body>
+    <!-- header and navbar -->
+    <div class="fixed-menu">
+         <div class="container">
+             <!-- <i class="far fa-times-circle fa-2x"></i> -->
+             <img src="dist/img/close.svg" alt="close">
+            <ul class="list-unstyled">
+                <li class="active"><a href="index.html">الرئيسية</a></li>
+                <li><a data-toggle="modal" data-target="#course-request">طلب كورس</a></li>
+                <li><a href="about.html">عن أكاديمي</a></li>
+                <li><a href="service.html">الخدمات</a></li>
+                <li class="login" data-toggle="modal" data-target="#login-modal"><a href="#">تسجيل الدخول</a></li>
+                <li class="register" data-toggle="modal" data-target="#register-modal"><a href="#">انضم الينا</a></li>
+            </ul>
+         </div>           
+    </div>
+    <header class="home-header">
+        <div class="container-fluid">
+            <nav class="navbar navbar--padding-right navbar-expand-lg">
+                <a class="navbar-brand" href="#"> 
+                    <img class="img-responsive" src="dist/img/logo.svg" alt="logo">
+                </a>
+                <div class="navbar-toggler">
+                    <!-- <i class="fas fa-stream fa-1x"></i> -->
+                    <img src="dist/img/menu.svg" alt="menu" class="menu-icon">
+                </div>
+            
+                <div class="collapse navbar-collapse">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="ايجاد المنهج, كود الكورس, اسم الجامعة و أكثر..." aria-label="Search">
+                        <img src="dist/img/student_dashboard_icons/Слой 2.svg" alt="search">
+                    </form>
+                    <ul class="navbar-nav mr-auto"> 
+                        <li class="nav-item">
+                            <a class="nav-link" href="student-subscriptions.html">كورساتي</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">الرجوع إلى الرئيسية</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img class="teacher-photo" src="dist/img/teacher.jpg" alt="teacher-photo">
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item teacher-name" href="#">أحمد البيك</a>
+                                <a class="dropdown-item teacher-uni" href="#">جامعة الأميرة نورة</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">
+                                    <img src="dist/img/student_dashboard_icons/notification.svg" alt="icon">
+                                    الاشعارات
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                      
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <img src="dist/img/student_dashboard_icons/setting.svg" alt="icon">
+                                    اعدادات العضوية
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <img src="dist/img/student_dashboard_icons/support.svg" alt="icon">
+                                    الدعم الفني
+                                </a>
+                                    
+                                <a class="dropdown-item" href="#">
+                                    <img src="dist/img/student_dashboard_icons/sign out.svg" alt="icon">
+                                    تسجيل الخروج
+                                </a>
+                                              
+                                
+                            </div>
+                        </li>
+                   
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    
+    <!-- start preview div -->
+    <div class="preview preview--profile">
+        <div class="overlay">
+            <div class="container">
+          
+            </div>
+        </div>
+    </div>
+    <!-- end preview div -->
+    <section class="profile profile--teacher text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                   
+                    <!-- Nav pills -->
+                    <ul class="nav nav-tabs">
+                        <div class="profile-image">
+                            <img src="dist/img/teacher.jpg" alt="profile-img">
+                        </div>
+                        <li class="nav-item">
+                        <a class="nav-link active" data-toggle="pill" href="#personal-info">بيانات شخصية
+                        </a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#menu1">مجالات التدريس</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#menu2">الهوية الشخصية</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="pill" href="#menu3"> معلومات الملف الشخصي</a>
+                        </li>
+                 
+                    </ul>
+                </div>
+                <div class="col-lg-9">
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div class="tab-pane container active" id="personal-info">
+                            <form action="" id="personal-info-form">
+                                    <!-- <legend>بيانات شخصية</legend> -->
+                                    <p class="secret">
+                                        <img src="dist/img/security-warning.svg" alt="security-warning">
+                                        هذة المعلومات سرية فقط تُرى من قبل الادارة فقط ، ولا تشارك مع الاخرين
+                                    </p>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="info-box">
+                                                <p class="box-title">معلومات شخصية</p>
+                                                <div class="row">
+                                                    <div class="col-md-6">  
+                                                        <div class="form-group custom-input">
+                                                            <input required class="form-control" type="text"  name="name">
+                                                            <label class="form__label" for="first-name">الاسم الأول</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group custom-input">
+                                                            <input required class="form-control"  type="text"  name="Lname">
+                                                            <label class="form__label" for="last-name">الاسم الثاني</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group custom-input">
+                                                            <input required class="form-control countryCode"  maxlength="13"
+                                                            type="number"  name="phone">
+                                                            <!-- <label class="form__label" for="mobileNumber">رقم الجوال</label> -->
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group custom-input">
+                                                            <input required class="form-control" id="email" type="text"  name="email">
+                                                            <label class="form__label" for="email">البريد الالكتروني</label>
+                                                        </div>
+                                                    </div>
+                                              
+                                         
+                                                </div>
+                                            </div>
+                                            <div class="info-box">
+                                                <p class="box-title">الحساب البنكي</p>
+                                                <div class="row">
+                                                    <div class="col-md-6">  
+                                                        <div class="form-group custom-input">
+                                                            <input required class="form-control" type="text"  name="accountName">
+                                                            <label class="form__label" for="first-name">الاسم الحساب</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group custom-input">
+                                                            <input required class="form-control"  type="number"  name="accountNumber">
+                                                            <label class="form__label" for="last-name">رقم الحساب</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                         
+                                            </div>
+                                            <div class="info-box">
+                                                <p class="box-title">
+                                                    كلمة المرور
+                                                </p>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group custom-input">
+                                                            <input type="password" required 
+                                                            class="form-control" 
+                                                            minlength="6" 
+                                                            id="register-password"  
+                                                            name="password"
+                                                            >
+                                                            <label class="form__label" for="email">كلمة المرور</label>
+                                                            <i class="fas fa-eye fa-lg hide-show-pass"></i>
+                    
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group custom-input">
+                                                            <input required 
+                                                            class="form-control"
+                                                            id="password_confirmation" 
+                                                            type="password" 
+                                                            name="new-password"
+                                                            >
+                                                            <label class="form__label" for="password_confirmation">كلمة المرور الجديدة</label>
+                                                            <i class="fas fa-eye fa-lg hide-show-pass"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                          
+                                        </div>
+                                    </div>  
+                                    <div class="form-group mt-4">
+                                        <input class="custom-btn custom-btn--blue" type="submit" value="حفظ">
+                                    </div>                 
+                            </form>
+                        </div>
+                        <div class="tab-pane container fade" id="menu1">
+                            <form action="{{route('update-teaching-fields')}}" method="post" id="teaching-field">
+                                
+                                <p class="secret">
+                                    <img src="dist/img/security-warning.svg"
+                                         alt="security-warning">
+                                    هذة المعلومات سرية فقط تُرى من قبل الادارة فقط ، ولا تشارك مع الاخرين
+                                </p>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group custom-input">
+                                            <label class="" for="Years_of_experiance">سنوات الخبرة</label>
+                                            <select class="form-control" name="Years_of_experience" required id="Years_of_experience" >
+                                                <option value="">سنوات الخبرة في التدريس</option>
+                                                    <option value="{{$year}}"></option>
+                                                    <option value="">1 سنة</option>
+                                                    <option value="">2 </option>
+                                                    <option value="">3</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="hidden" id="teacher_id" value="{{$user->id}}">
+
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <div class="info-box">
+                                                        <p class="box-title">تخصصات ترغب تدريسها</p>
+                                                        <h6 class="card-title text-right">يمكنك إختيار تخصص من هنا</h6>
+                                                        <div class="add-items d-flex">
+                                                            <select class="form-control select2" name="specialty" id="db_specialty">
+                                                                <option value="">اختر</option>
+                                                                <option value="">علوم الحاسوب</option>
+                                                                <option value="">هندسة حاسوب</option>
+                                                                <option value="">هندسة ميكانيكية</option>
+                                                            </select>
+                                                        </div>
+
+
+                                                        <h6 class="card-title text-right">أو يمكنك اضافة تخصص جديد</h6>
+                                                        <div class="input-group custom-input mb-3">
+                                                            <input type="text" class="form-control todo-list-input"
+                                                            data-teacher-id="{{$user->id}}" placeholder="ما هي المادة الذي ترغب باضافتها"
+                                                            aria-label="Example text with button addon" aria-describedby="button-addon2">
+                                                            <div class="input-group-prepend">
+                                                                <button type="button" id="button-addon2"
+                                                                class="btn btn-outline-secondary font-weight-bold todo-list-add-btn"
+                                                                >اضافة</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="list-wrapper">
+                                                            <ul class="d-flex flex-column-reverse todo-list list-unstyled">
+                                                                    <li>
+                                                                        <div class="form-check">
+                                                                            <label class="form-check-label">
+                                                                                فيزياء 
+                                                                            </label>
+                                                                        </div>
+                                                                        <i class="remove fas fa-times-circle"
+                                                                            data-teacher-id="{{$teaching_specialty->teacher_id}}"
+                                                                            data-specialty-id="{{$teaching_specialty->specialty_id}}">
+
+                                                                        </i>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="form-check">
+                                                                            <label class="form-check-label">
+                                                                                فيزياء 
+                                                                            </label>
+                                                                        </div>
+                                                                        <i class="remove fas fa-times-circle"
+                                                                            data-teacher-id="{{$teaching_specialty->teacher_id}}"
+                                                                            data-specialty-id="{{$teaching_specialty->specialty_id}}">
+
+                                                                        </i>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="form-check">
+                                                                            <label class="form-check-label">
+                                                                                فيزياء 
+                                                                            </label>
+                                                                        </div>
+                                                                        <i class="remove fas fa-times-circle"
+                                                                            data-teacher-id="{{$teaching_specialty->teacher_id}}"
+                                                                            data-specialty-id="{{$teaching_specialty->specialty_id}}">
+
+                                                                        </i>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="form-check">
+                                                                            <label class="form-check-label">
+                                                                                فيزياء 
+                                                                            </label>
+                                                                        </div>
+                                                                        <i class="remove fas fa-times-circle"
+                                                                            data-teacher-id="{{$teaching_specialty->teacher_id}}"
+                                                                            data-specialty-id="{{$teaching_specialty->specialty_id}}">
+
+                                                                        </i>
+                                                                    </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <!-- end col-6 -->
+                                                <div class="col-lg-6">
+                                                    <div class="info-box">
+                                                        <p class="box-title">مواد ترغب تدريسها</p>
+                                                        <h6 class="card-title text-right">يمكنك اختيار مادة من هنا</h6>
+                                                     
+                                                        <div class="add-items d-flex">
+                                                            <select class="form-control select2" name="subject" id="db_subject">
+                                                                <option value="" >اختر</option>
+                                                              
+                                                                <option value="{{$subject->id}}">vuejs</option>
+                                                                <option value="{{$subject->id}}">vuejs</option>
+                                                                <option value="{{$subject->id}}">vuejs</option>
+                                                            </select>
+                                                        </div>
+
+                                                        <h6 class="card-title text-right">أو يمكنك إضافة مادة جديدة</h6>
+
+                                                        <div class="input-group custom-input mb-3">
+
+                                                            <input type="text" class="form-control todo-list-input2"
+                                                            data-teacher-id="{{$user->id}}" placeholder="ما هي المادة الذي ترغب باضافتها" 
+                                                            aria-label="Example text with button addon" aria-describedby="button-addon1">
+                                                            <div class="input-group-prepend">
+                                                                <button type="button" id="button-addon1"
+                                                                class="btn btn-outline-secondary font-weight-bold todo-list-add-btn2"
+                                                                >اضافة</button>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="list-wrapper">
+                                                            <ul class="d-flex flex-column-reverse todo-list2 list-unstyled">
+                                                               
+                                                                    <li>
+                                                                        <div class="form-check">
+                                                                            <label class="form-check-label">
+                                                                                Reactjs
+                                                                            </label>
+                                                                        </div>
+                                                                        <i class="remove fas fa-times-circle"
+                                                                            data-teacher-id="{{$teaching_subject->teacher_id}}"
+                                                                            data-subject-id="{{$teaching_subject->subject_id}}">
+                                                                        </i>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="form-check">
+                                                                            <label class="form-check-label">
+                                                                                Reactjs
+                                                                            </label>
+                                                                        </div>
+                                                                        <i class="remove fas fa-times-circle"
+                                                                            data-teacher-id="{{$teaching_subject->teacher_id}}"
+                                                                            data-subject-id="{{$teaching_subject->subject_id}}">
+                                                                        </i>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="form-check">
+                                                                            <label class="form-check-label">
+                                                                                Reactjs
+                                                                            </label>
+                                                                        </div>
+                                                                        <i class="remove fas fa-times-circle"
+                                                                            data-teacher-id="{{$teaching_subject->teacher_id}}"
+                                                                            data-subject-id="{{$teaching_subject->subject_id}}">
+                                                                        </i>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="form-check">
+                                                                            <label class="form-check-label">
+                                                                                Angular
+                                                                            </label>
+                                                                        </div>
+                                                                        <i class="remove fas fa-times-circle"
+                                                                            data-teacher-id="{{$teaching_subject->teacher_id}}"
+                                                                            data-subject-id="{{$teaching_subject->subject_id}}">
+                                                                        </i>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="form-check">
+                                                                            <label class="form-check-label">
+                                                                                vuejs
+                                                                            </label>
+                                                                        </div>
+                                                                        <i class="remove fas fa-times-circle"
+                                                                            data-teacher-id="{{$teaching_subject->teacher_id}}"
+                                                                            data-subject-id="{{$teaching_subject->subject_id}}">
+                                                                        </i>
+                                                                    </li>
+                                                              
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+      
+                                    </div>
+                                </div>
+                                <div class="form-group mt-4">
+                                    <input class="custom-btn custom-btn--blue" type="submit" value="حفظ">
+                                </div>
+
+                            </form>
+                            <!-- <form action="" id="teaching-field">
+                                 
+                                <p class="secret">
+                                    <img src="dist/img/security-warning.svg" alt="security-warning">
+                                    هذة المعلومات سرية فقط تُرى من قبل الادارة فقط ، ولا تشارك مع الاخرين
+                                </p>
+                                <div class="row">
+                                    <div class="col-md-12 col-lg-8 offset-lg-2">
+                                        <div class="form-group">
+                                    
+                                            <div class="custom-input">
+                                                <select class="form-control select2" multiple name="specialties[]">
+                                                    <option disabled value="">المجالات</option>
+                                                    <option value="0">علوم</option>
+                                                    <option value="1">فيزياء</option>
+                                                    <option value="2">جافاسكربت</option>
+                                                    <option value="3">آخرى</option>
+                                                </select>
+                                                <label class="form__label" for="university">الجامعة</label> 
+                                                <label class="form__label" for=""> المجالات
+                                                    <i class="fas fa-question-circle"
+                                                    data-toggle="tooltip" data-placement="left" 
+                                                    title="إن لم تجد التخصص المطلوب يمكنك كتابة التخصص الذي ترغب به!"
+                                                    data-content=""></i>
+                                                </label>
+                                            </div> 
+                                        </div>
+                                        <div class="form-group custom-input">
+                                            <input required class="form-control"  type="number"  name="Years_of_experiance">
+                                            <label class="form__label" for="Years_of_experiance">سنوات الخبرة</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group mt-4">
+                                    <input class="custom-btn custom-btn--blue" type="submit" value="حفظ">
+                                </div>  
+
+                            </form> -->
+                        </div>
+                        <div class="tab-pane container fade" id="menu2">
+                            <form action="" id="qualification">
+                                <p class="secret">
+                                    <img src="dist/img/security-warning.svg" alt="security-warning">
+                                    سيتم اظهار هذة المعلومات في ملفك الشخصي امام الطلاب
+                                </p>
+                                <div class="row">
+    
+                                    <div class="col-md-12 col-lg-8 offset-lg-2">
+                                        <div class="form-group custom-input-file custom-input-file--green">
+                                            <input required class="dropify s3-input" 
+                                            type="file" data-height="100" accept="image/*"
+                                            data-default-file="" 
+                                            name="file"
+                                            >
+                                            <input type="hidden" name="profile-image-s3url" class="s3url">
+                                            <label class="form__label">المؤهل الدراسي</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group mt-4">
+                                    <input class="custom-btn custom-btn--blue" type="submit" value="حفظ">
+                                </div>  
+                            </form>
+                        </div>
+                        <div class="tab-pane container fade" id="menu3">
+                            <form action="" id="information">
+                                <p class="warning">
+                                    <img src="dist/img/warning.svg" alt="warning">
+                                    سيتم اظهار هذة المعلومات في ملفك الشخصي امام الطلاب       
+                                </p>
+                                <div class="row">
+                                    <div class="col-md-12 col-lg-8 offset-lg-2">
+                                        <div class="row">
+                                            <!-- <div class="col-md-6">
+                                                <div class="form-group custom-input">
+                                                    <input required class="form-control" type="text"  name="nickname">
+                                                    <label class="form__label" for="nickname">الاسم المستعار</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group custom-input">
+                                                    <input required class="form-control"  type="text"  name="specialties">
+                                                    <label class="form__label" for="specialties">التخصص</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group custom-input">
+                                                    <input required class="form-control" type="text"  name="email">
+                                                    <label class="form__label" for="email">البريد الالكتروني</label>
+                                                </div>
+                                            </div> -->
+                                            <!-- <div class="col-md-6">
+                                                <div class="form-group custom-input">
+                                                    <input required class="form-control"  type="text"  name="avg">
+                                                    <label class="form__label" for="avg">معدل التكلفة</label>
+                                                </div>
+                                            </div> -->
+                                            <div class="col-md-12">
+                                                <div class="form-group custom-input">
+                                                    <label class="" for="specialty_id">
+                                                        ادخل تخصصك<i class="fas fa-question-circle" data-toggle="tooltip" data-placement="left" title="هنا ستقوم بادخل تخصصك الدراسي"></i>
+                                                    </label>
+                                                    <select class="form-control" name="specialty_id" required id="specialty_id">
+                                                        <option value="">التخصص</option>                           
+                                                        <option value=""></option>
+                                                        <option value="{{$main_specialty->id}}">علوم حاسوب</option>        
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group  custom-input">
+                                                    <textarea class="form-control" name="bio" id="" rows="4" 
+                                                    placeholder="هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص"></textarea>
+                                                    <label class="form__label" for="">نبذه مختصرة</label>
+    
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group custom-input-file">
+                                                    <input required class="dropify s3-input" 
+                                                    type="file" data-height="85" accept="image/*"
+                                                    data-default-file="" multiple
+                                                    name="profile-image-s3url"
+                                                    >
+                                                    <input type="hidden" name="profile-image-s3url" class="s3url">
+                                                    <label class="form__label">الصورة الشخصية</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group mt-4">
+                                    <input class="custom-btn custom-btn--blue" type="submit" value="حفظ">
+                                </div>  
+                            </form>
+                        </div>
+
+                    </div>
+  
+                </div>
+                <!-- end col -->
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container -->
+    </section>
+
+    <!-- end about section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row d-flex">
+                <div class="col-lg-3 footer__logo">
+                    <img src="dist/img/logo.png" alt="logo">
+                </div>
+                <div class="col-lg-6 footer__links">
+                    <ul class="list-unstyled d-flex justify-content-center">
+                        <li><a href="">الرئيسية</a> </li>
+                        <li><a href="">الأسئلة الشائعة</a></li>
+                        <li><a href="">حقوق الطالب</a></li>
+                        <li><a href="">حقوق المعلم</a></li>
+                        <li><a href="">تسجيل شكوى</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 footer__social">
+                    <a target="_blank" href="https://www.facebook.com/acdemi.sa/"><i class="fab fa-facebook-f fa-2x"></i></a>
+                    <a target="_blank" href="https://twitter.com/academi_sa"><i class="fab fa-twitter fa-2x"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/company/academi-sa/"><i class="fab fa-linkedin fa-2x"></i></a>
+                    <a target="_blank" href="https://www.instagram.com/academi_sa/"><i class="fab fa-instagram fa-2x"></i></a>
+                    <!-- <a href="#"><i class="fab fa-google-plus-g fa-2x"></i></a> -->
+                    <a target="_blank" href="https://www.youtube.com/channel/UCM1e6k-gmPu4l7O6oXPmoOg?view_as=subscriber"><i class="fab fa-youtube fa-2x"></i></a>
+
+                </div>
+            </div>
+            <div class="d-flex justify-content-center footer__copy-right">
+                <p class="copy-right">جميع حقوق النشر محفوظة, أكاديمي 2019 &copy;</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="chat-icon">
+        <span class="online"></span>
+        <a href="#">
+            <img src="dist/img/message.svg" alt="chat">
+        </a>
+    </div>        
+    </body>
+    <script  src="dist/js/allPage.js"></script>
+    <script  src="assets/js/todolist.js"></script>
+    <script  src="dist/js/teacher-profile.js"></script>
+    <script  src="assets/js/plugin/tel-input.js"></script>
+
+
+</body>
+</html>

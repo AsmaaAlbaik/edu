@@ -1,0 +1,30 @@
+.gradient-background {
+    background-image: linear-gradient(-45deg, $mainBlue, $mainGreen);
+}
+.gradient-black-background {
+    background-image: linear-gradient(to right,  rgba(37, 74, 93, .2), transparent);
+    &--left {
+        background-image: linear-gradient(to left,  rgba(37, 74, 93, .2), transparent);
+    }
+    &--bottom {
+        background-image: linear-gradient(to bottom,  rgba(37, 74, 93, .2), transparent);
+    }
+    &--top {
+        background-image: linear-gradient(to top,  rgba(37, 74, 93, .9), transparent);
+    }
+}
+.gradient-smoth-black-background {
+    background-image: linear-gradient(to left, $veryDarkBlue, #6D90A1);
+}
+.gradient-green-background {
+    background-image: linear-gradient(to left, $greenDark, $greenLight);
+}
+.gradient-gray-background {
+    background-image: linear-gradient(to top, $lightGray , transparent);
+}
+.gradient-red-background {
+    background-image: linear-gradient(to left, $darkRed, $red);
+}
+.gradient-orange-red-background {
+    background-image: linear-gradient(76deg, #ff0044 0%, #ff7f2e 133%);  
+}

@@ -1,0 +1,38 @@
+/*
+ ** media query mixin
+ * */
+
+ /* mobile (landscape phones, 768px and up) */
+ @mixin timelinemobile {
+   @media (max-width: 846px) {
+     @content;
+   }
+}
+
+ /* Small devices (landscape phones, 576px and up) */
+ @mixin small {
+   @media (min-width: 576px) {
+     @content;
+   }
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+ @mixin medium {
+   @media (min-width: 768px) {
+     @content;
+   }
+ }
+
+ /* Large devices (desktops, 992px and up) */
+@mixin large {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@mixin extraLarge {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}

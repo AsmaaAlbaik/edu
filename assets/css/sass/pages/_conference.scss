@@ -1,0 +1,103 @@
+.student-dashboard {
+  &__left-content {
+    &--conference {
+        @media (min-width:992px) {
+            margin-right: 60px;
+        }
+      .video-title {
+        font-size: 0.9rem;
+        color: $mainGreen;
+        font-weight: bold;
+        float: right;
+        margin-top: 20px;
+      }
+      iframe {
+        margin: 0;
+      }
+      .student-dashboard__about-course {
+        top: auto;
+        transform: none;
+        left: 20px;
+        right: 20px;
+        overflow-y: scroll;
+        padding: 10px 10px;
+
+        &::-webkit-scrollbar {
+          width: 5px;
+        }
+        &::-webkit-scrollbar-track {
+          background: $lightGray;
+          border-radius: 20px;
+        }
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+          background: $mainGreen;
+          border-radius: 20px;
+        }
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+          background: $mainGreen;
+        }
+      }
+      .user-list {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+          margin: 10px;
+
+          iframe {
+            min-width: 100px;
+            max-width: 100px;
+            min-height: 100px;
+            max-height: 100px;
+          }
+        }
+      }
+    }
+  }
+}
+.showandhide {
+    display: none;
+}
+
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 99999999999;
+    background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(2px);
+    // background-color: rgba(53, 59, 65, 0.7) !important;
+    h3 {
+      color: $veryDarkBlue;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+    .fa-spinner {
+        color: $mainGreen;
+    }
+    .contant {
+        margin-top: 20%;
+    }
+  }
+  .modal-content {
+    border-radius: 1.3rem;
+    border: none;
+  }
+  .session {
+    h4 {
+      color: $green;
+      margin: 20px 0;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    textarea {
+      margin: 30px 0;
+      &.form-control {
+        // height: calc(1.5em + 3.75rem + 2px);
+      }
+    }
+  }

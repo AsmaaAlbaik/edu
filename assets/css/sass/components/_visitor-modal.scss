@@ -1,0 +1,193 @@
+.modal {
+    z-index: 9999;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    &--login {
+        text-align: right;
+        &__bg {
+            position: relative;
+            background-image: url('../../dist/img/sign_in.jpg');
+            height: 100%;
+            padding: 60px 0;
+            z-index: 0;
+            background-position: center right; 
+            background-repeat: no-repeat;
+            background-size: cover; /* Resize the background image to cover the entire container */
+            border-radius: 1.25rem;
+            .overlay {
+                border-radius: 0 1.25rem 1.25rem 0;
+            }
+        }
+        .modal-body {
+            padding: 0;
+        }
+        .close {
+            float: left;
+            padding: 1.562rem;
+        }
+        .login-form {
+            padding: 4rem 0.5rem;
+            margin: 0.625rem 3.125rem;
+            margin-left: 5.93rem;
+            margin-right: 1rem;
+            @media (max-width:768px) {
+                margin-left: 0;
+                padding: 1rem;
+            }
+            &__title {
+                font-size: 1.75em;
+                color: $veryDarkBlue;
+                font-weight: bold;
+                margin-bottom: 2rem;
+            }
+            &__text {
+                font-size: 0.875em;
+                color: $gray;
+                margin-bottom: 2rem;
+            }
+            &__join {
+                font-size: 0.875em;
+                color: $veryDarkBlue;
+                font-weight: bold;
+                margin-bottom: 1.8rem;
+                a {
+                    color: $mainGreen;
+                    font-size: .875em;
+                    cursor: pointer;
+                }
+            }
+            .form__forget {
+                color: $mainGreen;
+                font-size: .875em;
+                font-weight: bold;
+                margin-top: 10px;
+                display: inline-block;
+                float: left;
+                @media (max-width:767px) {
+                    float: none;
+                }
+            }
+            &__submit {
+                background-image: linear-gradient(to left, $mainBlue, $mainGreen);
+                color: #fff;
+                padding: 1rem 3.125rem;
+                border-radius: 30px;
+                font-weight: bold;
+                border: none;
+                font-size: .785em;
+                box-shadow: 0.25rem 0.25rem 0.8125rem 0.5rem $lightBlue;
+                margin-top: 2rem;
+            }
+        }
+ 
+    }
+    &--register {
+        @media (min-width:400px) {
+            .modal-sm {
+                // max-width: 323px;
+            }  
+        }
+     
+        svg {
+            width: auto;
+            path {
+                transition: all 0.5s ease-in-out;
+            }
+        }
+        h5 {
+            font-size: 0.875em;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        &__teacher {
+            border: 2px solid $veryDarkBlue;
+            text-align: center;
+            height: 120px;
+            width: 120px;
+            border-radius: 20px;
+            transition: all 0.5s ease-in-out;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-flow: column;
+            cursor: pointer;
+            color: $veryDarkBlue;
+            text-decoration: none;
+            @media(max-width:575px){
+                height: 110px;
+                width: auto;  
+            }
+            &:hover {
+                background: $mainGreen;
+                border-color: $mainGreen;
+                text-decoration: none;
+                color: #fff;
+                svg path {
+                    fill: #fff;
+                }
+                h5 {
+                    color: #fff;
+                }
+            }
+        }
+        &__student {
+            border: 2px solid $veryDarkBlue;
+            text-align: center;
+            border-radius: 20px;
+            height: 120px;
+            width: 120px;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-flow: column;
+            transition: all 0.5s ease-in-out;
+            cursor: pointer;
+            color: $veryDarkBlue;
+            text-decoration: none;
+            @media(max-width:575px){
+                height: 110px;
+                width: auto;  
+            }
+            &:hover {
+                background: $mainGreen;
+                border-color: $mainGreen;
+                text-decoration: none;
+                color: #fff;
+                svg path {
+                    fill: #fff;
+                }
+                h5 {
+                    color: #fff;
+                }
+            }
+        }
+    }
+    &--course-request {
+        h4 {
+            background: $lightBlue;
+            padding: 15px 30px;
+            border-radius: 30px;
+            display: inline-block;
+            margin: 30px 0;
+            color: $mainBlue;
+            font-size: 20px;
+            font-family: font-bold;
+        }         
+    }
+    .modal-content {
+        border-radius: 1.25rem;
+    }
+    .modal-dialog {
+        opacity: 0;
+        transition: all 0.4s ease-in-out;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+}
+
+.modal.show .modal-dialog {
+    opacity: 1;
+    transform:   translateY(-50%);
+    transition: all 0.4s ease-in-out;
+}

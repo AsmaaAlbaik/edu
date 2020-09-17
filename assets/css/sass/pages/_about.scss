@@ -1,0 +1,215 @@
+.goals-vision {
+    padding: 100px 0;
+    @media (max-width:767px) {
+        padding: 20px 0;       
+    }
+    .card {
+        text-align: right;
+        border-radius: 13px;
+        margin-bottom: 15px;
+        border: 2px solid $mainGreen;
+        .card-header {
+            // padding-bottom: 0;
+            margin-bottom: 0;
+            background: none; 
+            border-bottom: none;
+            .card-link {
+                color: $veryDarkBlue;
+                font-weight: bold;
+                font-size: 12px;
+                i {
+                    color: $mainGreen; 
+                    padding-left: 10px;
+                    font-size: 16px;
+                }
+            }
+        }
+        .card-body {
+            color: $veryDarkBlue;
+            font-size: 12px;
+            opacity: 0.6;
+            padding-top: 0;
+        }
+    }
+    .goals {
+        padding: 20px 0;
+        &__title {
+            color: $mainGreen;
+            font-size: 23px;
+            font-weight: bold;
+            text-align: right;
+            margin-bottom: 30px;
+        }
+   
+        &__img {
+            position: relative;
+            .overlay {
+                border-radius: 0px 30px 30px 30px
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius:  0px 30px 30px 30px;
+                @media (max-width:991px) {
+                    display: none;
+                }
+            }
+        }
+        .offset-lg-2 {
+            @media (min-width: 992px){
+                margin-right: 16.666667%;
+                margin-left: auto;
+            }
+        }
+        .offset-lg-1 {
+            @media (min-width: 992px){
+                margin-right: 8.333333%;
+                margin-left: auto;
+            }
+        }
+    }
+    .vision {
+        padding: 20px 0;
+
+        &__title {
+            color: $mainGreen;
+            font-size: 23px;
+            font-weight: bold;
+            text-align: right;
+            margin-bottom: 30px;
+        }
+   
+        &__img {
+            position: relative;
+            @media (max-width:991px) {
+                margin-bottom: 20px;
+                display: none;
+            }
+            .overlay {
+                border-radius: 30px 30px 0px 30px;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 30px 30px 0px 30px;
+            }
+        }
+        .offset-lg-2 {
+            @media (min-width: 992px){
+                margin-right: 16.666667%;
+                margin-left: auto;
+            }
+        }
+        .offset-lg-1 {
+            @media (min-width: 992px){
+                margin-right: 8.333333%;
+                margin-left: auto;
+            }
+        }
+    }
+}
+.team {
+    padding: 50px 0;
+    .title {
+        font-weight: bold;
+        color: $veryDarkBlue;
+        margin-bottom: 50px;
+        // background-image: url('../../dist/img/logo.png');
+        // background-repeat: no-repeat;
+        // background-position: center;
+    }
+    &__info {
+        position: absolute;
+        bottom: -85px;
+        right: 00%;
+        transform: translateX(-50%);
+        h3 {
+            font-weight: bold;
+            color: $veryDarkBlue;
+            font-size: 1.5rem;
+        }
+        p {
+            font-size: 0.875rem;
+            color: $mainBlue;
+            text-align: center;
+        }
+    }
+    .owl-carousel  {
+        .owl-stage-outer {
+            height: 320px;
+        }
+        .item {
+            // position: relative;
+
+            img {
+                width: 250px;
+                height: 250px;
+                object-fit: contain;
+                border-radius: 30px;
+                position: relative;
+            }
+        }
+        .owl-nav.disabled+.owl-dots {
+            margin-top: 25px;
+            display: block !important;
+          }
+        .owl-dots .owl-dot span {
+              width :8px;
+              height: 8px;
+              border: 1px solid $gray;
+              border-radius: 50%;
+              transition: all 0.4s ease-in-out;
+          }
+          .owl-dots .owl-dot.active span {
+              width : 25px;
+              height: 8px;
+              border: 1px solid $mainGreen;
+              border-radius: 10px;
+              background-image: linear-gradient(to left, $mainBlue, $mainGreen);
+          }
+    }
+    &__img {
+        // img {
+        //     position: relative;
+        // }
+        @media (max-width:767px) {
+            margin-bottom: 20px;
+            display: none;
+        }
+        .item-overlay {
+            @extend .gradient-black-background--top;
+            text-align: center;
+            position: absolute;
+            left: 0;
+            right: 0;
+            color: #fff;
+            font-size: 1.2em;
+            bottom: 0px;
+            overflow: hidden;
+            height: 100%;
+            border-radius: 30px;
+            @media (min-width:992px) {
+                left: 86px;
+            }
+        }
+        .icon {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 20px;
+            a {
+                color: #fff;
+            }
+            i {
+                border-radius: 50%;
+                border: 1px solid #fff;
+                width: 45px;
+                height: 45px;
+                padding: 11px;
+                &:not(:last-of-type) {
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+}

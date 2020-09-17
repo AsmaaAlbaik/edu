@@ -1,0 +1,64 @@
+.custom-input-file {
+    position: relative;
+    .dropify-wrapper,
+    .dropzone {
+        border: 1px dashed $veryDarkBlue;
+        border-radius: 6px;
+        .dropify-message
+        {
+            p:first-of-type {
+                display: inline-block;
+                position: relative;
+                top: -10px;
+                color: $veryDarkBlue;
+                font-weight: bold;
+                font-size: 9px;
+                opacity: 1;
+            }
+            span.file-icon:before {
+                color: $veryDarkBlue;
+                font-weight: 600;
+            } 
+        }
+        // .dz-preview .dz-progress .dz-upload {
+        //     @extend .gradient-background;
+
+        // }
+
+    }
+    .form__label {
+        position: absolute;
+        top: -16px;
+        right: 16px;
+        background: #fff;
+        min-width: 130px;
+        color: $veryDarkBlue;
+        z-index: 9;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    &--green {
+        .dropify-wrapper {
+            border-color: $mainGreen;
+            background: $lightBlue;
+            height: 140px;
+            .dropify-message {
+                p:first-of-type {
+                    color: $mainGreen;
+                    display: block;
+                    position: initial;
+                }
+                span.file-icon:before {
+                    color: $mainGreen;
+                    font-weight: 600;
+                } 
+            } 
+          
+        }
+  
+        .form__label {
+            color: $mainGreen;
+        }
+    }
+}

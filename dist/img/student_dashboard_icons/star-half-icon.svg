@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128.186" height="126.926" viewBox="0 0 128.186 126.926">
+  <defs>
+    <linearGradient id="linear-gradient" x1="1.893" y1="1.835" x2="-0.049" y2="0.226" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#5899cf"/>
+      <stop offset="1" stop-color="#19bdc1"/>
+    </linearGradient>
+    <filter id="star-half-icon" x="0" y="0" width="128.186" height="126.926" filterUnits="userSpaceOnUse">
+      <feOffset dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feFlood flood-color="#19bdc1" flood-opacity="0.251"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#star-half-icon)">
+    <path id="star-half-icon-2" data-name="star-half-icon" d="M4.65,18.926a1.309,1.309,0,0,1-.757-.24A1.252,1.252,0,0,1,3.41,17.34l1.468-5.352L.479,8.5A1.237,1.237,0,0,1,.063,7.135a1.277,1.277,0,0,1,1.152-.87l5.658-.286L8.89.806a1.293,1.293,0,0,1,2.4,0l2.027,5.172,5.656.286a1.281,1.281,0,0,1,1.153.87A1.241,1.241,0,0,1,19.71,8.5l-4.4,3.48,1.47,5.351A1.251,1.251,0,0,1,16.3,18.68a1.3,1.3,0,0,1-1.451.038L10.1,15.691,5.347,18.718a1.3,1.3,0,0,1-.7.207ZM10.1,12.94a1.31,1.31,0,0,1,.7.2l2.645,1.684-.816-2.969a1.247,1.247,0,0,1,.431-1.309l2.438-1.93-3.137-.161a1.277,1.277,0,0,1-1.129-.8L10.091,4.768v8.178Z" transform="translate(54 49)" fill-rule="evenodd" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

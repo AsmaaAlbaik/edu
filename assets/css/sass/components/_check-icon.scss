@@ -1,0 +1,48 @@
+.circle {
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    position: relative;
+    margin-left: .625rem;
+    .check {
+        position: absolute;
+        top: -4px;
+        right: 0;
+        display: inline-block;
+        transform: rotate(45deg);
+        height: 14px;
+        width: 7px;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+        border-right: 2px solid rgba(255, 255, 255, 0.8);
+    }
+    &--done {
+        @extend .gradient-green-background;
+        box-shadow: 0.25rem 0.25rem 0.8125rem 0.2rem  rgba(37, 74, 93, .2);
+        width: 45px;
+        height: 45px;
+        border: none;
+        position: relative;
+        top: 18px;
+        .check {
+            top: 7px;
+            right: 16px;
+            height: 25px;
+            width: 12px;
+            border-bottom: 2px solid #fff;
+            border-right: 2px solid #fff;
+        }
+    }
+    &--large {
+        width: 90px;
+        height: 90px;
+        .check {
+            top: 25px;
+            right: 38px;
+            height: 33px;
+            width: 17px;
+        }
+    }
+
+}

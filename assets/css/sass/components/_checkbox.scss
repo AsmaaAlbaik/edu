@@ -1,0 +1,83 @@
+.custom-file {
+  background: transparent;
+  padding: 10px 0;
+  border: 1px solid #123f45;
+  width: 100%;
+  height: 40px;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+.custom-file span {
+  margin-right: 10px;
+}
+.custom-file input[type='file'] {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 3;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.custom-file:after {
+  content: 'تحميل الصورة';
+  height: 100%;
+  width: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #123f45;
+  color: #fff;
+  text-align: center;
+  line-height: 38px;
+  z-index: 2;
+  cursor: pointer;
+}
+/* checkbox */
+ .checkbox {
+    position: relative;
+    margin-bottom: 25px;
+}
+ input[type=checkbox]:not(old) {
+   margin:17px 8px !important;
+   z-index: 99;
+ }
+ .checkbox input[type="checkbox"] {
+    display: inline;
+    opacity: 0 !important;
+}
+
+input[type=checkbox]:not(old)+label,
+input[type=radio]:not(old)+label {
+  margin-left: 0;
+}
+
+.checkbox label::before {
+    content: "";
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+    background: #fff;
+    border: 1px solid #ccc;
+    top: 6px;
+    right: -15px;
+    position: relative;
+}
+.checkbox.cus input[type="checkbox"]:checked + label::after {
+  top: -1px !important;
+}
+
+.checkbox input[type="checkbox"]:checked + label::after {
+    content: '\f00c';
+    font-family: 'Font Awesome\ 5 Free';
+    font-weight: bold;
+    color: #123f45;;
+    right: 0px;
+    position: absolute;
+    top: 14px;
+    font-size: 22px;
+    z-index: 999;
+}

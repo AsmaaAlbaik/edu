@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="83" height="83" viewBox="0 0 83 83">
+    <defs>
+        <linearGradient id="prefix__a" x1="100%" x2="0%" y1="100%" y2="0%">
+            <stop offset="0%" stop-color="#0C9EE2"/>
+            <stop offset="100%" stop-color="#00D0D3"/>
+        </linearGradient>
+        <linearGradient id="prefix__b" x1="66.325%" x2="33.675%" y1="100%" y2="0%">
+            <stop offset="0%" stop-color="#0C9EE2"/>
+            <stop offset="100%" stop-color="#00D0D3"/>
+        </linearGradient>
+        <linearGradient id="prefix__c" x1="100%" x2="0%" y1="50.261%" y2="49.739%">
+            <stop offset="0%" stop-color="#0C9EE2"/>
+            <stop offset="100%" stop-color="#00D0D3"/>
+        </linearGradient>
+        <linearGradient id="prefix__d" x1="100%" x2="0%" y1="54.252%" y2="45.748%">
+            <stop offset="0%" stop-color="#0C9EE2"/>
+            <stop offset="100%" stop-color="#00D0D3"/>
+        </linearGradient>
+        <linearGradient id="prefix__e" x1="62.658%" x2="37.342%" y1="100%" y2="0%">
+            <stop offset="0%" stop-color="#0C9EE2"/>
+            <stop offset="100%" stop-color="#00D0D3"/>
+        </linearGradient>
+        <linearGradient id="prefix__f" x1="100%" x2="0%" y1="63.601%" y2="36.399%">
+            <stop offset="0%" stop-color="#0C9EE2"/>
+            <stop offset="100%" stop-color="#00D0D3"/>
+        </linearGradient>
+        <linearGradient id="prefix__g" x1="95.468%" x2="4.532%" y1="100%" y2="0%">
+            <stop offset="0%" stop-color="#0C9EE2"/>
+            <stop offset="100%" stop-color="#00D0D3"/>
+        </linearGradient>
+        <linearGradient id="prefix__h" x1="52.551%" x2="47.449%" y1="100%" y2="0%">
+            <stop offset="0%" stop-color="#0C9EE2"/>
+            <stop offset="100%" stop-color="#00D0D3"/>
+        </linearGradient>
+        <linearGradient id="prefix__i" x1="52.412%" x2="47.588%" y1="100%" y2="0%">
+            <stop offset="0%" stop-color="#0C9EE2"/>
+            <stop offset="100%" stop-color="#00D0D3"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(1.1 1)">
+        <circle cx="40.5" cy="40.5" r="40.5" stroke="url(#prefix__a)" stroke-width="1.8"/>
+        <g stroke-linecap="round" stroke-linejoin="round" stroke-width="1.89" transform="translate(21.6 27.701)">
+            <ellipse cx="33.353" cy="7.783" stroke="url(#prefix__b)" rx="4.447" ry="7.783"/>
+            <path stroke="url(#prefix__c)" d="M4.447 0s14.411 4.118 27.386.467"/>
+            <path stroke="url(#prefix__d)" d="M25.292 13.865c2.194.184 4.365.584 6.48 1.195"/>
+            <path stroke="url(#prefix__e)" d="M7.836 14.797l-3.389.777C1.99 15.566 0 12.08 0 7.783S1.99 0 4.447 0"/>
+            <path stroke="url(#prefix__f)" d="M24.254 17.61c1.792 1.114 3.336 2.585 4.536 4.32 1.558-.678 2.868-1.821 3.748-3.274"/>
+            <path stroke="url(#prefix__g)" d="M12.153 17.044c.203 3.284.626 6.55 1.266 9.777l3.402-1.875 4.655 1.875c-.618-3.137-1.032-6.31-1.242-9.501"/>
+            <circle cx="16.305" cy="13.805" r="5.267" stroke="url(#prefix__a)"/>
+            <path stroke="url(#prefix__h)" d="M20.25 10.312c.114-2.874.73-5.705 1.818-8.367"/>
+            <path stroke="url(#prefix__i)" d="M14.105 1.737c-1.213 2.78-1.87 5.77-1.933 8.804"/>
+        </g>
+    </g>
+</svg>

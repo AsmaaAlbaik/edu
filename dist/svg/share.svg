@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="141" height="137" viewBox="0 0 141 137">
+    <defs>
+        <linearGradient id="prefix__c" x1="100%" x2="0%" y1="72.881%" y2="27.119%">
+            <stop offset="0%" stop-color="#0C9EE2"/>
+            <stop offset="100%" stop-color="#00D0D3"/>
+        </linearGradient>
+        <filter id="prefix__a" width="620.6%" height="869.6%" x="-260.3%" y="-384.8%" filterUnits="objectBoundingBox">
+            <feOffset in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="29.5"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.063 0 0 0 0 0.114 0 0 0 0 0.443 0 0 0 0.0767864948 0"/>
+        </filter>
+        <path id="prefix__b" d="M171.292 26.125h-2.125V7.437c0-.793-.635-1.437-1.417-1.437h-25.5c-.782 0-1.417.644-1.417 1.438v18.687h-2.125c-.39 0-.708.322-.708.719v.718c0 .794.634 1.438 1.417 1.438h31.166c.783 0 1.417-.644 1.417-1.438v-.718c0-.397-.317-.719-.708-.719zm-8.005-9.56l-5.369 5.449c-.133.136-.314.212-.503.212-.188 0-.37-.076-.502-.212l-.284-.288c-.138-.135-.215-.322-.212-.517v-2.53c-4.25 0-8.5 1.84-8.996 4.197-.035.218-.222.377-.44.374h-.084c-.11.003-.214-.044-.284-.13-.074-.076-.115-.18-.113-.287.317-5.349 4.636-9.55 9.917-9.645v-2.272c-.003-.195.074-.382.212-.517l.284-.288c.133-.136.314-.212.502-.212.19 0 .37.076.503.212l5.37 5.448c.136.13.214.313.214.504 0 .19-.078.372-.215.503z"/>
+    </defs>
+    <g fill="none" transform="translate(-84.5 50.9)">
+        <use fill="#000" filter="url(#prefix__a)" xlink:href="#prefix__b"/>
+        <use fill="url(#prefix__c)" xlink:href="#prefix__b"/>
+    </g>
+</svg>

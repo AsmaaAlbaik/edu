@@ -1,0 +1,87 @@
+@font-face {
+  font-family: font-regular;
+  src: url("../fonts/a-jannat-lt.ttf") format("opentype");
+}
+@font-face {
+  font-family: font-bold;
+  src: url("../fonts/a-jannat-lt-bold.ttf") format("opentype");
+  font-weight: bold;
+}
+* {
+  font-family: font-regular;
+  // direction: rtl;
+}
+body, html {
+  min-height: 100%;
+  height: 100%;
+  direction: rtl;
+}
+ul {
+  padding: 0;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: $veryDarkBlue;
+  opacity: 0.53; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: $veryDarkBlue;
+  opacity: 0.53;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: $veryDarkBlue;
+  opacity: 0.53;
+}
+.error {
+  color: #E45D50;
+  font-size: .875em;
+  // position: relative;
+  font-weight: bold;
+  display: block;
+  padding: 5px;
+  // float: right;
+  text-align: right;
+  // clear: both;
+  &:before {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f057';
+    color: #E45D50;
+    top: 0;
+    right: 0;
+    padding-left: 7px;
+  }
+}
+.form-control.error:focus,
+.form-control.error {
+  border-color: #E45D50 !important;
+  box-shadow: none !important;
+}
+.form-control.error ~ label {
+  color: #E45D50 !important;
+}
+span.invalid-feedback {
+  color: red;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $lightBlue;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $mainBlue;
+  border-radius: 10px;
+
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $mainGreen;
+}

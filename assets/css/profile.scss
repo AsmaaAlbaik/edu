@@ -1,0 +1,25 @@
+@import './node_modules/owl.carousel/dist/assets/owl.carousel.min';
+@import './node_modules/owl.carousel/dist/assets/owl.theme.default.min';
+@import 'sass/components/_intlTelInput';
+@import './node_modules/dropify/dist/css/dropify.min';
+@import './node_modules/select2/dist/css/select2.min';
+// @import './node_modules/dropzone/dist/min/dropzone.min';
+@import 'sass/helpers/variables';
+@import 'sass/components/overlay';
+@import 'sass/components/content-placeholder';
+@import 'sass/components/switch';
+@import 'sass/components/background';
+@import 'sass/components/buttons';
+@import 'sass/components/select2';
+@import 'sass/components/chat-icon';
+@import 'sass/components/custom-radio';
+@import 'sass/components/jquery.steps';
+@import 'sass/components/custom-input-file';
+@import 'sass/components/custom-input';
+@import 'sass/components/visitor-modal';
+
+@import 'sass/layout/allpages';
+@import 'sass/layout/navbar';
+@import 'sass/layout/header';
+@import 'sass/pages/profile';
+@import 'sass/layout/footer';

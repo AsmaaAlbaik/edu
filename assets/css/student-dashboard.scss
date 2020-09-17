@@ -1,0 +1,30 @@
+@import './node_modules/owl.carousel/dist/assets/owl.carousel.min';
+@import './node_modules/owl.carousel/dist/assets/owl.theme.default.min';
+// @import './node_modules/animate.css/animate.min';
+@import './node_modules/dropify/dist/css/dropify.min';
+@import './node_modules/intro.js/minified/introjs.min';
+@import './node_modules/intro.js/minified/introjs-rtl.min';
+// @import './node_modules/lightgallery/dist/css/lightgallery.min';
+@import 'sass/helpers/variables';
+@import 'sass/components/overlay';
+@import 'sass/components/background';
+@import 'sass/components/check-icon';
+@import 'sass/components/switch';
+@import 'sass/components/buttons';
+// @import 'sass/components/application';
+@import 'sass/components/custom-input-file';
+@import 'sass/components/custom-input';
+@import 'sass/components/custom-radio';
+@import 'sass/components/_intlTelInput';
+@import 'sass/components/visitor-modal';
+@import 'sass/components/jquery.steps';
+@import 'sass/components/tab';
+
+@import 'sass/pages/student-dashboard';
+
+
+@import 'sass/layout/allpages';
+
+@import 'sass/layout/navbar';
+@import 'sass/layout/header';
+@import 'sass/layout/footer';
