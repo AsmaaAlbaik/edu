@@ -12,7 +12,7 @@
     "@dicebear/avatars": "^4.0.8",
     "@dicebear/avatars-initials-sprites": "^4.0.8",
     "autoprefixer": "^9.7.0",
-    "aws-sdk": "^2.599.0",
+    "aws-sdk": "^2.814.0",
     "bootstrap": "^4.3.1",
     "dropify": "^0.2.2",
     "dropzone": "^5.5.1",
